@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_kaisen:ko_guy",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

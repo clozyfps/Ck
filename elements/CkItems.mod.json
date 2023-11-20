@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Ck Items",
+    "icon": {
+      "value": "CUSTOM:Nail"
+    },
+    "showSearch": true
+  }
+}

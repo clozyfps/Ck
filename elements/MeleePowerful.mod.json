@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:KoGuy"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:TojiFushiguro"
+      },
+      {
+        "value": "CUSTOM:YujiItadori"
+      }
+    ],
+    "biomes": [],
+    "name": "melee_powerful",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:GreatSerpent"
+      },
+      {
+        "value": "CUSTOM:Nue"
+      },
+      {
+        "value": "CUSTOM:Toad"
+      },
+      {
+        "value": "CUSTOM:RoundDeer"
+      },
+      {
+        "value": "CUSTOM:TenShadowRabbit"
+      },
+      {
+        "value": "CUSTOM:WhiteDivineDog"
+      },
+      {
+        "value": "CUSTOM:BlackDivineDog"
+      },
+      {
+        "value": "CUSTOM:MaximumElephant"
+      }
+    ],
+    "biomes": [],
+    "name": "ten_shadows",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "craft_kaisen:custom/splitsoulkatananew",
+  "textures": {
+    "0": "craft_kaisen:blocks/sp1",
+    "2": "craft_kaisen:blocks/spe2",
+    "3": "craft_kaisen:blocks/sp3",
+    "4": "craft_kaisen:blocks/sp4",
+    "5": "craft_kaisen:blocks/sp5",
+    "missing": "craft_kaisen:blocks/",
+    "particle": "craft_kaisen:items/air102_layer_2"
+  }
+}

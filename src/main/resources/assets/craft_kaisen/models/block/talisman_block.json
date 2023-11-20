@@ -1,0 +1,10 @@
+{
+  "parent": "craft_kaisen:custom/talismanblock",
+  "textures": {
+    "all": "craft_kaisen:blocks/yuta2",
+    "particle": "craft_kaisen:blocks/yuta2",
+    "0": "craft_kaisen:blocks/talismantex",
+    "missing": "craft_kaisen:blocks/talismantex"
+  },
+  "render_type": "solid"
+}

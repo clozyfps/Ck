@@ -1,0 +1,517 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "startscroll-1.png_1.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 8
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnPlayer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": false,
+          "x": 178,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_race_human",
+          "text": {
+            "fixedValue": "Human"
+          },
+          "color": {
+            "value": -11112336,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHuman"
+          },
+          "x": 214,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_skillpoints",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSkillpoints"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_curse",
+          "text": {
+            "fixedValue": "Curse"
+          },
+          "color": {
+            "value": -11005165,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnCursedSpirit"
+          },
+          "x": 214,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_exp_display",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnExpDisplay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 73
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_rep",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnRep"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_affiliation",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAffiliation"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "---------------"
+          },
+          "color": {
+            "value": -11253961,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 100
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_special",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSpecial"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_strength",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStrength"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_health",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHealth"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_cursed_energy",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCursedEnergy"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_energy_control",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnEnergyControl"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_speed",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSpeed"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button1png",
+          "image": "button-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMoves"
+          },
+          "x": 246,
+          "y": 196
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": ">>"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 252,
+          "y": 198
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cursed_technique",
+          "text": {
+            "fixedValue": "Cursed Technique"
+          },
+          "width": 25,
+          "height": 11,
+          "x": 246,
+          "y": 196
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StrengthButton"
+          },
+          "x": 262,
+          "y": 126
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png1",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "HealthButton"
+          },
+          "x": 262,
+          "y": 136
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png3",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ControlButton"
+          },
+          "x": 255,
+          "y": 154
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png2",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "EnergyButton"
+          },
+          "x": 262,
+          "y": 146
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png4",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SpeedButton"
+          },
+          "x": 255,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty2",
+          "text": {
+            "fixedValue": "+"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 269,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty3",
+          "text": {
+            "fixedValue": "+"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 269,
+          "y": 138
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty4",
+          "text": {
+            "fixedValue": "+"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 269,
+          "y": 147
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty5",
+          "text": {
+            "fixedValue": "+"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 262,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty6",
+          "text": {
+            "fixedValue": "+"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 262,
+          "y": 165
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increases_attack_damage",
+          "text": {
+            "fixedValue": "increases attack damage"
+          },
+          "width": 19,
+          "height": 9,
+          "x": 262,
+          "y": 126
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_max_health",
+          "text": {
+            "fixedValue": "increase max health"
+          },
+          "width": 20,
+          "height": 9,
+          "x": 262,
+          "y": 136
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_max_cursed_energy",
+          "text": {
+            "fixedValue": "increase max cursed energy"
+          },
+          "width": 19,
+          "height": 10,
+          "x": 262,
+          "y": 144
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_energy_regen_rate_and_m",
+          "text": {
+            "fixedValue": "increase energy regen rate and max output"
+          },
+          "width": 19,
+          "height": 9,
+          "x": 255,
+          "y": 154
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_movement_speed",
+          "text": {
+            "fixedValue": "increase movement speed"
+          },
+          "width": 20,
+          "height": 9,
+          "x": 255,
+          "y": 164
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

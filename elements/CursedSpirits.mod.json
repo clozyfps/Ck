@@ -1,0 +1,45 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:RoppongiCursedSpirit"
+      },
+      {
+        "value": "CUSTOM:RyomenSukuna"
+      },
+      {
+        "value": "CUSTOM:GreatSerpent"
+      },
+      {
+        "value": "CUSTOM:RugbyFieldCursedSpirit"
+      },
+      {
+        "value": "CUSTOM:KoGuy"
+      },
+      {
+        "value": "CUSTOM:HeianEraSukuna"
+      },
+      {
+        "value": "CUSTOM:Choso"
+      },
+      {
+        "value": "CUSTOM:Jogo"
+      },
+      {
+        "value": "CUSTOM:Hanami"
+      },
+      {
+        "value": "CUSTOM:Mahito"
+      }
+    ],
+    "biomes": [],
+    "name": "cursed_spirits",
+    "namespace": "mod"
+  }
+}

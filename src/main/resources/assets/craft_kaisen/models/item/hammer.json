@@ -1,0 +1,9 @@
+{
+  "parent": "craft_kaisen:custom/nobarahammer",
+  "textures": {
+    "0": "craft_kaisen:blocks/nobara2",
+    "1": "craft_kaisen:blocks/nobara1",
+    "2": "craft_kaisen:blocks/nobara3",
+    "particle": "craft_kaisen:items/air102_layer_2"
+  }
+}

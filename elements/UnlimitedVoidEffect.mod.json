@@ -1,0 +1,26 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "UnlimitedVoid",
+    "icon": "a2i2e_layer_2.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "UnlimitedVoidEffectEffectStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "UnlimitedVoidEffectOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "UnlimitedVoidEffectEffectExpires"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Charge Cursed Energy",
+    "keyBindingCategoryKey": "craft_kaisen",
+    "onKeyPressed": {
+      "name": "ChargeCursedEnergyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ChargeCursedEnergyOnKeyReleased"
+    }
+  }
+}

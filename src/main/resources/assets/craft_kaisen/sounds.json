@@ -1,0 +1,82 @@
+{
+  "guts": {
+    "subtitle": "subtitles.guts",
+    "sounds": [
+      {
+        "name": "craft_kaisen:dicesteak",
+        "stream": false
+      }
+    ]
+  },
+  "slice": {
+    "subtitle": "subtitles.slice",
+    "sounds": [
+      {
+        "name": "craft_kaisen:sword_sweep",
+        "stream": false
+      }
+    ]
+  },
+  "heartbeat": {
+    "subtitle": "subtitles.heartbeat",
+    "sounds": [
+      {
+        "name": "craft_kaisen:rct_heartbeat",
+        "stream": false
+      }
+    ]
+  },
+  "domain": {
+    "subtitle": "subtitles.domain",
+    "sounds": [
+      {
+        "name": "craft_kaisen:domainexpansion",
+        "stream": false
+      }
+    ]
+  },
+  "electric": {
+    "subtitle": "subtitles.electric",
+    "sounds": [
+      {
+        "name": "craft_kaisen:electric_shock",
+        "stream": false
+      }
+    ]
+  },
+  "hit": {
+    "subtitle": "subtitles.hit",
+    "sounds": [
+      {
+        "name": "craft_kaisen:punch_hit1",
+        "stream": false
+      }
+    ]
+  },
+  "clank": {
+    "subtitle": "subtitles.clank",
+    "sounds": [
+      {
+        "name": "craft_kaisen:sword-clash-1",
+        "stream": false
+      }
+    ]
+  },
+  "splash": {
+    "sounds": [
+      {
+        "name": "craft_kaisen:9508__petenice__splash",
+        "stream": false
+      }
+    ]
+  },
+  "bell": {
+    "subtitle": "subtitles.bell",
+    "sounds": [
+      {
+        "name": "craft_kaisen:bell_au37k1v",
+        "stream": false
+      }
+    ]
+  }
+}

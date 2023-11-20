@@ -1,0 +1,9 @@
+{
+  "parent": "craft_kaisen:custom/shibuyagates",
+  "textures": {
+    "all": "craft_kaisen:blocks/sp4",
+    "particle": "craft_kaisen:blocks/sp4",
+    "0": "craft_kaisen:blocks/shibuyagatetex"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "craft_kaisen:custom/miwasword",
+  "textures": {
+    "0": "craft_kaisen:blocks/miwatexture",
+    "particle": "craft_kaisen:items/air102_layer_2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:round_deer_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.round_deer_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.round_deer_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "round_deer_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:rabbit_escape"
+}

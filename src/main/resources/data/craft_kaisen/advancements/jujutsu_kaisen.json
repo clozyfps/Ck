@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "minecraft:large_amethyst_bud"
+    },
+    "title": {
+      "translate": "advancements.jujutsu_kaisen.title"
+    },
+    "description": {
+      "translate": "advancements.jujutsu_kaisen.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "jujutsu_kaisen": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

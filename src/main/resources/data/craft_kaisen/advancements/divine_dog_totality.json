@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:mouth_cursed_spirit_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.divine_dog_totality.title"
+    },
+    "description": {
+      "translate": "advancements.divine_dog_totality.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "divine_dog_totality": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:white_divine_dog_advancement"
+}

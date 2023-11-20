@@ -1,0 +1,36 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Choso"
+      },
+      {
+        "value": "CUSTOM:Mahito"
+      },
+      {
+        "value": "CUSTOM:RyomenSukuna"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:TojiFushiguro"
+      },
+      {
+        "value": "CUSTOM:YujiItadori"
+      },
+      {
+        "value": "CUSTOM:YutaOkkotsu"
+      }
+    ],
+    "biomes": [],
+    "name": "dashable",
+    "namespace": "mod"
+  }
+}

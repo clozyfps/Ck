@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:great_serpent_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.great_serpent_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.great_serpent_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "great_serpent_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:toad_advancement"
+}

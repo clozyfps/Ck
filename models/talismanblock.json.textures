@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "talismantex",
+        "missing": "talismantex"
+      },
+      "name": "default"
+    }
+  }
+}

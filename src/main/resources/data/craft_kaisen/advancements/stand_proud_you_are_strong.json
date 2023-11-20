@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "title": {
+      "translate": "advancements.stand_proud_you_are_strong.title"
+    },
+    "description": {
+      "translate": "advancements.stand_proud_you_are_strong.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stand_proud_you_are_strong": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

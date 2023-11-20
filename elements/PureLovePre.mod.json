@@ -1,0 +1,23 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "PureLove",
+    "icon": "a2i2e_layer_2.png",
+    "color": {
+      "value": -6750055,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "PureLovePreOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "PureLovePreEffectExpires"
+    }
+  }
+}

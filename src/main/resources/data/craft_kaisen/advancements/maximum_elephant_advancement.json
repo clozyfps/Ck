@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:maximum_elephant_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.maximum_elephant_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.maximum_elephant_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "maximum_elephant_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:great_serpent_advancement"
+}

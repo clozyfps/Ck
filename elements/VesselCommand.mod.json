@@ -1,0 +1,9 @@
+{
+  "_fv": 47,
+  "_type": "command",
+  "definition": {
+    "commandName": "vessel",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">request</field><statement name=\"args\"><block type=\"number_min_max\"><field name=\"name\">time</field><field name=\"min\">10</field><field name=\"max\">60</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RequestVessel</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">accept</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">AcceptVessel</field></block></statement><next><block type=\"literal\"><field name=\"name\">deny</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">DenyVessel</field></block></statement><next><block type=\"literal\"><field name=\"name\">player1</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetPlayerOne</field></block></statement><next><block type=\"literal\"><field name=\"name\">player2</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetPlayerTwo</field></block></statement></block></next></block></next></block></next></block></next></block></statement></block></next></block></xml>"
+  }
+}

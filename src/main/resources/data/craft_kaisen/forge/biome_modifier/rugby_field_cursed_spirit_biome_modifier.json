@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_kaisen:rugby_field_cursed_spirit",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

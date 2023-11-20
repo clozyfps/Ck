@@ -1,0 +1,39 @@
+{
+  "_fv": 47,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "screenshot_2023-10-31_140759.png",
+          "use1Xscale": false,
+          "x": -142,
+          "y": -91
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "screenofwhite.png",
+          "use1Xscale": false,
+          "x": -49,
+          "y": -38
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ImpactFrameDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

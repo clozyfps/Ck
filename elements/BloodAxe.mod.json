@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 1,
+    "texture": "air102_layer_2",
+    "customModelName": "bloodaxe:default",
+    "name": "Blood Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CkWeapons"
+    },
+    "harvestLevel": 8,
+    "efficiency": 8.0,
+    "attackSpeed": 4.0,
+    "enchantability": 2,
+    "damageVsEntity": 12.0,
+    "usageCount": 1000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

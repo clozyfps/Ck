@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "yuta1",
+        "1": "yuta2",
+        "2": "yuta3"
+      },
+      "name": "default"
+    }
+  }
+}

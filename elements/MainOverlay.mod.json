@@ -1,0 +1,50 @@
+{
+  "_fv": 47,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ce_overlay",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCEOverlay"
+          },
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "x": 309,
+          "y": 218
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_output",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnOutput"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 309,
+          "y": 209
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

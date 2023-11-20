@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Rika"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:YujiItadori"
+      },
+      {
+        "value": "CUSTOM:YutaOkkotsu"
+      },
+      {
+        "value": "CUSTOM:NanamiKento"
+      }
+    ],
+    "biomes": [],
+    "name": "sorcerers",
+    "namespace": "mod"
+  }
+}

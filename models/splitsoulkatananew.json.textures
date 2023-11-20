@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sp1",
+        "2": "spe2",
+        "3": "sp3",
+        "4": "sp4",
+        "5": "sp5",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:TojiFushiguro"
+      }
+    ],
+    "biomes": [],
+    "name": "quest_mobs",
+    "namespace": "mod"
+  }
+}

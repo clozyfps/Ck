@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:black_divine_dog_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.black_divine_dog_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.black_divine_dog_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "black_divine_dog_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:ten_shadows_technique"
+}

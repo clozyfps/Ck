@@ -1,0 +1,190 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "startscroll-1.png_1.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 226,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": "<"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 191,
+          "y": 144
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "humanicon-1.png.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnHuman"
+          },
+          "x": 141,
+          "y": 5
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_race",
+          "text": {
+            "fixedValue": "RACE:"
+          },
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "x": 202,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spiriticon-1.png.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCursedSpirit"
+          },
+          "x": 141,
+          "y": 5
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_human",
+          "text": {
+            "fixedValue": "Human"
+          },
+          "color": {
+            "value": -13547705,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHuman"
+          },
+          "x": 200,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cursed_spirit",
+          "text": {
+            "fixedValue": "Curse"
+          },
+          "color": {
+            "value": -12380907,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnCursedSpirit"
+          },
+          "x": 200,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_finish",
+          "text": {
+            "fixedValue": "SAVE"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 201,
+          "y": 157
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button1png",
+          "image": "button-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "FinishCharacter"
+          },
+          "x": 201,
+          "y": 157
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ForwardButtonRace"
+          },
+          "x": 186,
+          "y": 144
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smallbutton1png1",
+          "image": "smallbutton-1.png.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ForwardButtonRace"
+          },
+          "x": 219,
+          "y": 144
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

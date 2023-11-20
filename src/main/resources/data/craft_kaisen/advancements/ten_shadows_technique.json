@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:domain_block"
+    },
+    "title": {
+      "translate": "advancements.ten_shadows_technique.title"
+    },
+    "description": {
+      "translate": "advancements.ten_shadows_technique.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "ten_shadows_technique": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "craft_kaisen:cursed_technique"
+}

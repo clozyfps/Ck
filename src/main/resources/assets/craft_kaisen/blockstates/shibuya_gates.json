@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craft_kaisen:block/shibuya_gates"
+    },
+    "facing=east": {
+      "model": "craft_kaisen:block/shibuya_gates",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craft_kaisen:block/shibuya_gates",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craft_kaisen:block/shibuya_gates",
+      "y": 270
+    }
+  }
+}

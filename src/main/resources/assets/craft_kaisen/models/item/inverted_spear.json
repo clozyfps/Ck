@@ -1,0 +1,7 @@
+{
+  "parent": "craft_kaisen:custom/invertedspear",
+  "textures": {
+    "0": "craft_kaisen:blocks/invertedspeartexture",
+    "particle": "craft_kaisen:items/air102_layer_2"
+  }
+}

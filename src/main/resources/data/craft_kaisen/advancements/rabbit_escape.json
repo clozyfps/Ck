@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:rabbit"
+    },
+    "title": {
+      "translate": "advancements.rabbit_escape.title"
+    },
+    "description": {
+      "translate": "advancements.rabbit_escape.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rabbit_escape": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:maximum_elephant_advancement"
+}

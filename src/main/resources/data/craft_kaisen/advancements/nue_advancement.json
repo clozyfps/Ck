@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:nue_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.nue_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.nue_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nue_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "craft_kaisen:cursed_technique"
+}

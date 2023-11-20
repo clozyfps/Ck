@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Ck Armor",
+    "icon": {
+      "value": "CUSTOM:BlackBlindFold.helmet"
+    },
+    "showSearch": true
+  }
+}
