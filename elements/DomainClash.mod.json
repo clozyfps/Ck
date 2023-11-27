@@ -1,0 +1,82 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 50,
+    "height": 50,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_x",
+          "text": "X",
+          "onClick": {
+            "name": "DomainClashUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 197,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_domain_clash",
+          "text": {
+            "fixedValue": "Domain Clash!!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 180,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_press_the_button_as_many_times_a",
+          "text": {
+            "fixedValue": "Press the button as many times as you can!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_combo",
+          "text": {
+            "fixedValue": "Combo:",
+            "name": "ComboValue"
+          },
+          "color": {
+            "value": -16750849,
+            "falpha": 0.0
+          },
+          "x": 184,
+          "y": 179
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

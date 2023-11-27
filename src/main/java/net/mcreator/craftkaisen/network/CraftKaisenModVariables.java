@@ -112,6 +112,11 @@ public class CraftKaisenModVariables {
 			clone.SimpleDomainType = original.SimpleDomainType;
 			clone.EvadeLevel = original.EvadeLevel;
 			clone.Durability = original.Durability;
+			clone.Fame = original.Fame;
+			clone.Grade = original.Grade;
+			clone.inventorycurse = original.inventorycurse;
+			clone.RenderSpecial = original.RenderSpecial;
+			clone.SukunaLevel = original.SukunaLevel;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -126,6 +131,7 @@ public class CraftKaisenModVariables {
 				clone.DoingMission = original.DoingMission;
 				clone.TenShadowDeaths = original.TenShadowDeaths;
 				clone.Page = original.Page;
+				clone.DomainClashCombo = original.DomainClashCombo;
 			}
 		}
 
@@ -352,6 +358,12 @@ public class CraftKaisenModVariables {
 		public String Page = "Melee";
 		public double EvadeLevel = 1.0;
 		public double Durability = 0;
+		public double Fame = 0;
+		public String Grade = "\"\"";
+		public double DomainClashCombo = 0;
+		public boolean inventorycurse = false;
+		public String RenderSpecial = "\"\"";
+		public double SukunaLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -413,6 +425,12 @@ public class CraftKaisenModVariables {
 			nbt.putString("Page", Page);
 			nbt.putDouble("EvadeLevel", EvadeLevel);
 			nbt.putDouble("Durability", Durability);
+			nbt.putDouble("Fame", Fame);
+			nbt.putString("Grade", Grade);
+			nbt.putDouble("DomainClashCombo", DomainClashCombo);
+			nbt.putBoolean("inventorycurse", inventorycurse);
+			nbt.putString("RenderSpecial", RenderSpecial);
+			nbt.putDouble("SukunaLevel", SukunaLevel);
 			return nbt;
 		}
 
@@ -471,6 +489,12 @@ public class CraftKaisenModVariables {
 			Page = nbt.getString("Page");
 			EvadeLevel = nbt.getDouble("EvadeLevel");
 			Durability = nbt.getDouble("Durability");
+			Fame = nbt.getDouble("Fame");
+			Grade = nbt.getString("Grade");
+			DomainClashCombo = nbt.getDouble("DomainClashCombo");
+			inventorycurse = nbt.getBoolean("inventorycurse");
+			RenderSpecial = nbt.getString("RenderSpecial");
+			SukunaLevel = nbt.getDouble("SukunaLevel");
 		}
 	}
 
@@ -548,6 +572,12 @@ public class CraftKaisenModVariables {
 					variables.Page = message.data.Page;
 					variables.EvadeLevel = message.data.EvadeLevel;
 					variables.Durability = message.data.Durability;
+					variables.Fame = message.data.Fame;
+					variables.Grade = message.data.Grade;
+					variables.DomainClashCombo = message.data.DomainClashCombo;
+					variables.inventorycurse = message.data.inventorycurse;
+					variables.RenderSpecial = message.data.RenderSpecial;
+					variables.SukunaLevel = message.data.SukunaLevel;
 				}
 			});
 			context.setPacketHandled(true);

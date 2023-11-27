@@ -1,0 +1,9 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "H",
+    "keyBindingName": "Reverse Cursed Technique",
+    "keyBindingCategoryKey": "craft_kaisen"
+  }
+}

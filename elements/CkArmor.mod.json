@@ -4,7 +4,7 @@
   "definition": {
     "name": "Ck Armor",
     "icon": {
-      "value": "CUSTOM:BlackBlindFold.helmet"
+      "value": "CUSTOM:BandageBlindFold.helmet"
     },
     "showSearch": true
   }

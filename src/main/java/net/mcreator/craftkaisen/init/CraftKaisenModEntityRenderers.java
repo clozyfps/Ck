@@ -32,14 +32,18 @@ import net.mcreator.craftkaisen.client.renderer.NobaraKugisakiRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MouthCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumElephantRenderer;
+import net.mcreator.craftkaisen.client.renderer.MaxMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
+import net.mcreator.craftkaisen.client.renderer.InventoryCurseMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
+import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer;
+import net.mcreator.craftkaisen.client.renderer.CoffinMountainRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChimeraShadowGardenMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.BlackDivineDogRenderer;
@@ -98,6 +102,12 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.NOBARA_KUGISAKI.get(), NobaraKugisakiRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.NAIL_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.DISASTER_FLAME_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.EMBER_INSECT.get(), EmberInsectRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.VOLCANIC_ERUPTION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MAX_METEOR.get(), MaxMeteorRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.COFFIN_MOUNTAIN.get(), CoffinMountainRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.INVENTORY_CURSE_MOB.get(), InventoryCurseMobRenderer::new);
 	}
 }

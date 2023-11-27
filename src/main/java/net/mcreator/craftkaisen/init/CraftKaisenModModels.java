@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelreversalred;
 import net.mcreator.craftkaisen.client.model.Modelnewmuzi;
 import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
+import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmaximumelephantnew;
 import net.mcreator.craftkaisen.client.model.Modelmaximumelephant;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
@@ -38,6 +39,7 @@ import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
 import net.mcreator.craftkaisen.client.model.Modelfemaleuniform;
+import net.mcreator.craftkaisen.client.model.Modelemberinsect;
 import net.mcreator.craftkaisen.client.model.Modeldivinedog;
 import net.mcreator.craftkaisen.client.model.Modelcustom_model;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
@@ -68,6 +70,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modelcursedspiritgrasshopper.LAYER_LOCATION, Modelcursedspiritgrasshopper::createBodyLayer);
 		event.registerLayerDefinition(Modeljogo.LAYER_LOCATION, Modeljogo::createBodyLayer);
 		event.registerLayerDefinition(Modeltojipants.LAYER_LOCATION, Modeltojipants::createBodyLayer);
+		event.registerLayerDefinition(Modelemberinsect.LAYER_LOCATION, Modelemberinsect::createBodyLayer);
 		event.registerLayerDefinition(Modelchosodrip.LAYER_LOCATION, Modelchosodrip::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
@@ -91,6 +94,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modelreversalred.LAYER_LOCATION, Modelreversalred::createBodyLayer);
 		event.registerLayerDefinition(ModelTenShadowBunny.LAYER_LOCATION, ModelTenShadowBunny::createBodyLayer);
 		event.registerLayerDefinition(Modeldivinedog.LAYER_LOCATION, Modeldivinedog::createBodyLayer);
+		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelnewmuzi.LAYER_LOCATION, Modelnewmuzi::createBodyLayer);
 	}
 }

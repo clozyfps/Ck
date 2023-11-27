@@ -100,7 +100,7 @@
       "name": "MalevolentShrineOnEntityTickUpdate"
     },
     "onInitialSpawn": {
-      "name": "DomainSpawnNbt"
+      "name": "MalevolentShrineOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

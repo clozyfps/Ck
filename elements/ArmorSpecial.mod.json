@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "O",
+    "keyBindingName": "Armor Special",
+    "keyBindingCategoryKey": "craft_kaisen",
+    "onKeyPressed": {
+      "name": "ArmorSpecialOnKeyPressed"
+    }
+  }
+}

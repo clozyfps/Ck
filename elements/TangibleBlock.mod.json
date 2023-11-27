@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.TALLGRASS#0"
+      },
+      {
+        "value": "Blocks.TALLGRASS#1"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#2"
+      },
+      {
+        "value": "Blocks.SEAGRASS"
+      },
+      {
+        "value": "Blocks.TALL_SEAGRASS"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "tangible_block",
+    "namespace": "mod"
+  }
+}

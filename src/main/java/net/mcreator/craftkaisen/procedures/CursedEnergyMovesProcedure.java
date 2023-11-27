@@ -21,7 +21,6 @@ import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
-import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 
 import javax.annotation.Nullable;
@@ -123,37 +122,11 @@ public class CursedEnergyMovesProcedure {
 			} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentMove).equals("Curtain")) {
 				if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy >= 50
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
-					{
-						double _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy
-								- 50 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10);
-						entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.currentCursedEnergy = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CrumbleAwayRangedEntity(CraftKaisenModEntities.CRUMBLE_AWAY_RANGED.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 0, 0, (byte) 500);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
+					CurtainProcedureProcedure.execute(world, x, y, z, entity);
+					CurtainProcedure2Procedure.execute(world, x, y, z, entity);
 					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal("Crumble Away."), true);
-					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
+						_player.displayClientMessage(Component.literal("Emerge from the darkness, blacker than darkness. Purify that which is impure."), true);
+					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 100);
 				} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy < 50
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
