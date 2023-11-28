@@ -161,7 +161,7 @@ public class SetMovesProcedure {
 				}
 			}
 			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				entity.getPersistentData().putDouble("maxMoves", 6);
+				entity.getPersistentData().putDouble("maxMoves", 11);
 				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
 					entity.getPersistentData().putString("moveDisplay", "Black Divine Dog");
 					entity.getPersistentData().putDouble("moveCost", 5);

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:geto_outfit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.perfect_preparation.title"
+    },
+    "description": {
+      "translate": "advancements.perfect_preparation.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "perfect_preparation": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "parent": "craft_kaisen:shibuya_incident"
+}

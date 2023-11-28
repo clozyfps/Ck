@@ -6,7 +6,7 @@
     "displayName": "Force Sukuna Technique",
     "description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
     "category": "MISC",
-    "defaultValueLogic": false,
+    "defaultValueLogic": true,
     "defaultValueNumber": 0
   }
 }

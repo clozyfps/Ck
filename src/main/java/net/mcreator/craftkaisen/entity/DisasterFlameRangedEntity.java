@@ -7,7 +7,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
@@ -22,7 +21,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftkaisen.procedures.DisasterFlameRangedWhileProjectileFlyingTickProcedure;
-import net.mcreator.craftkaisen.procedures.DisasterFlameRangedProjectileHitsLivingEntityProcedure;
 import net.mcreator.craftkaisen.procedures.DisasterFlameRangedProjectileHitsBlockProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
@@ -64,12 +62,6 @@ public class DisasterFlameRangedEntity extends AbstractArrow implements ItemSupp
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
-	}
-
-	@Override
-	public void onHitEntity(EntityHitResult entityHitResult) {
-		super.onHitEntity(entityHitResult);
-		DisasterFlameRangedProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

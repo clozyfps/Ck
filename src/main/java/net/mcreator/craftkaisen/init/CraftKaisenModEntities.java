@@ -57,6 +57,7 @@ import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
+import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
@@ -248,13 +249,17 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<CoffinMountainEntity>> COFFIN_MOUNTAIN = register("coffin_mountain", EntityType.Builder.<CoffinMountainEntity>of(CoffinMountainEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CoffinMountainEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InventoryCurseMobEntity>> INVENTORY_CURSE_MOB = register("inventory_curse_mob",
+			EntityType.Builder.<InventoryCurseMobEntity>of(InventoryCurseMobEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseMobEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FingerBearerEntity>> FINGER_BEARER = register("finger_bearer",
+			EntityType.Builder.<FingerBearerEntity>of(FingerBearerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FingerBearerEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity>> EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA = register("eight_handled_sword_divergent_sila_divine_general_mahoraga",
 			EntityType.Builder.<EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity>of(EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<InventoryCurseMobEntity>> INVENTORY_CURSE_MOB = register("inventory_curse_mob",
-			EntityType.Builder.<InventoryCurseMobEntity>of(InventoryCurseMobEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseMobEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -299,8 +304,9 @@ public class CraftKaisenModEntities {
 			EmberInsectEntity.init();
 			MaxMeteorEntity.init();
 			CoffinMountainEntity.init();
-			EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.init();
 			InventoryCurseMobEntity.init();
+			FingerBearerEntity.init();
+			EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.init();
 		});
 	}
 
@@ -340,7 +346,8 @@ public class CraftKaisenModEntities {
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(MAX_METEOR.get(), MaxMeteorEntity.createAttributes().build());
 		event.put(COFFIN_MOUNTAIN.get(), CoffinMountainEntity.createAttributes().build());
-		event.put(EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.createAttributes().build());
 		event.put(INVENTORY_CURSE_MOB.get(), InventoryCurseMobEntity.createAttributes().build());
+		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
+		event.put(EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.createAttributes().build());
 	}
 }

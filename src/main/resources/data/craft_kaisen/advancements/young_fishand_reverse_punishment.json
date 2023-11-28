@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:mahito_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.young_fishand_reverse_punishment.title"
+    },
+    "description": {
+      "translate": "advancements.young_fishand_reverse_punishment.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "young_fishand_reverse_punishment": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

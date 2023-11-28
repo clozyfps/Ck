@@ -7,6 +7,7 @@ import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -16,6 +17,7 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.client.model.Modeltoji_curse;
 
@@ -55,6 +57,16 @@ public class RenderProcedure {
 				}
 				new com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer(context, new ResourceLocation("craft_kaisen:textures/entities/maininventorycurseatlas.png"), new Modeltoji_curse(context.bakeLayer(Modeltoji_curse.LAYER_LOCATION)))
 						.render((Mob) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+			}
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SUKUNA.get()) : false) || (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.VESSEL_POTION_EFFECT.get()) : false)) {
+			if (_evt.getRenderer() instanceof PlayerRenderer) {
+				if (_evt instanceof RenderLivingEvent.Pre) {
+					// _evt.setCanceled(true);
+				}
+				new com.kleiders.kleidersplayerrenderer.InternalPlayerRenderer(new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font),
+						new ResourceLocation("craft_kaisen:textures/entities/facemarktexture.png"))
+						.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 			}
 		}
 	}

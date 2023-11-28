@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "MaximumSukunaVesselPlayers (singeplayer)",
+    "description": "Control how many players can be a sukuna vessel",
+    "category": "MISC",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 1
+  }
+}

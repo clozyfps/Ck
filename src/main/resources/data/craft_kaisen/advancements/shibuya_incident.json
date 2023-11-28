@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:geto_outfit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.shibuya_incident.title"
+    },
+    "description": {
+      "translate": "advancements.shibuya_incident.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shibuya_incident": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:death_painting"
+}

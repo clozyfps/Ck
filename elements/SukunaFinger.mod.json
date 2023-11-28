@@ -10,7 +10,7 @@
     "name": "Sukuna Finger",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkItems"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -34,14 +34,14 @@
     "onFinishUsingItem": {
       "name": "SukunaFingerPlayerFinishesUsingItem"
     },
-    "isFood": false,
+    "isFood": true,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
       "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": false,
+    "isAlwaysEdible": true,
     "animation": "eat"
   }
 }

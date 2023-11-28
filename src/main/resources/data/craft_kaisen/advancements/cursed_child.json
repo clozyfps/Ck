@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:yuta_outfit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.cursed_child.title"
+    },
+    "description": {
+      "translate": "advancements.cursed_child.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cursed_child": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_kaisen:cursed_spirit"
+}

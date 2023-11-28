@@ -115,6 +115,8 @@ public class MaxMeteorOnEntityTickUpdateProcedure {
 									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							if (!entity.level.isClientSide())
+								entity.discard();
 						}
 					}
 				}

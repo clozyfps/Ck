@@ -168,11 +168,13 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> EMBER_INSECT_SPAWN_EGG = REGISTRY.register("ember_insect_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EMBER_INSECT, -13434829, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> VOLCANIC_ERUPTION = REGISTRY.register("volcanic_eruption", () -> new VolcanicEruptionItem());
-	public static final RegistryObject<Item> EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA_SPAWN_EGG = REGISTRY.register("eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA, -1710619, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> INVENTORY_CURSE_MOB_SPAWN_EGG = REGISTRY.register("inventory_curse_mob_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.INVENTORY_CURSE_MOB, -13556943, -13885397, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> SUKUNA_FINGER = REGISTRY.register("sukuna_finger", () -> new SukunaFingerItem());
+	public static final RegistryObject<Item> FINGER_BEARER_SPAWN_EGG = REGISTRY.register("finger_bearer_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.FINGER_BEARER, -2960686, -15527136, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA_SPAWN_EGG = REGISTRY.register("eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA, -1710619, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
