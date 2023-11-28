@@ -13,6 +13,7 @@ public class CraftKaisenModTabs {
 	public static CreativeModeTab TAB_CK_ARMOR;
 	public static CreativeModeTab TAB_CK_CURSES;
 	public static CreativeModeTab TAB_CK_ITEMS;
+	public static CreativeModeTab TAB_CK_BLOCKS;
 
 	public static void load() {
 		TAB_CK_WEAPONS = new CreativeModeTab("tabck_weapons") {
@@ -40,7 +41,7 @@ public class CraftKaisenModTabs {
 		TAB_CK_ARMOR = new CreativeModeTab("tabck_armor") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(CraftKaisenModItems.BLACK_BLIND_FOLD_HELMET.get());
+				return new ItemStack(CraftKaisenModItems.BANDAGE_BLIND_FOLD_HELMET.get());
 			}
 
 			@Override
@@ -63,6 +64,17 @@ public class CraftKaisenModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(CraftKaisenModItems.NAIL.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return true;
+			}
+		}.setBackgroundSuffix("item_search.png");
+		TAB_CK_BLOCKS = new CreativeModeTab("tabck_blocks") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(CraftKaisenModBlocks.BARRIER_BLOCK.get());
 			}
 
 			@Override

@@ -36,31 +36,23 @@ public class MistPurpleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 0.8f;
-		this.lifetime = 1;
+		this.quadSize *= 50f;
+		this.lifetime = 25;
 		this.gravity = 0f;
 		this.hasPhysics = false;
 		this.xd = vx * 0;
 		this.yd = vy * 0;
 		this.zd = vz * 0;
-		this.setSpriteFromAge(spriteSet);
-	}
-
-	@Override
-	public int getLightColor(float partialTick) {
-		return 15728880;
+		this.pickSprite(spriteSet);
 	}
 
 	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_LIT;
+		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 7 + 1, 7));
-		}
 	}
 }

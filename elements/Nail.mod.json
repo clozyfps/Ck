@@ -10,7 +10,7 @@
     "name": "Nail",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkItems"
     },
     "stackSize": 64,
     "enchantability": 0,

@@ -35,7 +35,7 @@ public class PureLoveActiveOnEffectActiveTickProcedure {
 					entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()))
 					.canOcclude() || raytrace_distance < 14) {
 				raytrace_distance = raytrace_distance + 1;
-				world.addParticle((SimpleParticleType) (CraftKaisenModParticleTypes.PURPLE_PARTICLE.get()), x, (y + 1), z, ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2),
+				world.addParticle((SimpleParticleType) (CraftKaisenModParticleTypes.MIST_PURPLE.get()), x, (y + 1), z, ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2),
 						((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 2), ((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craft_kaisen:block/quest_board"
+    },
+    "facing=east": {
+      "model": "craft_kaisen:block/quest_board",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craft_kaisen:block/quest_board",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craft_kaisen:block/quest_board",
+      "y": 270
+    }
+  }
+}

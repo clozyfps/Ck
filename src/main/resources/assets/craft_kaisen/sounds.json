@@ -78,5 +78,14 @@
         "stream": false
       }
     ]
+  },
+  "sukuna": {
+    "subtitle": "subtitles.sukuna",
+    "sounds": [
+      {
+        "name": "craft_kaisen:know-your-place-fool-sukuna",
+        "stream": false
+      }
+    ]
   }
 }

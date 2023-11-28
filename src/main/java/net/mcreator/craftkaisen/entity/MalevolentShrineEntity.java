@@ -36,8 +36,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.craftkaisen.procedures.MalevolentShrineOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.MalevolentShrineOnEntityTickUpdateProcedure;
-import net.mcreator.craftkaisen.procedures.DomainSpawnNbtProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 import javax.annotation.Nullable;
@@ -124,7 +124,7 @@ public class MalevolentShrineEntity extends TamableAnimal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		DomainSpawnNbtProcedure.execute(this);
+		MalevolentShrineOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
 	}
 

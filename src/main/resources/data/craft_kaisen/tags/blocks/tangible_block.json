@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:seagrass",
+    "minecraft:grass",
+    "minecraft:tall_grass",
+    "minecraft:tall_seagrass",
+    "minecraft:dead_bush"
+  ]
+}

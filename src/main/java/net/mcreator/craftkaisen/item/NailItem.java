@@ -14,7 +14,7 @@ import java.util.List;
 
 public class NailItem extends Item {
 	public NailItem() {
-		super(new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_ITEMS).stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

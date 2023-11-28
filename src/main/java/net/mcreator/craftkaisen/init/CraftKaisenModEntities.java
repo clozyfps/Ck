@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
 import net.mcreator.craftkaisen.entity.WhiteDivineDogEntity;
 import net.mcreator.craftkaisen.entity.WaterMaximumElephantEntity;
+import net.mcreator.craftkaisen.entity.VolcanicEruptionEntity;
 import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
@@ -45,10 +46,12 @@ import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.NailProjectileEntity;
 import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.MaximumElephantEntity;
+import net.mcreator.craftkaisen.entity.MaxMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
+import net.mcreator.craftkaisen.entity.InventoryCurseMobEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
 import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
@@ -56,11 +59,14 @@ import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
+import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
+import net.mcreator.craftkaisen.entity.DisasterFlameRangedEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.CoffinMountainEntity;
 import net.mcreator.craftkaisen.entity.ChosoEntity;
 import net.mcreator.craftkaisen.entity.ChimeraShadowGardenMobEntity;
 import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
@@ -233,6 +239,24 @@ public class CraftKaisenModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DisasterFlameRangedEntity>> DISASTER_FLAME_RANGED = register("projectile_disaster_flame_ranged", EntityType.Builder.<DisasterFlameRangedEntity>of(DisasterFlameRangedEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(DisasterFlameRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EmberInsectEntity>> EMBER_INSECT = register("ember_insect",
+			EntityType.Builder.<EmberInsectEntity>of(EmberInsectEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EmberInsectEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanicEruptionEntity>> VOLCANIC_ERUPTION = register("projectile_volcanic_eruption", EntityType.Builder.<VolcanicEruptionEntity>of(VolcanicEruptionEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(VolcanicEruptionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MaxMeteorEntity>> MAX_METEOR = register("max_meteor",
+			EntityType.Builder.<MaxMeteorEntity>of(MaxMeteorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaxMeteorEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CoffinMountainEntity>> COFFIN_MOUNTAIN = register("coffin_mountain", EntityType.Builder.<CoffinMountainEntity>of(CoffinMountainEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CoffinMountainEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InventoryCurseMobEntity>> INVENTORY_CURSE_MOB = register("inventory_curse_mob",
+			EntityType.Builder.<InventoryCurseMobEntity>of(InventoryCurseMobEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseMobEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -273,6 +297,10 @@ public class CraftKaisenModEntities {
 			ChimeraShadowGardenMobEntity.init();
 			NobaraKugisakiEntity.init();
 			EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.init();
+			EmberInsectEntity.init();
+			MaxMeteorEntity.init();
+			CoffinMountainEntity.init();
+			InventoryCurseMobEntity.init();
 		});
 	}
 
@@ -310,5 +338,9 @@ public class CraftKaisenModEntities {
 		event.put(CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobEntity.createAttributes().build());
 		event.put(NOBARA_KUGISAKI.get(), NobaraKugisakiEntity.createAttributes().build());
 		event.put(EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.createAttributes().build());
+		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
+		event.put(MAX_METEOR.get(), MaxMeteorEntity.createAttributes().build());
+		event.put(COFFIN_MOUNTAIN.get(), CoffinMountainEntity.createAttributes().build());
+		event.put(INVENTORY_CURSE_MOB.get(), InventoryCurseMobEntity.createAttributes().build());
 	}
 }

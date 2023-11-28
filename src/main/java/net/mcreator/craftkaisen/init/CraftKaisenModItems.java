@@ -17,11 +17,13 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.craftkaisen.item.YutaOutfitItem;
 import net.mcreator.craftkaisen.item.YutaKatanaItem;
 import net.mcreator.craftkaisen.item.WaterMaximumElephantItem;
+import net.mcreator.craftkaisen.item.VolcanicEruptionItem;
 import net.mcreator.craftkaisen.item.TwistRangedItem;
 import net.mcreator.craftkaisen.item.TojiOutfitItem;
 import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
 import net.mcreator.craftkaisen.item.TestItem;
 import net.mcreator.craftkaisen.item.SukunaOutfitItem;
+import net.mcreator.craftkaisen.item.SukunaFingerItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
@@ -37,7 +39,6 @@ import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
-import net.mcreator.craftkaisen.item.InventoryCurseItem;
 import net.mcreator.craftkaisen.item.HammerItem;
 import net.mcreator.craftkaisen.item.GetoOutfitItem;
 import net.mcreator.craftkaisen.item.FireArrowMobItem;
@@ -46,6 +47,7 @@ import net.mcreator.craftkaisen.item.FindBlueLocationItem;
 import net.mcreator.craftkaisen.item.ExplodeRangedItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.DismantleItem;
+import net.mcreator.craftkaisen.item.DisasterFlameRangedItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.ChosoArmorItem;
@@ -105,7 +107,6 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT, -16764058, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> KO_GUY_SPAWN_EGG = REGISTRY.register("ko_guy_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.KO_GUY, -6831509, -2237795, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> BLACK_MUCUS = REGISTRY.register("black_mucus", () -> new BlackMucusItem());
-	public static final RegistryObject<Item> INVENTORY_CURSE = REGISTRY.register("inventory_curse", () -> new InventoryCurseItem());
 	public static final RegistryObject<Item> TOJI_CURSE_ARMOR_CHESTPLATE = REGISTRY.register("toji_curse_armor_chestplate", () -> new TojiCurseArmorItem.Chestplate());
 	public static final RegistryObject<Item> DISMANTLE = REGISTRY.register("dismantle", () -> new DismantleItem());
 	public static final RegistryObject<Item> HEIAN_ERA_SUKUNA_SPAWN_EGG = REGISTRY.register("heian_era_sukuna_spawn_egg",
@@ -162,7 +163,16 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
 	public static final RegistryObject<Item> NAIL_PROJECTILE = REGISTRY.register("nail_projectile", () -> new NailProjectileItem());
 	public static final RegistryObject<Item> EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA_SPAWN_EGG = REGISTRY.register("eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA, -1710619, -2446830, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA, -1710619, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> BARRIER_BLOCK = block(CraftKaisenModBlocks.BARRIER_BLOCK, null);
+	public static final RegistryObject<Item> QUEST_BOARD = block(CraftKaisenModBlocks.QUEST_BOARD, CraftKaisenModTabs.TAB_CK_BLOCKS);
+	public static final RegistryObject<Item> DISASTER_FLAME_RANGED = REGISTRY.register("disaster_flame_ranged", () -> new DisasterFlameRangedItem());
+	public static final RegistryObject<Item> EMBER_INSECT_SPAWN_EGG = REGISTRY.register("ember_insect_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EMBER_INSECT, -13434829, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> VOLCANIC_ERUPTION = REGISTRY.register("volcanic_eruption", () -> new VolcanicEruptionItem());
+	public static final RegistryObject<Item> INVENTORY_CURSE_MOB_SPAWN_EGG = REGISTRY.register("inventory_curse_mob_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.INVENTORY_CURSE_MOB, -13556943, -13885397, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> SUKUNA_FINGER = REGISTRY.register("sukuna_finger", () -> new SukunaFingerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

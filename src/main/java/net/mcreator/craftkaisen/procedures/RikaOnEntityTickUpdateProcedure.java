@@ -35,7 +35,7 @@ public class RikaOnEntityTickUpdateProcedure {
 							_ent.getYRot(), _ent.getXRot());
 			}
 		}
-		if (entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+		if ((entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && !entity.getPersistentData().getBoolean("releaserika")) {
 			rotation_speed = 36;
 			player_yaw = (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getYRot();
 			entity_yaw = entity.getYRot();
