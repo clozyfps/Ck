@@ -1,30 +1,20 @@
 package net.mcreator.craftkaisen.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.world.inventory.DomainClashMenu;
-import net.mcreator.craftkaisen.procedures.ComboValueProcedure;
-import net.mcreator.craftkaisen.network.DomainClashButtonMessage;
-import net.mcreator.craftkaisen.CraftKaisenMod;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> {
+
 	private final static HashMap<String, Object> guistate = DomainClashMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_x;
+
+	ImageButton imagebutton_press;
+	ImageButton imagebutton_press1;
+	ImageButton imagebutton_press2;
+	ImageButton imagebutton_press3;
+	ImageButton imagebutton_press4;
+	ImageButton imagebutton_press5;
+	ImageButton imagebutton_press6;
 
 	public DomainClashScreen(DomainClashMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -42,8 +32,11 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
+
 		super.render(ms, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(ms, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -51,8 +44,13 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("craft_kaisen:textures/screens/gui.png"));
+		this.blit(ms, this.leftPos + -64, this.topPos + -66, 0, 0, 178, 178, 178, 178);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -62,6 +60,7 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -72,11 +71,6 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craft_kaisen.domain_clash.label_domain_clash"), -8, -13, -1);
-		this.font.draw(poseStack, Component.translatable("gui.craft_kaisen.domain_clash.label_press_the_button_as_many_times_a"), -80, 57, -1);
-		this.font.draw(poseStack,
-
-				ComboValueProcedure.execute(entity), -4, 84, -16750849);
 	}
 
 	@Override
@@ -88,14 +82,177 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 	@Override
 	public void init() {
 		super.init();
+
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		button_x = new Button(this.leftPos + 8, this.topPos + 14, 30, 20, Component.translatable("gui.craft_kaisen.domain_clash.button_x"), e -> {
-			if (true) {
+
+		imagebutton_press = new ImageButton(this.leftPos + -25, this.topPos + -22, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum1Procedure.execute(entity)
+
+			) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(0, x, y, z));
 				DomainClashButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		});
-		guistate.put("button:button_x", button_x);
-		this.addRenderableWidget(button_x);
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum1Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press", imagebutton_press);
+		this.addRenderableWidget(imagebutton_press);
+
+		imagebutton_press1 = new ImageButton(this.leftPos + 34, this.topPos + -15, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press1.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum2Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(1, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum2Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press1", imagebutton_press1);
+		this.addRenderableWidget(imagebutton_press1);
+
+		imagebutton_press2 = new ImageButton(this.leftPos + -45, this.topPos + 9, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press2.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum3Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(2, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum3Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press2", imagebutton_press2);
+		this.addRenderableWidget(imagebutton_press2);
+
+		imagebutton_press3 = new ImageButton(this.leftPos + 1, this.topPos + 37, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press3.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum5Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(3, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum5Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press3", imagebutton_press3);
+		this.addRenderableWidget(imagebutton_press3);
+
+		imagebutton_press4 = new ImageButton(this.leftPos + -46, this.topPos + 70, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press4.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum6Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(4, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum6Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press4", imagebutton_press4);
+		this.addRenderableWidget(imagebutton_press4);
+
+		imagebutton_press5 = new ImageButton(this.leftPos + 60, this.topPos + 19, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press5.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum7Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(5, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum7Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press5", imagebutton_press5);
+		this.addRenderableWidget(imagebutton_press5);
+
+		imagebutton_press6 = new ImageButton(this.leftPos + 42, this.topPos + 65, 40, 24, 0, 0, 24, new ResourceLocation("craft_kaisen:textures/screens/atlas/imagebutton_press6.png"), 40, 48, e -> {
+			if (
+
+			DisplayDomainNum4Procedure.execute(entity)
+
+			) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(6, x, y, z));
+				DomainClashButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (
+
+				DisplayDomainNum4Procedure.execute(entity)
+
+				)
+					super.render(ms, gx, gy, ticks);
+			}
+		};
+
+		guistate.put("button:imagebutton_press6", imagebutton_press6);
+		this.addRenderableWidget(imagebutton_press6);
+
 	}
+
 }

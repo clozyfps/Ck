@@ -1,8 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import javax.annotation.Nullable;
 
 public class DomainClashUpProcedure {
 	public static void execute(Entity entity) {
@@ -15,5 +15,6 @@ public class DomainClashUpProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		entity.getPersistentData().putDouble("domainClashNum", (Mth.nextInt(RandomSource.create(), 1, 7)));
 	}
 }

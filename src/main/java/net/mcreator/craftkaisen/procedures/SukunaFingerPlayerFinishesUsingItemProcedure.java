@@ -29,7 +29,7 @@ public class SukunaFingerPlayerFinishesUsingItemProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getLevelData().getGameRules().getBoolean(CraftKaisenModGameRules.SUKUNA_VESSEL_MODE) == false) {
+		if (world.getLevelData().getGameRules().getBoolean(CraftKaisenModGameRules.DELETED_MOD_ELEMENT) == false) {
 			if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).SukunaLevel <= 0) {
 				if (Math.random() < 0.08) {
 					{

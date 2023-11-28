@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "craft_kaisen:cursed_spirit"
+  "parent": "craft_kaisen:deleted_mod_element"
 }

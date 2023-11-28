@@ -34,4 +34,5 @@ public class CraftKaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> LAPSE_PARTICLE = REGISTRY.register("lapse_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PURPLE_PARTICLE = REGISTRY.register("purple_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PURPLE_ELECTRICITY_PARTICLE = REGISTRY.register("purple_electricity_particle", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> DOMAIN_CLASH_PARTICLE = REGISTRY.register("domain_clash_particle", () -> new SimpleParticleType(true));
 }
