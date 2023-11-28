@@ -41,6 +41,7 @@ import net.mcreator.craftkaisen.client.renderer.InventoryCurseMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
+import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer;
 import net.mcreator.craftkaisen.client.renderer.CoffinMountainRenderer;
@@ -109,5 +110,6 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.MAX_METEOR.get(), MaxMeteorRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.COFFIN_MOUNTAIN.get(), CoffinMountainRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.INVENTORY_CURSE_MOB.get(), InventoryCurseMobRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.FINGER_BEARER.get(), FingerBearerRenderer::new);
 	}
 }

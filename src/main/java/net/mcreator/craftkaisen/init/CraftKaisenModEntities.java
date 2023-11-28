@@ -57,6 +57,7 @@ import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
+import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
@@ -257,6 +258,10 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<InventoryCurseMobEntity>of(InventoryCurseMobEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseMobEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FingerBearerEntity>> FINGER_BEARER = register("finger_bearer",
+			EntityType.Builder.<FingerBearerEntity>of(FingerBearerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FingerBearerEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -301,6 +306,7 @@ public class CraftKaisenModEntities {
 			MaxMeteorEntity.init();
 			CoffinMountainEntity.init();
 			InventoryCurseMobEntity.init();
+			FingerBearerEntity.init();
 		});
 	}
 
@@ -342,5 +348,6 @@ public class CraftKaisenModEntities {
 		event.put(MAX_METEOR.get(), MaxMeteorEntity.createAttributes().build());
 		event.put(COFFIN_MOUNTAIN.get(), CoffinMountainEntity.createAttributes().build());
 		event.put(INVENTORY_CURSE_MOB.get(), InventoryCurseMobEntity.createAttributes().build());
+		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
 	}
 }

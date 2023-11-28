@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "SukunaVesselMultiplayer",
+    "description": "Control Wether vessels are singleplayer or multiplayer (2 player controlled vessels(",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

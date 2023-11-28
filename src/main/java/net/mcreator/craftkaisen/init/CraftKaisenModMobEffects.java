@@ -14,6 +14,7 @@ import net.mcreator.craftkaisen.potion.VesselPotionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.UnlimitedVoidEffectMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.TojiCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.SukunaMobEffect;
 import net.mcreator.craftkaisen.potion.SimpleDomainMobEffect;
 import net.mcreator.craftkaisen.potion.PureLovePreMobEffect;
 import net.mcreator.craftkaisen.potion.PureLoveActiveMobEffect;
@@ -52,4 +53,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> PRE_RED = REGISTRY.register("pre_red", () -> new PreRedMobEffect());
 	public static final RegistryObject<MobEffect> PURE_LOVE_ACTIVE = REGISTRY.register("pure_love_active", () -> new PureLoveActiveMobEffect());
 	public static final RegistryObject<MobEffect> PURE_LOVE_PRE = REGISTRY.register("pure_love_pre", () -> new PureLovePreMobEffect());
+	public static final RegistryObject<MobEffect> SUKUNA = REGISTRY.register("sukuna", () -> new SukunaMobEffect());
 }

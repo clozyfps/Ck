@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "craft_kaisen:rugby_field_cursed_spirit_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.cursed_spirit.title"
+    },
+    "description": {
+      "translate": "advancements.cursed_spirit.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cursed_spirit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

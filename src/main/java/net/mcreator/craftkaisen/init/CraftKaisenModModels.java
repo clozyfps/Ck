@@ -40,6 +40,7 @@ import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
 import net.mcreator.craftkaisen.client.model.Modelfemaleuniform;
 import net.mcreator.craftkaisen.client.model.Modelemberinsect;
+import net.mcreator.craftkaisen.client.model.Modeldivinemahoraga;
 import net.mcreator.craftkaisen.client.model.Modeldivinedog;
 import net.mcreator.craftkaisen.client.model.Modelcustom_model;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
@@ -50,6 +51,7 @@ import net.mcreator.craftkaisen.client.model.Modelchimerafrog;
 import net.mcreator.craftkaisen.client.model.Modelblackblindfold;
 import net.mcreator.craftkaisen.client.model.ModelTenShadowBunny;
 import net.mcreator.craftkaisen.client.model.ModelRika;
+import net.mcreator.craftkaisen.client.model.ModelFingerBearernew;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class CraftKaisenModModels {
@@ -73,6 +75,8 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modelemberinsect.LAYER_LOCATION, Modelemberinsect::createBodyLayer);
 		event.registerLayerDefinition(Modelchosodrip.LAYER_LOCATION, Modelchosodrip::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
+		event.registerLayerDefinition(Modeldivinemahoraga.LAYER_LOCATION, Modeldivinemahoraga::createBodyLayer);
+		event.registerLayerDefinition(ModelFingerBearernew.LAYER_LOCATION, ModelFingerBearernew::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximumelephant.LAYER_LOCATION, Modelmaximumelephant::createBodyLayer);
 		event.registerLayerDefinition(Modeltstoad.LAYER_LOCATION, Modeltstoad::createBodyLayer);
