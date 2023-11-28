@@ -21,6 +21,7 @@ import net.mcreator.craftkaisen.entity.TenShadowRabbitEntity;
 import net.mcreator.craftkaisen.entity.RoundDeerEntity;
 import net.mcreator.craftkaisen.entity.MaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
+import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 import net.mcreator.craftkaisen.entity.BlackDivineDogEntity;
 
 import javax.annotation.Nullable;

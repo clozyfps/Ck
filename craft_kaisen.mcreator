@@ -4835,7 +4835,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/grade_4.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "SemiGrade3",
@@ -4848,7 +4849,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_3.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "Grade3",
@@ -4861,7 +4863,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/grade_3.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "SemiGrade2",
@@ -4874,7 +4877,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_2.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "Grade2",
@@ -4887,7 +4891,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/grade_2.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "SemiGrade1",
@@ -4900,7 +4905,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_1.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "Grade1",
@@ -4913,7 +4919,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/grade_1.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "SpecialGrade",
@@ -4926,7 +4933,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/special_grade.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "GojoQuests",
@@ -5294,7 +5302,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/jujutsu_sorcerer.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "UnlimitedVoidMobOnInitialEntitySpawn",
@@ -5632,7 +5641,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/black_flash_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "FindBlueLocationProjectileHitsLivingEntity",
@@ -8184,7 +8194,7 @@
       "name": "TenShadowDeath",
       "type": "procedure",
       "sortid": 348,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ten_shadow_death",
       "metadata": {
@@ -8709,7 +8719,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/stand_proud_you_are_strong.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "ToggleCTSpecialOnKeyPressed",
@@ -8932,7 +8943,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/rabbit_escape.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "EvadeOnKeyPressed",
@@ -9032,7 +9044,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/black_divine_dog_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "CursedEnergyMoves",
@@ -9101,7 +9114,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/ten_shadows_technique.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "ForwardPage",
@@ -9154,7 +9168,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/great_serpent_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "NailProjectileProjectileHitsBlock",
@@ -9273,7 +9288,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/divine_dog_totality.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "HammerRightclicked",
@@ -9660,7 +9676,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/cursed_technique.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "BlockHit",
@@ -9856,7 +9873,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/nue_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "RoundDeerAdvancement",
@@ -9869,7 +9887,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/round_deer_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "MaximumElephantAdvancement",
@@ -9882,7 +9901,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/maximum_elephant_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "DivineGeneralMahoraga",
@@ -9895,7 +9915,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/divine_general_mahoraga.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "PureLoveActiveOnEffectActiveTick",
@@ -9944,7 +9965,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/white_divine_dog_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "PreRedEffectExpires",
@@ -9977,7 +9999,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/toad_advancement.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "BackPage",
@@ -10041,7 +10064,7 @@
       "name": "MahoragaProcedure",
       "type": "procedure",
       "sortid": 423,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mahoraga_procedure",
       "metadata": {
@@ -11667,23 +11690,6 @@
       "path": "~/Abilities/Cursed Energy"
     },
     {
-      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoraga",
-      "type": "animatedentity",
-      "sortid": 476,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/model/EightHandledSwordDivergentSilaDivineGeneralMahoragaModel.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "InventoryCurseMobRightClickedOnEntity",
       "type": "procedure",
       "sortid": 477,
@@ -11821,7 +11827,8 @@
         "files": [
           "src/main/resources/data/craft_kaisen/advancements/sukuna_vessel.json"
         ]
-      }
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "SukunaFinger",
@@ -12393,6 +12400,22 @@
         ]
       },
       "path": "~/GUI/Procedures/Value"
+    },
+    {
+      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoraga",
+      "type": "livingentity",
+      "sortid": 505,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -12869,12 +12892,12 @@
       "advancements.maximum_elephant_advancement.descr": "Tame Maximum Elephant",
       "key.craft_kaisen.output": "Output",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
       "gui.craft_kaisen.move_gui.button_3": "3",
-      "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
+      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
       "gui.craft_kaisen.move_gui.button_6": "6",
-      "gui.craft_kaisen.move_gui.button_empty2": "\u003c",
+      "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
       "gui.craft_kaisen.move_gui.button_5": "5",
+      "gui.craft_kaisen.move_gui.button_empty2": "\u003c",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_2": "2",
