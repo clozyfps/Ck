@@ -117,6 +117,9 @@ public class CraftKaisenModVariables {
 			clone.inventorycurse = original.inventorycurse;
 			clone.RenderSpecial = original.RenderSpecial;
 			clone.SukunaLevel = original.SukunaLevel;
+			clone.RCT = original.RCT;
+			clone.RCTExp = original.RCTExp;
+			clone.RCTLevel = original.RCTLevel;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -364,6 +367,9 @@ public class CraftKaisenModVariables {
 		public boolean inventorycurse = false;
 		public String RenderSpecial = "\"\"";
 		public double SukunaLevel = 0;
+		public boolean RCT = false;
+		public double RCTExp = 0;
+		public double RCTLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -431,6 +437,9 @@ public class CraftKaisenModVariables {
 			nbt.putBoolean("inventorycurse", inventorycurse);
 			nbt.putString("RenderSpecial", RenderSpecial);
 			nbt.putDouble("SukunaLevel", SukunaLevel);
+			nbt.putBoolean("RCT", RCT);
+			nbt.putDouble("RCTExp", RCTExp);
+			nbt.putDouble("RCTLevel", RCTLevel);
 			return nbt;
 		}
 
@@ -495,6 +504,9 @@ public class CraftKaisenModVariables {
 			inventorycurse = nbt.getBoolean("inventorycurse");
 			RenderSpecial = nbt.getString("RenderSpecial");
 			SukunaLevel = nbt.getDouble("SukunaLevel");
+			RCT = nbt.getBoolean("RCT");
+			RCTExp = nbt.getDouble("RCTExp");
+			RCTLevel = nbt.getDouble("RCTLevel");
 		}
 	}
 
@@ -578,6 +590,9 @@ public class CraftKaisenModVariables {
 					variables.inventorycurse = message.data.inventorycurse;
 					variables.RenderSpecial = message.data.RenderSpecial;
 					variables.SukunaLevel = message.data.SukunaLevel;
+					variables.RCT = message.data.RCT;
+					variables.RCTExp = message.data.RCTExp;
+					variables.RCTLevel = message.data.RCTLevel;
 				}
 			});
 			context.setPacketHandled(true);
