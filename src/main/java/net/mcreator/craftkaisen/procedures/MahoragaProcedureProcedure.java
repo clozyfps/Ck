@@ -18,7 +18,6 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import java.util.Comparator;

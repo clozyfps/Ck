@@ -1,13 +1,29 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.DomainClashMenu;
+import net.mcreator.craftkaisen.procedures.ComboValueProcedure;
+import net.mcreator.craftkaisen.network.DomainClashButtonMessage;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> {
-
 	private final static HashMap<String, Object> guistate = DomainClashMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_x;
 
 	public DomainClashScreen(DomainClashMenu container, Inventory inventory, Component text) {
@@ -26,11 +42,8 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -38,10 +51,8 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -51,7 +62,6 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -66,7 +76,7 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 		this.font.draw(poseStack, Component.translatable("gui.craft_kaisen.domain_clash.label_press_the_button_as_many_times_a"), -80, 57, -1);
 		this.font.draw(poseStack,
 
-				ComboValueProcedure.execute(), -4, 84, -16750849);
+				ComboValueProcedure.execute(entity), -4, 84, -16750849);
 	}
 
 	@Override
@@ -78,19 +88,14 @@ public class DomainClashScreen extends AbstractContainerScreen<DomainClashMenu> 
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_x = new Button(this.leftPos + 8, this.topPos + 14, 30, 20, Component.translatable("gui.craft_kaisen.domain_clash.button_x"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new DomainClashButtonMessage(0, x, y, z));
 				DomainClashButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_x", button_x);
 		this.addRenderableWidget(button_x);
-
 	}
-
 }
