@@ -6,6 +6,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.craftkaisen.entity.RoundDeerEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -20,6 +21,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof RoundDeerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

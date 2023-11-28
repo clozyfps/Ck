@@ -1,25 +1,9 @@
 
 package net.mcreator.craftkaisen.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.world.inventory.DomainClashMenu;
-import net.mcreator.craftkaisen.procedures.DomainClashUpProcedure;
-import net.mcreator.craftkaisen.CraftKaisenMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DomainClashButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public DomainClashButtonMessage(FriendlyByteBuf buffer) {
@@ -51,6 +35,7 @@ public class DomainClashButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -59,12 +44,14 @@ public class DomainClashButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = DomainClashMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
-			DomainClashUpProcedure.execute(entity);
+			DomainClashUpProcedure.execute();
 		}
 	}
 
@@ -72,4 +59,5 @@ public class DomainClashButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftKaisenMod.addNetworkMessage(DomainClashButtonMessage.class, DomainClashButtonMessage::buffer, DomainClashButtonMessage::new, DomainClashButtonMessage::handler);
 	}
+
 }

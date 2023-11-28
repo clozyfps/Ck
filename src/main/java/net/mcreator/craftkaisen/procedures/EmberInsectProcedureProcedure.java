@@ -1,21 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.EmberInsectEntity;
-import net.mcreator.craftkaisen.CraftKaisenMod;
-
-import java.util.stream.Collectors;
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class EmberInsectProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -27,7 +14,7 @@ public class EmberInsectProcedureProcedure {
 		});
 		for (int index0 = 0; index0 < 6; index0++) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new EmberInsectEntity(CraftKaisenModEntities.EMBER_INSECT.get(), _level);
+				Entity entityToSpawn = new EmberInsectEntity(CraftKaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
 					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);

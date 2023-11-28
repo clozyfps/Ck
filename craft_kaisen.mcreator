@@ -3554,7 +3554,6 @@
     {
       "name": "ForceSukunaTechnique",
       "type": "gamerule",
-      "sortid": 487,
       "compiles": true,
       "locked_code": false,
       "registry_name": "force_sukuna_technique",
@@ -4836,7 +4835,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_4.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade3",
@@ -4850,7 +4849,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_3.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade3",
@@ -4864,7 +4863,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_3.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade2",
@@ -4878,7 +4877,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_2.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade2",
@@ -4892,7 +4891,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_2.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade1",
@@ -4906,7 +4905,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_1.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade1",
@@ -4920,7 +4919,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_1.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SpecialGrade",
@@ -4934,7 +4933,7 @@
           "src/main/resources/data/craft_kaisen/advancements/special_grade.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "GojoQuests",
@@ -5303,7 +5302,7 @@
           "src/main/resources/data/craft_kaisen/advancements/jujutsu_sorcerer.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "UnlimitedVoidMobOnInitialEntitySpawn",
@@ -5642,7 +5641,7 @@
           "src/main/resources/data/craft_kaisen/advancements/black_flash_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/PassiveSkills"
     },
     {
       "name": "FindBlueLocationProjectileHitsLivingEntity",
@@ -8720,7 +8719,7 @@
           "src/main/resources/data/craft_kaisen/advancements/stand_proud_you_are_strong.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other"
     },
     {
       "name": "ToggleCTSpecialOnKeyPressed",
@@ -8944,7 +8943,7 @@
           "src/main/resources/data/craft_kaisen/advancements/rabbit_escape.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "EvadeOnKeyPressed",
@@ -9045,7 +9044,7 @@
           "src/main/resources/data/craft_kaisen/advancements/black_divine_dog_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "CursedEnergyMoves",
@@ -9115,7 +9114,7 @@
           "src/main/resources/data/craft_kaisen/advancements/ten_shadows_technique.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "ForwardPage",
@@ -9169,7 +9168,7 @@
           "src/main/resources/data/craft_kaisen/advancements/great_serpent_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "NailProjectileProjectileHitsBlock",
@@ -9289,7 +9288,7 @@
           "src/main/resources/data/craft_kaisen/advancements/divine_dog_totality.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "HammerRightclicked",
@@ -9677,7 +9676,7 @@
           "src/main/resources/data/craft_kaisen/advancements/cursed_technique.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other"
     },
     {
       "name": "BlockHit",
@@ -9874,7 +9873,7 @@
           "src/main/resources/data/craft_kaisen/advancements/nue_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "RoundDeerAdvancement",
@@ -9888,7 +9887,7 @@
           "src/main/resources/data/craft_kaisen/advancements/round_deer_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "MaximumElephantAdvancement",
@@ -9902,7 +9901,7 @@
           "src/main/resources/data/craft_kaisen/advancements/maximum_elephant_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "DivineGeneralMahoraga",
@@ -9916,7 +9915,7 @@
           "src/main/resources/data/craft_kaisen/advancements/divine_general_mahoraga.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "PureLoveActiveOnEffectActiveTick",
@@ -9966,7 +9965,7 @@
           "src/main/resources/data/craft_kaisen/advancements/white_divine_dog_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "PreRedEffectExpires",
@@ -10000,7 +9999,7 @@
           "src/main/resources/data/craft_kaisen/advancements/toad_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Other/TenShadows"
     },
     {
       "name": "BackPage",
@@ -11690,6 +11689,23 @@
       "path": "~/Abilities/Cursed Energy"
     },
     {
+      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoraga",
+      "type": "animatedentity",
+      "sortid": 476,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/model/EightHandledSwordDivergentSilaDivineGeneralMahoragaModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
       "name": "InventoryCurseMobRightClickedOnEntity",
       "type": "procedure",
       "sortid": 477,
@@ -11828,7 +11844,7 @@
           "src/main/resources/data/craft_kaisen/advancements/sukuna_vessel.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks/Sukuna"
     },
     {
       "name": "SukunaFinger",
@@ -11844,82 +11860,6 @@
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "Sukuna",
-      "type": "potioneffect",
-      "sortid": 484,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sukuna",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/SukunaMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
-      "name": "SukunaTakeover",
-      "type": "procedure",
-      "sortid": 485,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sukuna_takeover",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaTakeoverProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "MaximumSukunaVesselPlayers",
-      "type": "gamerule",
-      "sortid": 486,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "maximum_sukuna_vessel_players",
-      "metadata": {
-        "files": [],
-        "type": "number"
-      },
-      "path": "~/Gamerules"
-    },
-    {
-      "name": "SukunaVesselMode",
-      "type": "gamerule",
-      "sortid": 488,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sukuna_vessel_mode",
-      "metadata": {
-        "files": [],
-        "type": "logic"
-      },
-      "path": "~/Gamerules"
     },
     {
       "name": "SukunaEffectExpires",
@@ -11958,6 +11898,20 @@
       "path": "~/Potions/Procedures"
     },
     {
+      "name": "PerfectPreparation",
+      "type": "achievement",
+      "sortid": 498,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "perfect_preparation",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/perfect_preparation.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
       "name": "SukunaEffectStartedapplied",
       "type": "procedure",
       "sortid": 490,
@@ -11976,6 +11930,119 @@
         ]
       },
       "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SukunaVesselMode",
+      "type": "gamerule",
+      "sortid": 488,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_vessel_mode",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "CursedChild",
+      "type": "achievement",
+      "sortid": 500,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_child",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/cursed_child.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "DespawnTenShadow",
+      "type": "procedure",
+      "sortid": 502,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_ten_shadow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnTenShadowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ShibuyaIncident",
+      "type": "achievement",
+      "sortid": 496,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shibuya_incident",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/shibuya_incident.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 503,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "CallSukunaActivation",
@@ -12012,6 +12079,127 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "DeathPainting",
+      "type": "achievement",
+      "sortid": 495,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_painting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/death_painting.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "MaximumSukunaVesselPlayers",
+      "type": "gamerule",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_sukuna_vessel_players",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "CursedSpirit",
+      "type": "achievement",
+      "sortid": 499,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/cursed_spirit.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "Sukuna",
+      "type": "potioneffect",
+      "sortid": 484,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SukunaMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FingerBearer",
+      "type": "livingentity",
+      "sortid": 493,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finger_bearer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SukunaTakeover",
+      "type": "procedure",
+      "sortid": 485,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_takeover",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaTakeoverProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "YoungFishandReversePunishment",
+      "type": "achievement",
+      "sortid": 497,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "young_fishand_reverse_punishment",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/young_fishand_reverse_punishment.json"
+        ]
+      },
+      "path": "~/Advancement"
     },
     {
       "name": "AskSukuna",
@@ -12054,22 +12242,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "FingerBearer",
-      "type": "livingentity",
-      "sortid": 493,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "finger_bearer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "FearsomeWomb",
       "type": "achievement",
       "sortid": 494,
@@ -12082,178 +12254,6 @@
         ]
       },
       "path": "~/Advancement"
-    },
-    {
-      "name": "DeathPainting",
-      "type": "achievement",
-      "sortid": 495,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "death_painting",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/death_painting.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "ShibuyaIncident",
-      "type": "achievement",
-      "sortid": 496,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shibuya_incident",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/shibuya_incident.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "YoungFishandReversePunishment",
-      "type": "achievement",
-      "sortid": 497,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "young_fishand_reverse_punishment",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/young_fishand_reverse_punishment.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "PerfectPreparation",
-      "type": "achievement",
-      "sortid": 498,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "perfect_preparation",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/perfect_preparation.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "CursedSpirit",
-      "type": "achievement",
-      "sortid": 499,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_spirit",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/cursed_spirit.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "CursedChild",
-      "type": "achievement",
-      "sortid": 500,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_child",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/advancements/cursed_child.json"
-        ]
-      },
-      "path": "~/Advancement"
-    },
-    {
-      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoraga",
-      "type": "livingentity",
-      "sortid": 501,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "DespawnTenShadow",
-      "type": "procedure",
-      "sortid": 502,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "despawn_ten_shadow",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnTenShadowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 503,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedure"
     }
   ],
   "variable_elements": [
@@ -12723,64 +12723,50 @@
       "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
       "subtitles.sukuna": "sukuna talking",
-      "gui.craft_kaisen.domain_clash.label_domain_clash": "Domain Clash!!",
       "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
-      "advancements.sukuna_vessel.descr": "Become a Vessel Of Ryomen Sukuna",
       "advancements.maximum_elephant_advancement.descr": "Tame Maximum Elephant",
       "key.craft_kaisen.output": "Output",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "gui.craft_kaisen.move_gui.button_6": "6",
+      "gui.craft_kaisen.move_gui.button_3": "3",
       "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
-      "gui.craft_kaisen.move_gui.button_5": "5",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "gui.craft_kaisen.move_gui.button_empty2": "\u003c",
+      "gui.craft_kaisen.move_gui.button_5": "5",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "advancements.semi_grade_3.title": "Semi Grade 3",
-      "entity.craft_kaisen.coffin_mountain": "Coffin Mountain",
       "advancements.black_divine_dog_advancement.descr": "Summon The Black Divine Dog",
-      "block.craft_kaisen.quest_board": "Quest Board",
       "entity.craft_kaisen.ko_guy": "Ko-Guy",
       "advancements.semi_grade_1.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
       "effect.craft_kaisen.piercing_blood": "PiercingBlood",
       "item.craft_kaisen.eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg": "Eight Handled Sword Divergent Sila Divine General Mahoraga Spawn Egg",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
-      "advancements.death_painting.descr": "WIP",
       "block.craft_kaisen.talisman_block": "Talisman Block",
       "entity.craft_kaisen.mouth_cursed_spirit": "Mouth Cursed Spirit",
       "advancements.cursed_technique.title": "Cursed Technique",
       "entity.craft_kaisen.black_divine_dog": "Black Divine Dog",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
-      "advancements.shibuya_incident.descr": "Arrive at Shibuya during the shibuya world event",
       "entity.craft_kaisen.round_deer": "Round Deer",
       "advancements.ten_shadows_technique.title": "Ten Shadows Technique",
-      "item.craft_kaisen.ember_insect_spawn_egg": "Ember Insect Spawn Egg",
       "item.craft_kaisen.choso_armor_leggings": "Choso Pants",
-      "entity.craft_kaisen.inventory_curse_mob": "Inventory Curse Mob",
       "advancements.grade_4.descr": "Reach The Required Fame.",
-      "gamerule.maximumSukunaVesselPlayers": "MaximumSukunaVesselPlayers (singeplayer)",
       "advancements.divine_general_mahoraga.descr": "Tame Mahoraga",
       "itemGroup.tabck_mobs": "Craft Kaisen Humans",
       "item.craft_kaisen.naginata": "Naginata",
       "advancements.special_grade.title": "Special Grade",
       "item.craft_kaisen.geto_outfit_boots": "Geto Sandals",
-      "advancements.cursed_spirit.descr": "Become a Cursed Spirit",
       "advancements.special_grade.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
-      "item.craft_kaisen.inventory_curse_mob_spawn_egg": "Inventory Curse Mob Spawn Egg",
       "entity.craft_kaisen.nobara_kugisaki": "Nobara Kugisaki",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
-      "key.craft_kaisen.reverse_cursed_technique": "Reverse Cursed Technique",
       "entity.craft_kaisen.mahito": "Mahito",
       "item.craft_kaisen.hammer": "Hammer",
-      "item.craft_kaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "itemGroup.tabck_weapons": "Ck Weapons",
-      "advancements.perfect_preparation.descr": "Survive Through The Shibuya Incident",
       "entity.craft_kaisen.maximum_elephant": "Maximum Elephant",
       "advancements.great_serpent_advancement.descr": "Tame The Great Serpent",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
@@ -12815,14 +12801,11 @@
       "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
       "effect.craft_kaisen.pre_red": "PreRed",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
-      "entity.craft_kaisen.finger_bearer": "Finger Bearer",
       "block.craft_kaisen.sprinkler_on": "Sprinkler On",
       "advancements.grade_3.descr": "Reach The Required Fame.",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
-      "block.craft_kaisen.barrier_block": "Barrier Block",
       "advancements.white_divine_dog_advancement.title": "White Divine Dog ",
       "item.craft_kaisen.black_divine_dog_spawn_egg": "Black Divine Dog Spawn Egg",
-      "advancements.sukuna_vessel.title": "Sukuna Vessel",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "item.craft_kaisen.black_mucus": "Black Mucus",
       "key.craft_kaisen.toggle_ct_special": "Toggle CT Special",
@@ -12833,16 +12816,12 @@
       "item.craft_kaisen.nanami_kento_spawn_egg": "Nanami Kento Spawn Egg",
       "item.craft_kaisen.nail": "Nail",
       "advancements.nue_advancement.title": "Nue",
-      "itemGroup.tabck_blocks": "Ck Blocks",
       "item.craft_kaisen.nanami_knife": "Nanami Knife",
       "entity.craft_kaisen.choso": "Choso",
       "advancements.round_deer_advancement.descr": "Tame The Round Deer",
-      "advancements.young_fishand_reverse_punishment.title": "Young Fish and Reverse Punishment",
       "itemGroup.tabck_armor": "Ck Armor",
       "entity.craft_kaisen.toad": "Toad",
       "block.craft_kaisen.sprinkler": "Sprinkler",
-      "advancements.cursed_child.descr": "Kill Yuta",
-      "entity.craft_kaisen.ember_insect": "Ember Insect",
       "block.craft_kaisen.domain_block": "Domain Block",
       "advancements.stand_proud_you_are_strong.title": "Stand Proud, You\u0027re Strong",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
@@ -12870,12 +12849,9 @@
       "item.craft_kaisen.sukuna_finger": "Sukuna Finger",
       "item.craft_kaisen.blood_spear": "Blood Spear",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
-      "gamerule.maximumSukunaVesselPlayers.description": "Control how many players can be a sukuna vessel",
       "gui.craft_kaisen.main_menu.label_empty": "---------------",
       "entity.craft_kaisen.eight_handled_sword_divergent_sila_divine_general_mahoraga": "Eight Handled Sword Divergent Sila Divine General Mahoraga",
       "item.craft_kaisen.toji_curse_armor_chestplate": "Toji Curse Armor ",
-      "advancements.death_painting.title": "Death Painting",
-      "advancements.cursed_spirit.title": "Cursed Spirit",
       "advancements.black_flash_advancement.title": "Black Flash",
       "advancements.toad_advancement.title": "Toad",
       "effect.craft_kaisen.twisting": "Twisting",
@@ -12899,14 +12875,11 @@
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
       "key.craft_kaisen.ability_3": "Ability 3",
       "item.craft_kaisen.reversal_red": "Reversal Red",
-      "advancements.young_fishand_reverse_punishment.descr": "Kill Mahito",
       "entity.craft_kaisen.unlimited_void_mob": "Unlimited Void Mob",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
       "entity.craft_kaisen.hanami": "Hanami",
       "item.craft_kaisen.heian_era_sukuna_spawn_egg": "Heian Era Sukuna Spawn Egg",
       "advancements.great_serpent_advancement.title": "Great Serpent",
-      "gui.craft_kaisen.domain_clash.button_x": "X",
-      "effect.craft_kaisen.sukuna": "Sukuna",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
       "item.craft_kaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
@@ -12918,20 +12891,15 @@
       "item.craft_kaisen.great_serpent_spawn_egg": "Great Serpent Spawn Egg",
       "advancements.divine_general_mahoraga.title": "Unable To Tame",
       "item.craft_kaisen.yuta_outfit_chestplate": "Yuta Shirt",
-      "key.craft_kaisen.armor_special": "Armor Special",
       "advancements.rabbit_escape.title": "Rabbit Escape",
       "entity.craft_kaisen.nanami_kento": "Nanami Kento",
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
       "item.craft_kaisen.roppongi_cursed_spirit_spawn_egg": "Roppongi Cursed Spirit Spawn Egg",
       "advancements.grade_1.descr": "Reach The Required Fame.",
-      "advancements.fearsome_womb.title": "Fearsome Womb",
       "item.craft_kaisen.miwa_katana": "Miwa Katana",
-      "advancements.perfect_preparation.title": "Perfect Preparation",
       "item.craft_kaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
       "entity.craft_kaisen.heian_era_sukuna": "Heian Era Sukuna",
-      "gamerule.sukunaVesselMode": "SukunaVesselMultiplayer",
       "subtitles.hit": "strong hit",
-      "advancements.shibuya_incident.title": "Shibuya Incident",
       "item.craft_kaisen.split_soul_katana": "Split Soul Katana",
       "item.craft_kaisen.nobara_kugisaki_spawn_egg": "Nobara Kugisaki Spawn Egg",
       "subtitles.electric": "electricity",
@@ -12943,20 +12911,17 @@
       "item.craft_kaisen.round_deer_spawn_egg": "Round Deer Spawn Egg",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "effect.craft_kaisen.toji_cooldown": "TojiCooldown",
-      "advancements.fearsome_womb.descr": "Find a Finger Bearer",
       "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "effect.craft_kaisen.pure_love_active": "PureLoveActive",
       "advancements.maximum_elephant_advancement.title": "Maximum Elephant",
       "advancements.grade_2.title": "Grade 2",
-      "gui.craft_kaisen.domain_clash.label_press_the_button_as_many_times_a": "Press the button as many times as you can!",
       "item.craft_kaisen.nobara_outfit_leggings": "Female Jujutsu Sorcerer Outfit",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
       "item.craft_kaisen.find_blue_location": "Find Blue Location",
       "entity.craft_kaisen.jogo": "Jogo",
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
-      "entity.craft_kaisen.max_meteor": "Max Meteor",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
@@ -12984,7 +12949,6 @@
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
       "entity.craft_kaisen.rugby_field_cursed_spirit": "Rugby Field Cursed Spirit",
-      "advancements.cursed_child.title": "Cursed Child",
       "advancements.semi_grade_3.descr": "Reach The Required Fame.",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.nue": "Nue",
@@ -12992,10 +12956,8 @@
       "effect.craft_kaisen.body_crushing": "Crushing",
       "advancements.round_deer_advancement.title": "Round Deer",
       "item.craft_kaisen.ko_guy_spawn_egg": "Ko-Guy Spawn Egg",
-      "item.craft_kaisen.volcanic_eruption": "Volcanic Eruption",
       "key.craft_kaisen.menu": "Menu",
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
-      "gamerule.sukunaVesselMode.description": "Control Wether vessels are singleplayer or multiplayer (2 player controlled vessels(",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
@@ -13024,19 +12986,6 @@
             "children": []
           },
           {
-            "name": "Limitless",
-            "children": []
-          },
-          {
-            "name": "CursedSpeech",
-            "children": [
-              {
-                "name": "Procedures",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Mobs",
             "children": [
               {
@@ -13054,6 +13003,27 @@
             "children": []
           },
           {
+            "name": "SukunaVessel",
+            "children": []
+          },
+          {
+            "name": "Limitless",
+            "children": []
+          },
+          {
+            "name": "CursedSpeech",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Disaster Flames",
+            "children": []
+          },
+          {
             "name": "Inverse",
             "children": []
           },
@@ -13062,15 +13032,7 @@
             "children": []
           },
           {
-            "name": "SukunaVessel",
-            "children": []
-          },
-          {
             "name": "Cursed Energy",
-            "children": []
-          },
-          {
-            "name": "Disaster Flames",
             "children": []
           }
         ]
