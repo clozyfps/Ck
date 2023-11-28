@@ -1,8 +1,35 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.init.CraftKaisenModBlocks;
+import net.mcreator.craftkaisen.entity.CoffinMountainEntity;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class CoffinOfTheIronMountainProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -79,7 +106,7 @@ public class CoffinOfTheIronMountainProcedure {
 								CoffinMountainrReplaceProcedure.execute(world, x, y, z);
 							});
 							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = new CoffinMountainEntity(CraftKaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
+								Entity entityToSpawn = new CoffinMountainEntity(CraftKaisenModEntities.COFFIN_MOUNTAIN.get(), _level);
 								entityToSpawn.moveTo(x, y, z, 0, 0);
 								entityToSpawn.setYBodyRot(0);
 								entityToSpawn.setYHeadRot(0);
@@ -95,8 +122,10 @@ public class CoffinOfTheIronMountainProcedure {
 									}
 								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 									_toTame.tame(_owner);
+								CoffinMountainSecondProcedure.execute(world, x, y, z);
 								CoffinMountainReplaceMagmaProcedure.execute(world, x, y, z);
 								CraftKaisenMod.queueServerWork(1, () -> {
+									CoffinMakeGroundMagmaProcedure.execute(world, x, y, z);
 								});
 							});
 						} else if (entityiterator.getPersistentData().getBoolean("predomain")) {
@@ -108,6 +137,7 @@ public class CoffinOfTheIronMountainProcedure {
 			}
 		} else if (entity.getPersistentData().getBoolean("domain")) {
 			entity.getPersistentData().putBoolean("domain", false);
+			RemoveCoffinProcedure.execute(world, (entity.getPersistentData().getDouble("domainx")), (entity.getPersistentData().getDouble("domainy")), (entity.getPersistentData().getDouble("domainz")));
 		}
 	}
 }

@@ -23,6 +23,7 @@ import net.mcreator.craftkaisen.client.particle.LapseParticleParticle;
 import net.mcreator.craftkaisen.client.particle.InfinityParticleParticle;
 import net.mcreator.craftkaisen.client.particle.FireArrowParticleParticle;
 import net.mcreator.craftkaisen.client.particle.EvadeParticleParticle;
+import net.mcreator.craftkaisen.client.particle.DomainClashParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ClashParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BloodSplashParticle;
@@ -52,5 +53,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.LAPSE_PARTICLE.get(), LapseParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.PURPLE_PARTICLE.get(), PurpleParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.PURPLE_ELECTRICITY_PARTICLE.get(), PurpleElectricityParticleParticle::provider);
+		event.register(CraftKaisenModParticleTypes.DOMAIN_CLASH_PARTICLE.get(), DomainClashParticleParticle::provider);
 	}
 }

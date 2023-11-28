@@ -11,63 +11,124 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
+        "type": "image",
         "data": {
-          "name": "button_x",
-          "text": "X",
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 124,
+          "y": 29
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
           "onClick": {
             "name": "DomainClashUp"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 109
+          "displayCondition": {
+            "name": "DisplayDomainNum1"
+          },
+          "x": 163,
+          "y": 73
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_domain_clash",
-          "text": {
-            "fixedValue": "Domain Clash!!"
+          "name": "imagebutton_press1",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
           },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
+          "displayCondition": {
+            "name": "DisplayDomainNum2"
           },
-          "x": 180,
-          "y": 82
+          "x": 223,
+          "y": 80
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_press_the_button_as_many_times_a",
-          "text": {
-            "fixedValue": "Press the button as many times as you can!"
+          "name": "imagebutton_press2",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
           },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
+          "displayCondition": {
+            "name": "DisplayDomainNum3"
           },
-          "x": 108,
-          "y": 152
+          "x": 143,
+          "y": 104
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_combo",
-          "text": {
-            "fixedValue": "Combo:",
-            "name": "ComboValue"
+          "name": "imagebutton_press3",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
           },
-          "color": {
-            "value": -16750849,
-            "falpha": 0.0
+          "displayCondition": {
+            "name": "DisplayDomainNum5"
           },
-          "x": 184,
-          "y": 179
+          "x": 190,
+          "y": 132
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press4",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
+          },
+          "displayCondition": {
+            "name": "DisplayDomainNum6"
+          },
+          "x": 142,
+          "y": 165
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press5",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
+          },
+          "displayCondition": {
+            "name": "DisplayDomainNum7"
+          },
+          "x": 249,
+          "y": 114
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press6",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "DomainClashUp"
+          },
+          "displayCondition": {
+            "name": "DisplayDomainNum4"
+          },
+          "x": 231,
+          "y": 160
         }
       }
     ],

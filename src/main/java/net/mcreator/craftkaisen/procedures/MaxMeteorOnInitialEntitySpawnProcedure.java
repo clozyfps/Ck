@@ -1,8 +1,7 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
 public class MaxMeteorOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {
