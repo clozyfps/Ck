@@ -43,7 +43,6 @@ import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
-import net.mcreator.craftkaisen.client.renderer.EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer;
 import net.mcreator.craftkaisen.client.renderer.CoffinMountainRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChimeraShadowGardenMobRenderer;

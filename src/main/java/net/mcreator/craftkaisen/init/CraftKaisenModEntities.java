@@ -61,7 +61,6 @@ import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
-import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameRangedEntity;
