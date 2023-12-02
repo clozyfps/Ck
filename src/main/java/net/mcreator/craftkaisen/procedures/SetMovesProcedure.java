@@ -219,6 +219,43 @@ public class SetMovesProcedure {
 					entity.getPersistentData().putDouble("moveCost", 35);
 				}
 			}
+			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Disaster Plants")) {
+				entity.getPersistentData().putDouble("maxMoves", 5);
+				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+					entity.getPersistentData().putString("moveDisplay", "Roots");
+					entity.getPersistentData().putDouble("moveCost", 5);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+					entity.getPersistentData().putString("moveDisplay", "Flower Field");
+					entity.getPersistentData().putDouble("moveCost", 10);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+					entity.getPersistentData().putString("moveDisplay", "Wooden Ball");
+					entity.getPersistentData().putDouble("moveCost", 15);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+					entity.getPersistentData().putString("moveDisplay", "Cursed Bud");
+					entity.getPersistentData().putDouble("moveCost", 18);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+					entity.getPersistentData().putString("moveDisplay", "Flower Offering");
+					entity.getPersistentData().putDouble("moveCost", 35);
+				}
+			}
+			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Cursed Spirit Manipulation")) {
+				entity.getPersistentData().putDouble("maxMoves", 5);
+				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+					entity.getPersistentData().putString("moveDisplay", "Return Curses");
+					entity.getPersistentData().putDouble("moveCost", 0);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM1));
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM2));
+					entity.getPersistentData().putDouble("moveCost", 5);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM3));
+					entity.getPersistentData().putDouble("moveCost", 5);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM4));
+					entity.getPersistentData().putDouble("moveCost", 5);
+				}
+			}
 		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Cursed Energy")) {
 			CursedEnergySwitchProcedure.execute(entity);
 		}

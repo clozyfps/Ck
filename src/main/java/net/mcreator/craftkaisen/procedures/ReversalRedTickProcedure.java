@@ -74,31 +74,29 @@ public class ReversalRedTickProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 99999, 1, false, false));
 			if (entity.getPersistentData().getDouble("reversaltime") >= 20) {
 				entity.getPersistentData().putBoolean("reversal", false);
-				if (entity.isShiftKeyDown()) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.swing(InteractionHand.MAIN_HAND, true);
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new ReversalRedEntity(CraftKaisenModEntities.REVERSAL_RED.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, (float) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 8), 3, (byte) 500);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
+				if (entity instanceof LivingEntity _entity)
+					_entity.swing(InteractionHand.MAIN_HAND, true);
+				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level;
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+								AbstractArrow entityToSpawn = new ReversalRedEntity(CraftKaisenModEntities.REVERSAL_RED.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								entityToSpawn.setPierceLevel(piercing);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, (float) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 8), 3, (byte) 500);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
 					}
-					entity.getPersistentData().putDouble("reversaltime", 0);
 				}
+				entity.getPersistentData().putDouble("reversaltime", 0);
 			}
 		}
 	}

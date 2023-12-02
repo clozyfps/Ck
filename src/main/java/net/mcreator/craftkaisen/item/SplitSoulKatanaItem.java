@@ -46,6 +46,6 @@ public class SplitSoulKatanaItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("Perk - Increased damage against cursed spirits"));
+		list.add(Component.literal("Perk - Increased damage against cursed spirits/Does Extra Damage To Mahito"));
 	}
 }

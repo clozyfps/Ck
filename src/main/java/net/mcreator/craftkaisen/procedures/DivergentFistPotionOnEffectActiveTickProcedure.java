@@ -17,37 +17,37 @@ public class DivergentFistPotionOnEffectActiveTickProcedure {
 		if ((entity.getDirection()) == Direction.NORTH || (entity.getDirection()) == Direction.SOUTH) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() + 0.5), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.12 0.84 0.73 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() + 0.4), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() - 0.5), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.12 0.84 0.73 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() - 0.4), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() + 0.5), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0 0 0 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() + 0.4), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() - 0.5), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0 0 0 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX() - 0.4), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 		} else if ((entity.getDirection()) == Direction.EAST || (entity.getDirection()) == Direction.WEST) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() + 0.5)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.12 0.84 0.73 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() + 0.4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() - 0.5)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.12 0.84 0.73 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() - 0.4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() + 0.5)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0 0 0 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() + 0.4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() - 0.5)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0 0 0 1 ^0 ^0 ^0 0.1 1.2 0.1 0 5");
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ() - 0.4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.1 0.5 0.1 0 1");
 		}
 	}
 }

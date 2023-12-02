@@ -33,7 +33,7 @@ public class RandomiseCursedTechniqueProcedure {
 			}
 		} else if (techniqueNumber == 3) {
 			{
-				String _setval = "Roots";
+				String _setval = "Disaster Plants";
 				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.technique = _setval;
 					capability.syncPlayerVariables(entity);

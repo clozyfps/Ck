@@ -7,9 +7,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -27,7 +24,6 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
@@ -164,12 +160,15 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
+					entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 					entity.getPersistentData().putDouble("cooldown", 40);
 				} else if (move == 2) {
 					entity.getPersistentData().putBoolean("dismantleSphere", true);
+					entity.getPersistentData().putString("currentmoveactive", "OutwardDismantle");
 					entity.getPersistentData().putDouble("sphereSize", 0);
 					entity.getPersistentData().putDouble("cooldown", 100);
 				} else if (move == 3) {
+					entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level;
@@ -211,6 +210,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
+						entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 						CraftKaisenMod.queueServerWork(20, () -> {
 							{
 								Entity _shootFrom = entity;
@@ -232,6 +232,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
 							}
+							entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 						});
 					});
 					entity.getPersistentData().putDouble("cooldown", 80);
@@ -241,27 +242,19 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 				} else if (move == 5) {
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.PRE_FIRE_ARROW.get(), 60, 1, false, false));
+					CraftKaisenMod.queueServerWork(50, () -> {
+						entity.getPersistentData().putString("currentmoveactive", "Fire Arrow");
+					});
 					entity.getPersistentData().putDouble("cooldown", 80);
 				} else if (move == 6) {
-					if (Math.random() < 0.05) {
-						if (entity.getPersistentData().getDouble("domainCooldown") <= 0) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = new MalevolentShrineEntity(CraftKaisenModEntities.MALEVOLENT_SHRINE.get(), _level);
-								entityToSpawn.moveTo((entity.getX() + entity.getLookAngle().x * (-1)), (entity.getY() - 2), (entity.getZ() + entity.getLookAngle().z * (-1)), entity.getYRot(), entity.getXRot());
-								entityToSpawn.setYBodyRot(entity.getYRot());
-								entityToSpawn.setYHeadRot(entity.getYRot());
-								entityToSpawn.setDeltaMovement(0, 0, 0);
-								if (entityToSpawn instanceof Mob _mobToSpawn) {
-									_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-									if (entityToSpawn instanceof TamableAnimal _toTame && entity instanceof Player _owner) {
-										_toTame.tame(_owner);
-									}
-								}
-								_level.addFreshEntity(entityToSpawn);
-							}
-							entity.getPersistentData().putDouble("domainCooldown", 1200);
-							entity.getPersistentData().putDouble("cooldown", 80);
-						}
+					entity.getPersistentData().putDouble("cooldown", 80);
+				}
+			}
+			if (Math.random() < 0.1) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 400) {
+					if (!entity.getPersistentData().getBoolean("useddomain")) {
+						entity.getPersistentData().putBoolean("useddomain", true);
+						MalevolentShrineSukunaProcedure.execute(world, x, y, z, entity);
 					}
 				}
 			}

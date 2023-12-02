@@ -34,7 +34,6 @@ public class DisasterFlameRangedProjectileHitsBlockProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
 									entityiterator.setSecondsOnFire(7);
-									entityiterator.setDeltaMovement(new Vec3(((x + xi + entityiterator.getX()) / 9), ((y + i + entityiterator.getY()) / 9), ((z + zi + entityiterator.getZ()) / 9)));
 								}
 							}
 						}

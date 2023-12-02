@@ -32,11 +32,13 @@ import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetFragileBodyProcedure;
 import net.mcreator.craftkaisen.procedures.SetExpProcedure;
 import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
+import net.mcreator.craftkaisen.procedures.SetDisasterPlantsProcedure;
 import net.mcreator.craftkaisen.procedures.SetDisasterFlamesProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedSpeechProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
 import net.mcreator.craftkaisen.procedures.SetCopyProcedure;
+import net.mcreator.craftkaisen.procedures.SetCSMProcedure;
 import net.mcreator.craftkaisen.procedures.SetBloodManipulationProcedure;
 import net.mcreator.craftkaisen.procedures.ResetButtonProcedure;
 
@@ -166,6 +168,30 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetDisasterFlamesProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("DisasterPlants").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetDisasterPlantsProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("CursedSpiritManipulation").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetCSMProcedure.execute(entity);
 					return 0;
 				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

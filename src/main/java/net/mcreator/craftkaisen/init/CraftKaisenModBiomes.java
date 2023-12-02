@@ -31,6 +31,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 
+import net.mcreator.craftkaisen.world.biome.UVbiomeBiome;
 import net.mcreator.craftkaisen.world.biome.ShibuyaBiome;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
@@ -45,6 +46,7 @@ import com.google.common.base.Suppliers;
 @Mod.EventBusSubscriber
 public class CraftKaisenModBiomes {
 	public static final DeferredRegister<Biome> REGISTRY = DeferredRegister.create(ForgeRegistries.BIOMES, CraftKaisenMod.MODID);
+	public static final RegistryObject<Biome> U_VBIOME = REGISTRY.register("u_vbiome", UVbiomeBiome::createBiome);
 	public static final RegistryObject<Biome> SHIBUYA = REGISTRY.register("shibuya", ShibuyaBiome::createBiome);
 
 	@SubscribeEvent

@@ -33,9 +33,6 @@
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "DisasterFlameRangedProjectileHitsBlock"
-    },
     "onBulletFlyingTick": {
       "name": "DisasterFlameRangedWhileProjectileFlyingTick"
     }

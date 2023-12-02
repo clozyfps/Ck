@@ -159,7 +159,6 @@ public class EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpda
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							entityiterator.hurt((new EntityDamageSource("thorns", entity)), 12);
-							entityiterator.setDeltaMovement(new Vec3(((entity.getX() + entityiterator.getX()) / 15), ((entity.getY() + entityiterator.getY()) / 15), ((entity.getZ() + entityiterator.getZ()) / 15)));
 						}
 					}
 				}

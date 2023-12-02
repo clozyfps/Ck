@@ -16,6 +16,9 @@
     "onStarted": {
       "name": "SukunaEffectStartedapplied"
     },
+    "onActiveTick": {
+      "name": "SukunaOnEffectActiveTick"
+    },
     "onExpired": {
       "name": "SukunaEffectExpires"
     }
