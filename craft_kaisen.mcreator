@@ -1554,6 +1554,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3802,18 +3806,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -4148,28 +4140,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobTargetProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -5475,8 +5446,20 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6224,7 +6207,6 @@
     {
       "name": "Shibuya",
       "type": "biome",
-      "sortid": 580,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shibuya",
@@ -10218,6 +10200,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -10891,6 +10877,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -12104,8 +12106,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/finger_bearer_biome_modifier.json"
+          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -15143,7 +15144,6 @@
       "advancements.grade_2.descr": "Reach The Required Fame.",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_leggings": "Jujutsu Sorcerer Uniform",
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
-      "effect.craft_kaisen.zone": "Zone",
       "item.craft_kaisen.round_deer_spawn_egg": "Round Deer Spawn Egg",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "effect.craft_kaisen.toji_cooldown": "TojiCooldown",

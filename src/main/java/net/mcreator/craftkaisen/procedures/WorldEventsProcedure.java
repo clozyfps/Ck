@@ -21,14 +21,10 @@ public class WorldEventsProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		String type = "";
-		String faction = "";
-		String mob = "";
 		double v = 0;
 		double vLevel = 0;
-		double x = 0;
-		double y = 0;
 		double vType = 0;
 		double vMob = 0;
+		double vFaction = 0;
 	}
 }
