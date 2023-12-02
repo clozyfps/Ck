@@ -13,14 +13,11 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.YutaOkkotsuRenderer;
 import net.mcreator.craftkaisen.client.renderer.YujiItadoriRenderer;
-import net.mcreator.craftkaisen.client.renderer.WoodenBoxRenderer;
 import net.mcreator.craftkaisen.client.renderer.WhiteDivineDogRenderer;
 import net.mcreator.craftkaisen.client.renderer.UnlimitedVoidMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.ToadRenderer;
 import net.mcreator.craftkaisen.client.renderer.TenShadowRabbitRenderer;
-import net.mcreator.craftkaisen.client.renderer.SmallPoxDomainSpawnerRenderer;
-import net.mcreator.craftkaisen.client.renderer.SmallPoxDeityRenderer;
 import net.mcreator.craftkaisen.client.renderer.ShadowFrogRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
@@ -30,8 +27,6 @@ import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.ResurrectedTojiRenderer;
-import net.mcreator.craftkaisen.client.renderer.RainbowDragonRenderer;
-import net.mcreator.craftkaisen.client.renderer.PoxDeityDomainRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
 import net.mcreator.craftkaisen.client.renderer.NobaraKugisakiRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
@@ -48,7 +43,6 @@ import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
-import net.mcreator.craftkaisen.client.renderer.EmberInsectProjectileRenderer;
 import net.mcreator.craftkaisen.client.renderer.EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer;
 import net.mcreator.craftkaisen.client.renderer.CoffinMountainRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
@@ -117,15 +111,5 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.INVENTORY_CURSE_MOB.get(), InventoryCurseMobRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.FINGER_BEARER.get(), FingerBearerRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.PURE_LOVE_BEAM_RANGED.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.RAINBOW_DRAGON.get(), RainbowDragonRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.SMALL_POX_DEITY.get(), SmallPoxDeityRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.WOODEN_BOX.get(), WoodenBoxRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.SMALL_POX_DOMAIN_SPAWNER.get(), SmallPoxDomainSpawnerRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.POX_DEITY_DOMAIN.get(), PoxDeityDomainRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.HOLLOW_PURPLE_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.EMBER_INSECT_PROJECTILE.get(), EmberInsectProjectileRenderer::new);
-		event.registerEntityRenderer(CraftKaisenModEntities.FLOWER_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

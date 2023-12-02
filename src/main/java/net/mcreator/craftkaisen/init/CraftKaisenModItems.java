@@ -28,10 +28,8 @@ import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
-import net.mcreator.craftkaisen.item.RootProjectileItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.ReversalRedItem;
-import net.mcreator.craftkaisen.item.PureLoveBeamRangedItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.NobaraOutfitItem;
 import net.mcreator.craftkaisen.item.NanamiKnifeItem;
@@ -39,22 +37,17 @@ import net.mcreator.craftkaisen.item.NailProjectileItem;
 import net.mcreator.craftkaisen.item.NailItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
-import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
-import net.mcreator.craftkaisen.item.HollowPurpleProjectileItem;
 import net.mcreator.craftkaisen.item.HammerItem;
 import net.mcreator.craftkaisen.item.GetoOutfitItem;
-import net.mcreator.craftkaisen.item.FlowerProjectileItem;
 import net.mcreator.craftkaisen.item.FireArrowMobItem;
 import net.mcreator.craftkaisen.item.FireArrowItem;
 import net.mcreator.craftkaisen.item.FindBlueLocationItem;
 import net.mcreator.craftkaisen.item.ExplodeRangedItem;
-import net.mcreator.craftkaisen.item.EmberInsectProjectileItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.DisasterFlameRangedItem;
-import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.ChosoArmorItem;
@@ -182,17 +175,6 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.FINGER_BEARER, -2960686, -15527136, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA_SPAWN_EGG = REGISTRY.register("eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA, -1710619, -6710887, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
-	public static final RegistryObject<Item> PURE_LOVE_BEAM_RANGED = REGISTRY.register("pure_love_beam_ranged", () -> new PureLoveBeamRangedItem());
-	public static final RegistryObject<Item> RAINBOW_DRAGON_SPAWN_EGG = REGISTRY.register("rainbow_dragon_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RAINBOW_DRAGON, -6426, -9728, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
-	public static final RegistryObject<Item> SMALL_POX_DEITY_SPAWN_EGG = REGISTRY.register("small_pox_deity_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.SMALL_POX_DEITY, -10921639, -197380, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
-	public static final RegistryObject<Item> MAHORAGA_WHEEL_HELMET = REGISTRY.register("mahoraga_wheel_helmet", () -> new MahoragaWheelItem.Helmet());
-	public static final RegistryObject<Item> HOLLOW_PURPLE_PROJECTILE = REGISTRY.register("hollow_purple_projectile", () -> new HollowPurpleProjectileItem());
-	public static final RegistryObject<Item> ROOT_PROJECTILE = REGISTRY.register("root_projectile", () -> new RootProjectileItem());
-	public static final RegistryObject<Item> EMBER_INSECT_PROJECTILE = REGISTRY.register("ember_insect_projectile", () -> new EmberInsectProjectileItem());
-	public static final RegistryObject<Item> FLOWER_PROJECTILE = REGISTRY.register("flower_projectile", () -> new FlowerProjectileItem());
-	public static final RegistryObject<Item> CURSED_SPIRIT_ORB = REGISTRY.register("cursed_spirit_orb", () -> new CursedSpiritOrbItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

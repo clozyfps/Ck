@@ -16,7 +16,6 @@ import net.mcreator.craftkaisen.client.gui.MoveGuiScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
 import net.mcreator.craftkaisen.client.gui.InventoryCurseGuiScreen;
 import net.mcreator.craftkaisen.client.gui.DomainClashScreen;
-import net.mcreator.craftkaisen.client.gui.CSMGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModScreens {
@@ -28,7 +27,6 @@ public class CraftKaisenModScreens {
 			MenuScreens.register(CraftKaisenModMenus.MAIN_MENU.get(), MainMenuScreen::new);
 			MenuScreens.register(CraftKaisenModMenus.INVENTORY_CURSE_GUI.get(), InventoryCurseGuiScreen::new);
 			MenuScreens.register(CraftKaisenModMenus.DOMAIN_CLASH.get(), DomainClashScreen::new);
-			MenuScreens.register(CraftKaisenModMenus.CSMGUI.get(), CSMGUIScreen::new);
 		});
 	}
 }

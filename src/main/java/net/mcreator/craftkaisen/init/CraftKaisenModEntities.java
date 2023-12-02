@@ -18,7 +18,6 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
-import net.mcreator.craftkaisen.entity.WoodenBoxEntity;
 import net.mcreator.craftkaisen.entity.WhiteDivineDogEntity;
 import net.mcreator.craftkaisen.entity.WaterMaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.VolcanicEruptionEntity;
@@ -27,8 +26,6 @@ import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
 import net.mcreator.craftkaisen.entity.TenShadowRabbitEntity;
-import net.mcreator.craftkaisen.entity.SmallPoxDomainSpawnerEntity;
-import net.mcreator.craftkaisen.entity.SmallPoxDeityEntity;
 import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.ShadowFrogEntity;
@@ -38,15 +35,11 @@ import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.RugbyFieldCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RoundDeerEntity;
 import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
-import net.mcreator.craftkaisen.entity.RootProjectileEntity;
 import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntity;
 import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
-import net.mcreator.craftkaisen.entity.RainbowDragonEntity;
-import net.mcreator.craftkaisen.entity.PureLoveBeamRangedEntity;
-import net.mcreator.craftkaisen.entity.PoxDeityDomainEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
 import net.mcreator.craftkaisen.entity.NobaraKugisakiEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
@@ -59,17 +52,14 @@ import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.InventoryCurseMobEntity;
-import net.mcreator.craftkaisen.entity.HollowPurpleProjectileEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
 import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
-import net.mcreator.craftkaisen.entity.FlowerProjectileEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
-import net.mcreator.craftkaisen.entity.EmberInsectProjectileEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
@@ -272,39 +262,6 @@ public class CraftKaisenModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<PureLoveBeamRangedEntity>> PURE_LOVE_BEAM_RANGED = register("projectile_pure_love_beam_ranged", EntityType.Builder.<PureLoveBeamRangedEntity>of(PureLoveBeamRangedEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(PureLoveBeamRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<RainbowDragonEntity>> RAINBOW_DRAGON = register("rainbow_dragon",
-			EntityType.Builder.<RainbowDragonEntity>of(RainbowDragonEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RainbowDragonEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<SmallPoxDeityEntity>> SMALL_POX_DEITY = register("small_pox_deity",
-			EntityType.Builder.<SmallPoxDeityEntity>of(SmallPoxDeityEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SmallPoxDeityEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<WoodenBoxEntity>> WOODEN_BOX = register("wooden_box",
-			EntityType.Builder.<WoodenBoxEntity>of(WoodenBoxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WoodenBoxEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<SmallPoxDomainSpawnerEntity>> SMALL_POX_DOMAIN_SPAWNER = register("small_pox_domain_spawner",
-			EntityType.Builder.<SmallPoxDomainSpawnerEntity>of(SmallPoxDomainSpawnerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(SmallPoxDomainSpawnerEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<PoxDeityDomainEntity>> POX_DEITY_DOMAIN = register("pox_deity_domain",
-			EntityType.Builder.<PoxDeityDomainEntity>of(PoxDeityDomainEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PoxDeityDomainEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<HollowPurpleProjectileEntity>> HOLLOW_PURPLE_PROJECTILE = register("projectile_hollow_purple_projectile",
-			EntityType.Builder.<HollowPurpleProjectileEntity>of(HollowPurpleProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(HollowPurpleProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<RootProjectileEntity>> ROOT_PROJECTILE = register("projectile_root_projectile",
-			EntityType.Builder.<RootProjectileEntity>of(RootProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(RootProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<EmberInsectProjectileEntity>> EMBER_INSECT_PROJECTILE = register("projectile_ember_insect_projectile",
-			EntityType.Builder.<EmberInsectProjectileEntity>of(EmberInsectProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(EmberInsectProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<FlowerProjectileEntity>> FLOWER_PROJECTILE = register("projectile_flower_projectile", EntityType.Builder.<FlowerProjectileEntity>of(FlowerProjectileEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(FlowerProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -350,11 +307,6 @@ public class CraftKaisenModEntities {
 			InventoryCurseMobEntity.init();
 			FingerBearerEntity.init();
 			EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.init();
-			RainbowDragonEntity.init();
-			SmallPoxDeityEntity.init();
-			WoodenBoxEntity.init();
-			SmallPoxDomainSpawnerEntity.init();
-			PoxDeityDomainEntity.init();
 		});
 	}
 
@@ -397,10 +349,5 @@ public class CraftKaisenModEntities {
 		event.put(INVENTORY_CURSE_MOB.get(), InventoryCurseMobEntity.createAttributes().build());
 		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
 		event.put(EIGHT_HANDLED_SWORD_DIVERGENT_SILA_DIVINE_GENERAL_MAHORAGA.get(), EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity.createAttributes().build());
-		event.put(RAINBOW_DRAGON.get(), RainbowDragonEntity.createAttributes().build());
-		event.put(SMALL_POX_DEITY.get(), SmallPoxDeityEntity.createAttributes().build());
-		event.put(WOODEN_BOX.get(), WoodenBoxEntity.createAttributes().build());
-		event.put(SMALL_POX_DOMAIN_SPAWNER.get(), SmallPoxDomainSpawnerEntity.createAttributes().build());
-		event.put(POX_DEITY_DOMAIN.get(), PoxDeityDomainEntity.createAttributes().build());
 	}
 }
