@@ -10,14 +10,14 @@ import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class SmallPoxDeityCooldownMobEffect extends MobEffect {
-	public SmallPoxDeityCooldownMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -1);
+public class ZoneMobEffect extends MobEffect {
+	public ZoneMobEffect() {
+		super(MobEffectCategory.NEUTRAL, -16724737);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.craft_kaisen.small_pox_deity_cooldown";
+		return "effect.craft_kaisen.zone";
 	}
 
 	@Override
@@ -35,11 +35,6 @@ public class SmallPoxDeityCooldownMobEffect extends MobEffect {
 
 			@Override
 			public boolean renderInventoryText(MobEffectInstance instance, EffectRenderingInventoryScreen<?> screen, PoseStack poseStack, int x, int y, int blitOffset) {
-				return false;
-			}
-
-			@Override
-			public boolean isVisibleInGui(MobEffectInstance effect) {
 				return false;
 			}
 		});
