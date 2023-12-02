@@ -1,8 +1,33 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.Registry;
+import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.Camera;
 
 import javax.annotation.Nullable;
+
+import com.mojang.math.Vector3f;
+import com.mojang.math.Matrix4f;
+import com.mojang.blaze3d.vertex.VertexFormat;
+import com.mojang.blaze3d.vertex.Tesselator;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.mojang.blaze3d.vertex.BufferUploader;
+import com.mojang.blaze3d.vertex.BufferBuilder;
+import com.mojang.blaze3d.systems.RenderSystem;
 
 @Mod.EventBusSubscriber(value = {Dist.CLIENT})
 public class RenderVoidProcedure {
@@ -42,7 +67,7 @@ public class RenderVoidProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, PoseStack pose) {
 		if (entity == null || pose == null)
 			return;
-		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("craft_kaisen:deleted_mod_element")))) {
+		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("craft_kaisen:unlimited_void_domain")))) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_kaisen" + ":textures/" + "galaxy" + ".png")));
 			{
 				int _color = (int) (255 << 24 | 255 << 16 | 255 << 8 | 255);

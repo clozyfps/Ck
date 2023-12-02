@@ -1,0 +1,17 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Zone",
+    "icon": "totem_heart.png",
+    "color": {
+      "value": -16724737,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": true
+  }
+}

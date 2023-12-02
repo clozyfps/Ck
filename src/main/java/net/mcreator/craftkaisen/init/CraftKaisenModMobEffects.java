@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.potion.ZoneMobEffect;
 import net.mcreator.craftkaisen.potion.VesselPotionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.UnlimitedVoidEffectMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
@@ -56,4 +57,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> PURE_LOVE_PRE = REGISTRY.register("pure_love_pre", () -> new PureLovePreMobEffect());
 	public static final RegistryObject<MobEffect> SUKUNA = REGISTRY.register("sukuna", () -> new SukunaMobEffect());
 	public static final RegistryObject<MobEffect> SMALL_POX_DEITY_COOLDOWN = REGISTRY.register("small_pox_deity_cooldown", () -> new SmallPoxDeityCooldownMobEffect());
+	public static final RegistryObject<MobEffect> ZONE = REGISTRY.register("zone", () -> new ZoneMobEffect());
 }

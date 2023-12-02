@@ -1,5 +1,11 @@
 package net.mcreator.craftkaisen.entity.model;
 
+import software.bernie.geckolib3.model.AnimatedGeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.craftkaisen.entity.RainbowDragonEntity;
+
 public class RainbowDragonModel extends AnimatedGeoModel<RainbowDragonEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(RainbowDragonEntity entity) {

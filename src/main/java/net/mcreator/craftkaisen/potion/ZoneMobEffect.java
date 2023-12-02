@@ -1,23 +1,15 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
+public class ZoneMobEffect extends MobEffect {
 
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-public class SmallPoxDeityCooldownMobEffect extends MobEffect {
-	public SmallPoxDeityCooldownMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -1);
+	public ZoneMobEffect() {
+		super(MobEffectCategory.NEUTRAL, -16724737);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.craft_kaisen.small_pox_deity_cooldown";
+		return "effect.craft_kaisen.zone";
 	}
 
 	@Override
@@ -38,10 +30,6 @@ public class SmallPoxDeityCooldownMobEffect extends MobEffect {
 				return false;
 			}
 
-			@Override
-			public boolean isVisibleInGui(MobEffectInstance effect) {
-				return false;
-			}
 		});
 	}
 }
