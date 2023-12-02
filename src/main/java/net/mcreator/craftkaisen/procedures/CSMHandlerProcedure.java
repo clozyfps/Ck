@@ -1,21 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.TagKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.Registry;
-
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 
 import javax.annotation.Nullable;
 
@@ -39,7 +24,7 @@ public class CSMHandlerProcedure {
 		if (Math.random() < 0.8) {
 			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Cursed Spirit Manipulation")
 					&& entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:cursed_spirits")))) {
-				v = new ItemStack(CraftKaisenModItems.CURSED_SPIRIT_ORB.get());
+				v = new ItemStack(CraftKaisenModItems.DELETED_MOD_ELEMENT.get());
 				(v).setHoverName(Component.literal((entity.getDisplayName().getString())));
 				if (sourceentity instanceof Player _player) {
 					ItemStack _setstack = v;

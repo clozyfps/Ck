@@ -1,28 +1,9 @@
 
 package net.mcreator.craftkaisen.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.world.inventory.CSMGUIMenu;
-import net.mcreator.craftkaisen.procedures.Slot4CSMProcedure;
-import net.mcreator.craftkaisen.procedures.Slot3CSMProcedure;
-import net.mcreator.craftkaisen.procedures.Slot2CSMProcedure;
-import net.mcreator.craftkaisen.procedures.Slot1CSMProcedure;
-import net.mcreator.craftkaisen.CraftKaisenMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CSMGUIButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public CSMGUIButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +35,7 @@ public class CSMGUIButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,12 +44,14 @@ public class CSMGUIButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = CSMGUIMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
-			Slot1CSMProcedure.execute(entity);
+			Slot1CSMProcedure.execute();
 		}
 		if (buttonID == 1) {
 
@@ -75,11 +59,11 @@ public class CSMGUIButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			Slot3CSMProcedure.execute(entity);
+			Slot3CSMProcedure.execute();
 		}
 		if (buttonID == 3) {
 
-			Slot4CSMProcedure.execute(entity);
+			Slot4CSMProcedure.execute();
 		}
 	}
 
@@ -87,4 +71,5 @@ public class CSMGUIButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftKaisenMod.addNetworkMessage(CSMGUIButtonMessage.class, CSMGUIButtonMessage::buffer, CSMGUIButtonMessage::new, CSMGUIButtonMessage::handler);
 	}
+
 }

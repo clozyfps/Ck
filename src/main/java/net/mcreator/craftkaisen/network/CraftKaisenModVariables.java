@@ -117,10 +117,13 @@ public class CraftKaisenModVariables {
 			clone.inventorycurse = original.inventorycurse;
 			clone.RenderSpecial = original.RenderSpecial;
 			clone.SukunaLevel = original.SukunaLevel;
-			clone.CSM1 = original.CSM1;
-			clone.CSM2 = original.CSM2;
-			clone.CSM3 = original.CSM3;
 			clone.CSM4 = original.CSM4;
+			clone.CSM3 = original.CSM3;
+			clone.CSM2 = original.CSM2;
+			clone.CSM1 = original.CSM1;
+			clone.RCT = original.RCT;
+			clone.RCTLevel = original.RCTLevel;
+			clone.RCTExp = original.RCTExp;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -370,10 +373,13 @@ public class CraftKaisenModVariables {
 		public String RenderSpecial = "\"\"";
 		public double SukunaLevel = 0;
 		public double flowerexpand = 0;
-		public String CSM1 = "\"\"";
-		public String CSM2 = "\"\"";
-		public String CSM3 = "\"\"";
 		public String CSM4 = "\"\"";
+		public String CSM3 = "\"\"";
+		public String CSM2 = "\"\"";
+		public String CSM1 = "\"\"";
+		public boolean RCT = false;
+		public double RCTLevel = 0;
+		public double RCTExp = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -442,10 +448,13 @@ public class CraftKaisenModVariables {
 			nbt.putString("RenderSpecial", RenderSpecial);
 			nbt.putDouble("SukunaLevel", SukunaLevel);
 			nbt.putDouble("flowerexpand", flowerexpand);
-			nbt.putString("CSM1", CSM1);
-			nbt.putString("CSM2", CSM2);
-			nbt.putString("CSM3", CSM3);
 			nbt.putString("CSM4", CSM4);
+			nbt.putString("CSM3", CSM3);
+			nbt.putString("CSM2", CSM2);
+			nbt.putString("CSM1", CSM1);
+			nbt.putBoolean("RCT", RCT);
+			nbt.putDouble("RCTLevel", RCTLevel);
+			nbt.putDouble("RCTExp", RCTExp);
 			return nbt;
 		}
 
@@ -511,10 +520,13 @@ public class CraftKaisenModVariables {
 			RenderSpecial = nbt.getString("RenderSpecial");
 			SukunaLevel = nbt.getDouble("SukunaLevel");
 			flowerexpand = nbt.getDouble("flowerexpand");
-			CSM1 = nbt.getString("CSM1");
-			CSM2 = nbt.getString("CSM2");
-			CSM3 = nbt.getString("CSM3");
 			CSM4 = nbt.getString("CSM4");
+			CSM3 = nbt.getString("CSM3");
+			CSM2 = nbt.getString("CSM2");
+			CSM1 = nbt.getString("CSM1");
+			RCT = nbt.getBoolean("RCT");
+			RCTLevel = nbt.getDouble("RCTLevel");
+			RCTExp = nbt.getDouble("RCTExp");
 		}
 	}
 
@@ -599,10 +611,13 @@ public class CraftKaisenModVariables {
 					variables.RenderSpecial = message.data.RenderSpecial;
 					variables.SukunaLevel = message.data.SukunaLevel;
 					variables.flowerexpand = message.data.flowerexpand;
-					variables.CSM1 = message.data.CSM1;
-					variables.CSM2 = message.data.CSM2;
-					variables.CSM3 = message.data.CSM3;
 					variables.CSM4 = message.data.CSM4;
+					variables.CSM3 = message.data.CSM3;
+					variables.CSM2 = message.data.CSM2;
+					variables.CSM1 = message.data.CSM1;
+					variables.RCT = message.data.RCT;
+					variables.RCTLevel = message.data.RCTLevel;
+					variables.RCTExp = message.data.RCTExp;
 				}
 			});
 			context.setPacketHandled(true);

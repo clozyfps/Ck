@@ -1,16 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.SmallPoxDomainSpawnerEntity;
-import net.mcreator.craftkaisen.CraftKaisenMod;
+import javax.annotation.Nullable;
 
 public class SmallPoxDomainDimensionPlayerEntersDimensionProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

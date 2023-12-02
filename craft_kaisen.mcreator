@@ -1375,7 +1375,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility1",
@@ -1554,6 +1554,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2488,7 +2492,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/GUI"
     },
     {
       "name": "ReturnCursedEnergy",
@@ -3802,18 +3806,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -4148,28 +4140,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobTargetProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -5475,8 +5446,20 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6224,7 +6207,6 @@
     {
       "name": "Shibuya",
       "type": "biome",
-      "sortid": 557,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shibuya",
@@ -10218,6 +10200,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -10891,6 +10877,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -11950,7 +11952,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Tags"
     },
     {
       "name": "ShibuyaIncident",
@@ -12104,8 +12106,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/finger_bearer_biome_modifier.json"
+          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -12393,15 +12394,15 @@
       "path": "~/Mobs"
     },
     {
-      "name": "Exp",
+      "name": "RainbowDragonOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 506,
+      "sortid": 561,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "exp",
+      "registry_name": "rainbow_dragon_on_entity_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ExpProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/RainbowDragonOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -12423,81 +12424,21 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "ExpKill",
-      "type": "procedure",
-      "sortid": 507,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "exp_kill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ExpKillProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "SukunaOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 508,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sukuna_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potions/Procedures"
-    },
-    {
-      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoragaOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 509,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EightHandledSwordDivergentSilaDivineGeneralMahoragaOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
       "path": "~/Mobs/Procedure"
     },
     {
-      "name": "MahoragaAdaption",
+      "name": "OwnerAttackedCSMHandler",
       "type": "procedure",
-      "sortid": 510,
+      "sortid": 575,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mahoraga_adaption",
+      "registry_name": "owner_attacked_csm_handler",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MahoragaAdaptionProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/OwnerAttackedCSMHandlerProcedure.java"
         ],
         "dependencies": [
           {
@@ -12507,26 +12448,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "MalevolentShrineSukuna",
-      "type": "procedure",
-      "sortid": 511,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "malevolent_shrine_sukuna",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineSukunaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
@@ -12546,134 +12467,7 @@
           }
         ]
       },
-      "path": "~/Abilities/SukunaVessel"
-    },
-    {
-      "name": "PureLoveBeamRangedWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 512,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pure_love_beam_ranged_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PureLoveBeamRangedWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/Copy"
-    },
-    {
-      "name": "PureLoveBeamRanged",
-      "type": "rangeditem",
-      "sortid": 513,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pure_love_beam_ranged",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/pure_love_beam_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/PureLoveBeamRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/PureLoveBeamRangedEntity.java"
-        ]
-      },
-      "path": "~/Abilities/Copy"
-    },
-    {
-      "name": "RainbowDragon",
-      "type": "animatedentity",
-      "sortid": 514,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rainbow_dragon",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/rainbow_dragon_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/RainbowDragonEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/RainbowDragonRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/model/RainbowDragonModel.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "SmallPoxDeity",
-      "type": "animatedentity",
-      "sortid": 515,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_deity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SmallPoxDeityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/model/SmallPoxDeityModel.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/SmallPoxDeityEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/small_pox_deity_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/small_pox_deity_biome_modifier.json"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "WoodenBoxOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 516,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wooden_box_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBoxOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Abilities"
+      "path": "~/Abilities/ CSM"
     },
     {
       "name": "WoodenBoxEntityDies",
@@ -12706,212 +12500,6 @@
         ]
       },
       "path": "~/Mobs/Abilities"
-    },
-    {
-      "name": "WoodenBoxOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 518,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wooden_box_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBoxOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Abilities"
-    },
-    {
-      "name": "WoodenBox",
-      "type": "livingentity",
-      "sortid": 519,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wooden_box",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/WoodenBoxEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/WoodenBoxRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/Abilities"
-    },
-    {
-      "name": "SmallPoxDomainSpawnerOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 520,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_domain_spawner_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDomainSpawnerOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Abilities"
-    },
-    {
-      "name": "SmallPoxDomainSpawner",
-      "type": "livingentity",
-      "sortid": 521,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_domain_spawner",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/SmallPoxDomainSpawnerEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SmallPoxDomainSpawnerRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/Abilities"
-    },
-    {
-      "name": "SmallPoxDomainDimensionPlayerEntersDimension",
-      "type": "procedure",
-      "sortid": 522,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_domain_dimension_player_enters_dimension",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDomainDimensionPlayerEntersDimensionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "SmallPoxDomainDimension",
-      "type": "dimension",
-      "sortid": 559,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_domain_dimension",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/dimension_type/small_pox_domain_dimension.json",
-          "src/main/java/net/mcreator/craftkaisen/world/dimension/SmallPoxDomainDimensionDimension.java",
-          "src/main/resources/data/craft_kaisen/dimension/small_pox_domain_dimension.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "SmallBoxReplace",
-      "type": "procedure",
-      "sortid": 523,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_box_replace",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SmallBoxReplaceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedure"
-    },
-    {
-      "name": "SmallPoxDeityOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 524,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_deity_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDeityOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedure"
     },
     {
       "name": "PoxDeityDomainOnEntityTickUpdate",
@@ -12950,153 +12538,21 @@
       "path": "~/Mobs/Domain"
     },
     {
-      "name": "PoxDeityDomain",
-      "type": "livingentity",
-      "sortid": 526,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pox_deity_domain",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/PoxDeityDomainEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/PoxDeityDomainRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/Domain"
-    },
-    {
-      "name": "SmallPoxDeityCooldown",
-      "type": "potioneffect",
-      "sortid": 527,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "small_pox_deity_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/SmallPoxDeityCooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
-      "name": "AdaptionTimer",
+      "name": "EmberInsectProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 528,
+      "sortid": 551,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "adaption_timer",
+      "registry_name": "ember_insect_projectile_while_projectile_flying_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/AdaptionTimerProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmberInsectProjectileWhileProjectileFlyingTickProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
           },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "CurrentMoveStay",
-      "type": "procedure",
-      "sortid": 529,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "current_move_stay",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CurrentMoveStayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "CurrentMoveStayMob",
-      "type": "procedure",
-      "sortid": 530,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "current_move_stay_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CurrentMoveStayMobProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "MahoragaWheel",
-      "type": "armor",
-      "sortid": 531,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mahoraga_wheel",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/mahoraga_wheel_helmet.json"
-        ]
-      },
-      "path": "~/Armor"
-    },
-    {
-      "name": "HollowPurpleProjectile",
-      "type": "rangeditem",
-      "sortid": 532,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hollow_purple_projectile",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/hollow_purple_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleProjectileItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleProjectileEntity.java"
-        ]
-      },
-      "path": "~/Ranged"
-    },
-    {
-      "name": "RootProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 533,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "root_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RootProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
           {
             "name": "immediatesourceentity",
             "type": "entity"
@@ -13119,20 +12575,48 @@
           }
         ]
       },
-      "path": "~/Ranged/Procedures"
+      "path": "~/Abilities/Disaster Flames"
     },
     {
-      "name": "RootProjectileProjectileHitsBlock",
+      "name": "CSMHandler",
       "type": "procedure",
-      "sortid": 534,
+      "sortid": 563,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "root_projectile_projectile_hits_block",
+      "registry_name": "csm_handler",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RootProjectileProjectileHitsBlockProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/CSMHandlerProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Slot4CSMProcedure",
+      "type": "procedure",
+      "sortid": 573,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_4_csm_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4CSMProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -13151,48 +12635,144 @@
           }
         ]
       },
-      "path": "~/Ranged/Procedures"
+      "path": "~/Abilities/ CSM"
     },
     {
-      "name": "RootProjectile",
-      "type": "rangeditem",
-      "sortid": 535,
+      "name": "Slot2CSM",
+      "type": "procedure",
+      "sortid": 567,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "root_projectile",
+      "registry_name": "slot_2_csm",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/root_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/RootProjectileEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/RootProjectileItem.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot2CSMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SmallPoxDomainSpawner",
+      "type": "livingentity",
+      "sortid": 521,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_domain_spawner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/SmallPoxDomainSpawnerEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SmallPoxDomainSpawnerRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "CSMGUI",
+      "type": "gui",
+      "sortid": 565,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "csmgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/CSMGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/CSMGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/CSMGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "RenderVoid",
+      "type": "procedure",
+      "sortid": 560,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_void",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RenderVoidProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "pose",
+            "type": "pose"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "FlowerProjectile",
+      "type": "rangeditem",
+      "sortid": 554,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_projectile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/flower_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/FlowerProjectileItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FlowerProjectileEntity.java"
+        ]
+      },
+      "path": "~/Abilities/DisasterPlants"
+    },
+    {
+      "name": "CursedSpiritOrb",
+      "type": "item",
+      "sortid": 562,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit_orb",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/cursed_spirit_orb.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CursedSpiritOrbItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HollowPurpleProjectile",
+      "type": "rangeditem",
+      "sortid": 532,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_projectile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/hollow_purple_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleProjectileItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleProjectileEntity.java"
         ]
       },
       "path": "~/Ranged"
     },
     {
-      "name": "FlowersDisaster",
-      "type": "tag",
-      "sortid": 536,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowers_disaster",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/tags/blocks/flowers_disaster.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "FlowerFieldProcedure",
+      "name": "SetDisasterPlants",
       "type": "procedure",
-      "sortid": 537,
+      "sortid": 545,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flower_field_procedure",
+      "registry_name": "set_disaster_plants",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetDisasterPlantsProcedure.java"
         ],
         "dependencies": [
           {
@@ -13201,18 +12781,18 @@
           }
         ]
       },
-      "path": "~/Abilities/DisasterPlants"
+      "path": "~/Commands/Procedures"
     },
     {
-      "name": "FlowerField2",
+      "name": "FlowerFieldHanamiReplace",
       "type": "procedure",
-      "sortid": 538,
+      "sortid": 547,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flower_field_2",
+      "registry_name": "flower_field_hanami_replace",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField2Procedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldHanamiReplaceProcedure.java"
         ],
         "dependencies": [
           {
@@ -13240,15 +12820,32 @@
       "path": "~/Abilities/DisasterPlants"
     },
     {
-      "name": "FlowerField3",
-      "type": "procedure",
-      "sortid": 539,
+      "name": "EmberInsectProjectile",
+      "type": "rangeditem",
+      "sortid": 552,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flower_field_3",
+      "registry_name": "ember_insect_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField3Procedure.java"
+          "src/main/resources/assets/craft_kaisen/models/item/ember_insect_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/EmberInsectProjectileEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/EmberInsectProjectileRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/item/EmberInsectProjectileItem.java"
+        ]
+      },
+      "path": "~/Abilities/Disaster Flames"
+    },
+    {
+      "name": "FlowerFieldHanami",
+      "type": "procedure",
+      "sortid": 546,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_field_hanami",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldHanamiProcedure.java"
         ],
         "dependencies": [
           {
@@ -13312,15 +12909,15 @@
       "path": "~/Abilities/DisasterPlants"
     },
     {
-      "name": "FlowerField5",
+      "name": "FlowerField3",
       "type": "procedure",
-      "sortid": 541,
+      "sortid": 539,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flower_field_5",
+      "registry_name": "flower_field_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField5Procedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField3Procedure.java"
         ],
         "dependencies": [
           {
@@ -13384,6 +12981,456 @@
       "path": "~/Abilities/DisasterPlants"
     },
     {
+      "name": "WoodenBox",
+      "type": "livingentity",
+      "sortid": 519,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_box",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/WoodenBoxEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/WoodenBoxRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "FlowerField5",
+      "type": "procedure",
+      "sortid": 541,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_field_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/DisasterPlants"
+    },
+    {
+      "name": "Slot1CSM",
+      "type": "procedure",
+      "sortid": 566,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_1_csm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot1CSMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "FlowerField2",
+      "type": "procedure",
+      "sortid": 538,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_field_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerField2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/DisasterPlants"
+    },
+    {
+      "name": "SmallPoxDeityOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 524,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_deity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDeityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "PureLoveBeamRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 512,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pure_love_beam_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PureLoveBeamRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Copy"
+    },
+    {
+      "name": "RainbowDragon",
+      "type": "animatedentity",
+      "sortid": 514,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rainbow_dragon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/rainbow_dragon_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/RainbowDragonEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RainbowDragonRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/model/RainbowDragonModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "JogoOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 555,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jogo_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/JogoOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "AdaptionTimer",
+      "type": "procedure",
+      "sortid": 528,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adaption_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AdaptionTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetCSM",
+      "type": "procedure",
+      "sortid": 577,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_csm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCSMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SmallPoxDeity",
+      "type": "animatedentity",
+      "sortid": 515,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_deity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SmallPoxDeityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/model/SmallPoxDeityModel.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/SmallPoxDeityEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/small_pox_deity_spawn_egg.json",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/small_pox_deity_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "WoodenBoxOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 516,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_box_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBoxOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "WoodenBoxOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 518,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_box_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBoxOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "RootProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 534,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
+      "name": "FlowerFieldProcedure",
+      "type": "procedure",
+      "sortid": 537,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_field_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/DisasterPlants"
+    },
+    {
+      "name": "Slot4CSM",
+      "type": "procedure",
+      "sortid": 569,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_4_csm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4CSMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
       "name": "FlowerFieldTick",
       "type": "procedure",
       "sortid": 543,
@@ -13420,6 +13467,77 @@
       "path": "~/Abilities/DisasterPlants"
     },
     {
+      "name": "CurrentMoveStayMob",
+      "type": "procedure",
+      "sortid": 530,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "current_move_stay_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CurrentMoveStayMobProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MahoragaWheel",
+      "type": "armor",
+      "sortid": 531,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahoraga_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/mahoraga_wheel_helmet.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "RootProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 533,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
       "name": "DisasterPlantsMoves",
       "type": "procedure",
       "sortid": 544,
@@ -13444,35 +13562,15 @@
       "path": "~/Abilities/DisasterPlants"
     },
     {
-      "name": "SetDisasterPlants",
+      "name": "CursedSpiritOrbRightclicked",
       "type": "procedure",
-      "sortid": 545,
+      "sortid": 564,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_disaster_plants",
+      "registry_name": "cursed_spirit_orb_rightclicked",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetDisasterPlantsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "FlowerFieldHanami",
-      "type": "procedure",
-      "sortid": 546,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flower_field_hanami",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldHanamiProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritOrbRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -13497,18 +13595,121 @@
           }
         ]
       },
+      "path": "~/Items/Procedure"
+    },
+    {
+      "name": "SmallPoxDeityCooldown",
+      "type": "potioneffect",
+      "sortid": 527,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_deity_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SmallPoxDeityCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "UVbiome",
+      "type": "biome",
+      "sortid": 556,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "u_vbiome",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/biome/UVbiomeBiome.java"
+        ]
+      },
+      "path": "~/Biome"
+    },
+    {
+      "name": "FlowerProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 553,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
       "path": "~/Abilities/DisasterPlants"
     },
     {
-      "name": "FlowerFieldHanamiReplace",
+      "name": "ExpKill",
       "type": "procedure",
-      "sortid": 547,
+      "sortid": 507,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flower_field_hanami_replace",
+      "registry_name": "exp_kill",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerFieldHanamiReplaceProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExpKillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoxDeityDomain",
+      "type": "livingentity",
+      "sortid": 526,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pox_deity_domain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/PoxDeityDomainEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/PoxDeityDomainRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "MalevolentShrineSukuna",
+      "type": "procedure",
+      "sortid": 511,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineSukunaProcedure.java"
         ],
         "dependencies": [
           {
@@ -13533,7 +13734,215 @@
           }
         ]
       },
-      "path": "~/Abilities/DisasterPlants"
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "CursedSpiritManipulationMoves",
+      "type": "procedure",
+      "sortid": 574,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit_manipulation_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritManipulationMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "SmallPoxDomainDimensionPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 522,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_domain_dimension_player_enters_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDomainDimensionPlayerEntersDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "PureLoveBeamRanged",
+      "type": "rangeditem",
+      "sortid": 513,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pure_love_beam_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/pure_love_beam_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/PureLoveBeamRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/PureLoveBeamRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/Copy"
+    },
+    {
+      "name": "RootProjectile",
+      "type": "rangeditem",
+      "sortid": 535,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_projectile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/root_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/RootProjectileEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/RootProjectileItem.java"
+        ]
+      },
+      "path": "~/Ranged"
+    },
+    {
+      "name": "SmallPoxDomainDimension",
+      "type": "dimension",
+      "sortid": 559,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_domain_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/dimension_type/small_pox_domain_dimension.json",
+          "src/main/java/net/mcreator/craftkaisen/world/dimension/SmallPoxDomainDimensionDimension.java",
+          "src/main/resources/data/craft_kaisen/dimension/small_pox_domain_dimension.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "MahoragaAdaption",
+      "type": "procedure",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahoraga_adaption",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahoragaAdaptionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "EntityUpAttack",
+      "type": "procedure",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_up_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityUpAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CurrentMoveStay",
+      "type": "procedure",
+      "sortid": 529,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "current_move_stay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CurrentMoveStayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SukunaOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 508,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
     },
     {
       "name": "HanamiOnEntityTickUpdate",
@@ -13596,400 +14005,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "BlindFoldBlindness",
-      "type": "procedure",
-      "sortid": 550,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blind_fold_blindness",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BlindFoldBlindnessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "EmberInsectProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 551,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ember_insect_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EmberInsectProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/Disaster Flames"
-    },
-    {
-      "name": "EmberInsectProjectile",
-      "type": "rangeditem",
-      "sortid": 552,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ember_insect_projectile",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/ember_insect_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/EmberInsectProjectileEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/EmberInsectProjectileRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/item/EmberInsectProjectileItem.java"
-        ]
-      },
-      "path": "~/Abilities/Disaster Flames"
-    },
-    {
-      "name": "FlowerProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flower_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/DisasterPlants"
-    },
-    {
-      "name": "FlowerProjectile",
-      "type": "rangeditem",
-      "sortid": 554,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flower_projectile",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/flower_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/FlowerProjectileItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/FlowerProjectileEntity.java"
-        ]
-      },
-      "path": "~/Abilities/DisasterPlants"
-    },
-    {
-      "name": "JogoOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 555,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jogo_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/JogoOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedure"
-    },
-    {
-      "name": "UVbiome",
-      "type": "biome",
-      "sortid": 556,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "u_vbiome",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/biome/UVbiomeBiome.java"
-        ]
-      },
-      "path": "~/Biome"
-    },
-    {
-      "name": "UnlimitedVoidDomain",
-      "type": "dimension",
-      "sortid": 558,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unlimited_void_domain",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_kaisen/dimension/unlimited_void_domain.json",
-          "src/main/java/net/mcreator/craftkaisen/world/dimension/UnlimitedVoidDomainDimension.java",
-          "src/main/resources/data/craft_kaisen/dimension_type/unlimited_void_domain.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "RenderVoid",
-      "type": "procedure",
-      "sortid": 560,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_void",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RenderVoidProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "pose",
-            "type": "pose"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "RainbowDragonOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 561,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rainbow_dragon_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RainbowDragonOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedure"
-    },
-    {
-      "name": "CursedSpiritOrb",
-      "type": "item",
-      "sortid": 562,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_spirit_orb",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/cursed_spirit_orb.json",
-          "src/main/java/net/mcreator/craftkaisen/item/CursedSpiritOrbItem.java"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "CSMHandler",
-      "type": "procedure",
-      "sortid": 563,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "csm_handler",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CSMHandlerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "CursedSpiritOrbRightclicked",
-      "type": "procedure",
-      "sortid": 564,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_spirit_orb_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritOrbRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Procedure"
-    },
-    {
-      "name": "CSMGUI",
-      "type": "gui",
-      "sortid": 565,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "csmgui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/CSMGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/CSMGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/CSMGUIButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
-      "name": "Slot1CSM",
-      "type": "procedure",
-      "sortid": 566,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slot_1_csm",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Slot1CSMProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "Slot2CSM",
-      "type": "procedure",
-      "sortid": 567,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slot_2_csm",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Slot2CSMProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "Slot3CSM",
       "type": "procedure",
       "sortid": 568,
@@ -14010,15 +14025,29 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "Slot4CSM",
-      "type": "procedure",
-      "sortid": 569,
+      "name": "FlowersDisaster",
+      "type": "tag",
+      "sortid": 536,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "slot_4_csm",
+      "registry_name": "flowers_disaster",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4CSMProcedure.java"
+          "src/main/resources/data/craft_kaisen/tags/blocks/flowers_disaster.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BlindFoldBlindness",
+      "type": "procedure",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blind_fold_blindness",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlindFoldBlindnessProcedure.java"
         ],
         "dependencies": [
           {
@@ -14027,7 +14056,23 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidDomain",
+      "type": "dimension",
+      "sortid": 558,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_domain",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/dimension/unlimited_void_domain.json",
+          "src/main/java/net/mcreator/craftkaisen/world/dimension/UnlimitedVoidDomainDimension.java",
+          "src/main/resources/data/craft_kaisen/dimension_type/unlimited_void_domain.json"
+        ]
+      },
+      "path": "~/Dimensions"
     },
     {
       "name": "Slot1CSMProcedure",
@@ -14039,6 +14084,110 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/Slot1CSMProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/ CSM"
+    },
+    {
+      "name": "SmallBoxReplace",
+      "type": "procedure",
+      "sortid": 523,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_box_replace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SmallBoxReplaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "SmallPoxDomainSpawnerOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 520,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_pox_domain_spawner_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SmallPoxDomainSpawnerOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "Slot3CSMProcedure",
+      "type": "procedure",
+      "sortid": 572,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_3_csm_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot3CSMProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -14102,199 +14251,15 @@
       "path": "~/Abilities/ CSM"
     },
     {
-      "name": "Slot3CSMProcedure",
+      "name": "EightHandledSwordDivergentSilaDivineGeneralMahoragaOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 572,
+      "sortid": 509,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "slot_3_csm_procedure",
+      "registry_name": "eight_handled_sword_divergent_sila_divine_general_mahoraga_on_initial_entity_spawn",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Slot3CSMProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/ CSM"
-    },
-    {
-      "name": "Slot4CSMProcedure",
-      "type": "procedure",
-      "sortid": 573,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slot_4_csm_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4CSMProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/ CSM"
-    },
-    {
-      "name": "CursedSpiritManipulationMoves",
-      "type": "procedure",
-      "sortid": 574,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_spirit_manipulation_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritManipulationMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/MoveUse"
-    },
-    {
-      "name": "OwnerAttackedCSMHandler",
-      "type": "procedure",
-      "sortid": 575,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "owner_attacked_csm_handler",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OwnerAttackedCSMHandlerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/ CSM"
-    },
-    {
-      "name": "EntityUpAttack",
-      "type": "procedure",
-      "sortid": 576,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "entity_up_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EntityUpAttackProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "SetCSM",
-      "type": "procedure",
-      "sortid": 577,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_csm",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetCSMProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/EightHandledSwordDivergentSilaDivineGeneralMahoragaOnInitialEntitySpawnProcedure.java"
         ],
         "dependencies": [
           {
@@ -14303,7 +14268,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "MobBlackFlash",
@@ -14328,6 +14293,42 @@
           {
             "name": "amount",
             "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Exp",
+      "type": "procedure",
+      "sortid": 506,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -14772,13 +14773,7 @@
       "value": "0"
     },
     {
-      "name": "CSM1",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "CSM2",
+      "name": "CSM4",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
@@ -14790,10 +14785,34 @@
       "value": "\"\""
     },
     {
-      "name": "CSM4",
+      "name": "CSM2",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "CSM1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "RCT",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RCTLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RCTExp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -14890,18 +14909,14 @@
       "advancements.maximum_elephant_advancement.descr": "Tame Maximum Elephant",
       "key.craft_kaisen.output": "Output",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "gui.craft_kaisen.csmgui.button_1": "1",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
       "gui.craft_kaisen.move_gui.button_3": "3",
-      "gui.craft_kaisen.csmgui.button_3": "3",
       "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
       "gui.craft_kaisen.move_gui.button_6": "6",
-      "gui.craft_kaisen.csmgui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_empty2": "\u003c",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
-      "gui.craft_kaisen.csmgui.button_4": "4",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "advancements.semi_grade_3.title": "Semi Grade 3",
@@ -14921,7 +14936,6 @@
       "entity.craft_kaisen.black_divine_dog": "Black Divine Dog",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "advancements.shibuya_incident.descr": "Arrive at Shibuya during the shibuya world event",
-      "item.craft_kaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "entity.craft_kaisen.round_deer": "Round Deer",
       "advancements.ten_shadows_technique.title": "Ten Shadows Technique",
       "item.craft_kaisen.ember_insect_spawn_egg": "Ember Insect Spawn Egg",
@@ -14948,7 +14962,6 @@
       "advancements.perfect_preparation.descr": "Survive Through The Shibuya Incident",
       "entity.craft_kaisen.maximum_elephant": "Maximum Elephant",
       "advancements.great_serpent_advancement.descr": "Tame The Great Serpent",
-      "entity.craft_kaisen.wooden_box": "Wooden Box",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
       "entity.craft_kaisen.ryomen_sukuna": "Ryomen Sukuna",
       "item.craft_kaisen.explode_ranged": "Explode Ranged",
@@ -14963,12 +14976,10 @@
       "advancements.grade_1.title": "Grade 1",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "item.craft_kaisen.choso_armor_chestplate": "Choso Outfit",
-      "effect.craft_kaisen.small_pox_deity_cooldown": "SPDC",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
       "item.craft_kaisen.hanami_spawn_egg": "Hanami Spawn Egg",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "advancements.ten_shadows_technique.descr": "Get the ten shadows technique",
-      "item.craft_kaisen.ember_insect_projectile": "Ember Insect Projectile",
       "gui.craft_kaisen.main_menu.label_empty4": "+",
       "item.craft_kaisen.white_divine_dog_spawn_egg": "White Divine Dog Spawn Egg",
       "key.craft_kaisen.evade": "Evade",
@@ -15003,7 +15014,6 @@
       "advancements.nue_advancement.title": "Nue",
       "itemGroup.tabck_blocks": "Ck Blocks",
       "item.craft_kaisen.nanami_knife": "Nanami Knife",
-      "biome.craft_kaisen.u_vbiome": "U Vbiome",
       "entity.craft_kaisen.choso": "Choso",
       "advancements.round_deer_advancement.descr": "Tame The Round Deer",
       "advancements.young_fishand_reverse_punishment.title": "Young Fish and Reverse Punishment",
@@ -15048,7 +15058,6 @@
       "advancements.black_flash_advancement.title": "Black Flash",
       "advancements.toad_advancement.title": "Toad",
       "effect.craft_kaisen.twisting": "Twisting",
-      "item.craft_kaisen.rainbow_dragon_spawn_egg": "Rainbow Dragon Spawn Egg",
       "advancements.semi_grade_2.title": "Semi Grade 2",
       "entity.craft_kaisen.shadow_frog": "Shadow Frog",
       "item.craft_kaisen.water_maximum_elephant": "Water Maximum Elephant",
@@ -15079,7 +15088,6 @@
       "effect.craft_kaisen.sukuna": "Sukuna",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
       "item.craft_kaisen.jogo_spawn_egg": "Jogo Spawn Egg",
-      "entity.craft_kaisen.small_pox_deity": "Small Pox Deity",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
       "item.craft_kaisen.nobara_outfit_chestplate": "Female Jujutsu Sorcerer Outfit",
       "effect.craft_kaisen.pure_love_pre": "PureLove",
@@ -15124,14 +15132,11 @@
       "item.craft_kaisen.nobara_outfit_leggings": "Female Jujutsu Sorcerer Outfit",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
       "item.craft_kaisen.find_blue_location": "Find Blue Location",
-      "entity.craft_kaisen.pox_deity_domain": "Pox Deity Domain",
       "entity.craft_kaisen.jogo": "Jogo",
-      "item.craft_kaisen.small_pox_deity_spawn_egg": "Small Pox Deity Spawn Egg",
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "entity.craft_kaisen.max_meteor": "Max Meteor",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
-      "item.craft_kaisen.pure_love_beam_ranged": "Pure Love Beam Ranged",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
       "effect.craft_kaisen.evade_cooldown": "EvadeCooldown",
@@ -15139,7 +15144,6 @@
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "effect.craft_kaisen.simple_domain": "Simple Domain",
       "advancements.toad_advancement.descr": "Tame Toad",
-      "entity.craft_kaisen.rainbow_dragon": "Rainbow Dragon",
       "item.craft_kaisen.blood_blade": "Blood Dagger",
       "effect.craft_kaisen.divergent_fist_potion": "DivergentFist",
       "itemGroup.tabck_items": "Ck Items",
@@ -15147,18 +15151,14 @@
       "item.craft_kaisen.geto_outfit_leggings": "Geto Pants",
       "subtitles.bell": "ding",
       "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
-      "item.craft_kaisen.root_projectile": "Root Projectile",
       "advancements.semi_grade_2.descr": "Reach The Required Fame.",
       "entity.craft_kaisen.chimera_shadow_garden_mob": "Chimera Shadow Garden Mob",
       "itemGroup.tabck_curses": "Craft Kaisen Curses",
       "item.craft_kaisen.dismantle": "Dismantle",
       "entity.craft_kaisen.ten_shadow_rabbit": "Ten Shadow Rabbit",
-      "item.craft_kaisen.flower_projectile": "Flower Projectile",
       "advancements.grade_4.title": "Grade 4",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
       "item.craft_kaisen.nail_projectile": "Nail Projectile",
-      "item.craft_kaisen.hollow_purple_projectile": "Hollow Purple Projectile",
-      "item.craft_kaisen.cursed_spirit_orb": "Cursed Spirit Orb",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
@@ -15176,7 +15176,6 @@
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "gamerule.sukunaVesselMode.description": "Control Wether vessels are singleplayer or multiplayer (2 player controlled vessels(",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
-      "entity.craft_kaisen.small_pox_domain_spawner": "Small Pox Domain Spawner",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
   },
@@ -15225,6 +15224,14 @@
             "children": []
           },
           {
+            "name": " CSM",
+            "children": []
+          },
+          {
+            "name": "DisasterPlants",
+            "children": []
+          },
+          {
             "name": "Limitless",
             "children": []
           },
@@ -15251,14 +15258,6 @@
           },
           {
             "name": "Cursed Energy",
-            "children": []
-          },
-          {
-            "name": "DisasterPlants",
-            "children": []
-          },
-          {
-            "name": " CSM",
             "children": []
           }
         ]
