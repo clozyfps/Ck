@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
@@ -53,99 +54,101 @@ public class TenShadowDeathProcedure {
 				});
 			}
 		}
-		if (entity instanceof BlackDivineDogEntity) {
+		if (sourceentity instanceof Player) {
 			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:black_divine_dog_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+				if (entity instanceof BlackDivineDogEntity) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:black_divine_dog_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof WhiteDivineDogEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:white_divine_dog_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof WhiteDivineDogEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:white_divine_dog_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof GreatSerpentEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:great_serpent_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof GreatSerpentEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:great_serpent_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:divine_general_mahoraga"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:divine_general_mahoraga"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof ToadEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:toad_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof ToadEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:toad_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof MaximumElephantEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:maximum_elephant_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof MaximumElephantEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:maximum_elephant_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof TenShadowRabbitEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:rabbit_escape"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof TenShadowRabbitEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:rabbit_escape"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
-			}
-		} else if (entity instanceof RoundDeerEntity) {
-			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
-				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:round_deer_advancement"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			} else if (entity instanceof RoundDeerEntity) {
+				if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+					if (sourceentity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:round_deer_advancement"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
 			}

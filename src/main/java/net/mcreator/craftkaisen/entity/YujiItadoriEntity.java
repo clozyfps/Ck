@@ -25,7 +25,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.craftkaisen.procedures.YujiItadoriOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 public class YujiItadoriEntity extends Monster {
@@ -78,12 +77,6 @@ public class YujiItadoriEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		YujiItadoriOnEntityTickUpdateProcedure.execute(this.level, this);
 	}
 
 	public static void init() {

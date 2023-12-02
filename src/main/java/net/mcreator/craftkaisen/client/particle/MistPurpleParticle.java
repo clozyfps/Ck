@@ -36,7 +36,7 @@ public class MistPurpleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 50f;
+
 		this.lifetime = 25;
 		this.gravity = 0f;
 		this.hasPhysics = false;

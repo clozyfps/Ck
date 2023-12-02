@@ -16,7 +16,7 @@ public class RikaOnEntityTickUpdateProcedure {
 		double max_rotation_step = 0;
 		double rotation_direction = 0;
 		double rotation_speed = 0;
-		if ((entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && !entity.getPersistentData().getBoolean("releaserika")) {
+		if ((entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && !((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getPersistentData().getBoolean("releaserika"))) {
 			{
 				Entity _ent = entity;
 				_ent.teleportTo(
@@ -35,7 +35,7 @@ public class RikaOnEntityTickUpdateProcedure {
 							_ent.getYRot(), _ent.getXRot());
 			}
 		}
-		if ((entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && !entity.getPersistentData().getBoolean("releaserika")) {
+		if ((entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && !((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getPersistentData().getBoolean("releaserika"))) {
 			rotation_speed = 36;
 			player_yaw = (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getYRot();
 			entity_yaw = entity.getYRot();

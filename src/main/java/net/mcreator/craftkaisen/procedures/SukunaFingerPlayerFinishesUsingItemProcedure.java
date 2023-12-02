@@ -2,7 +2,6 @@ package net.mcreator.craftkaisen.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -11,7 +10,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -31,7 +29,7 @@ public class SukunaFingerPlayerFinishesUsingItemProcedure {
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(CraftKaisenModGameRules.SUKUNA_VESSEL_MODE) == false) {
 			if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).SukunaLevel <= 0) {
-				if (Math.random() < 0.08) {
+				if (Math.random() < 0.095) {
 					{
 						double _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).SukunaLevel + 1;
 						entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -64,13 +62,7 @@ public class SukunaFingerPlayerFinishesUsingItemProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR);
-						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
-					}
+					((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).shrink(1);
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:sukuna_vessel"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -81,16 +73,11 @@ public class SukunaFingerPlayerFinishesUsingItemProcedure {
 						}
 					}
 				} else {
-					entity.kill();
-					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR);
-						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
-					}
-					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal((entity.getDisplayName().getString() + " Failed to eat a Sukuna Finger.")), false);
+					((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).shrink(1);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 5, false, false));
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0, false, false));
 				}
 			} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).SukunaLevel > 0) {
 				{
@@ -125,13 +112,7 @@ public class SukunaFingerPlayerFinishesUsingItemProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR);
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
+				((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).shrink(1);
 			}
 		}
 	}

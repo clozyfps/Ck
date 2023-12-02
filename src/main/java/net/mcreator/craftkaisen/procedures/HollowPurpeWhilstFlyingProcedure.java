@@ -16,6 +16,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 
 import java.util.stream.Collectors;
@@ -28,7 +29,7 @@ public class HollowPurpeWhilstFlyingProcedure {
 			return;
 		{
 			// Get the radius of the sphere
-			double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.02); // 3 blocks
+			double radius = ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 7); // 3 blocks
 			// Set the tolerance for how close to the surface a point must be to create a particle
 			double tolerance = 0.15; // 0.1 blocks
 			for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -51,28 +52,29 @@ public class HollowPurpeWhilstFlyingProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.MIST_PURPLE.get()), x, y, z, 15, (entity.getPersistentData().getDouble("purpleCharge") / 25), (entity.getPersistentData().getDouble("purpleCharge") / 50),
-					(entity.getPersistentData().getDouble("purpleCharge") / 25), 1);
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.PURPLE_ELECTRICITY.get()), x, y, z, 5, (entity.getPersistentData().getDouble("purpleCharge") / 25), (entity.getPersistentData().getDouble("purpleCharge") / 50),
-					(entity.getPersistentData().getDouble("purpleCharge") / 25), 1);
+			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.PURPLE_ELECTRICITY.get()), x, y, z, 5,
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10), 1);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.PURPLE_PULSE.get()), x, y, z, 1, 0.1, 0.1, 0.1, 1);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.POOF, x, y, z, 9, (entity.getPersistentData().getDouble("purpleCharge") / 25), (entity.getPersistentData().getDouble("purpleCharge") / 50), (entity.getPersistentData().getDouble("purpleCharge") / 25),
-					0);
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 9, 3, 3, 3, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity.getPersistentData().getDouble("purpleCharge") / 20) / 2d), e -> true).stream()
-					.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world
+					.getEntitiesOfClass(Entity.class,
+							new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 5) / 2d), e -> true)
+					.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					entityiterator.hurt((new EntityDamageSource("flyIntoWall.player", entity)), (float) (20 + entity.getPersistentData().getDouble("purpleCharge") / 3));
+					entityiterator.hurt((new EntityDamageSource("flyIntoWall.player", entity)),
+							(float) (20 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10));
 				}
 			}
 		}
-		int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("purpleCharge") / 25) - 1;
-		int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("purpleCharge") / 25) - 1;
+		int horizontalRadiusSphere = (int) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 8) - 1;
+		int verticalRadiusSphere = (int) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 8) - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {

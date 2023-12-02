@@ -10,6 +10,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -59,6 +60,8 @@ public class SukunaTakeoverProcedure {
 							}
 							if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 								_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.SUKUNA.get(), 2500, 0, false, false));
+							if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 20, 0, false, false));
 							if (world.getLevelData().getGameRules().getBoolean(CraftKaisenModGameRules.FORCE_SUKUNA_TECHNIQUE) == true) {
 								entity.getPersistentData().putString("ability1old", ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).ability1));
 								entity.getPersistentData().putString("ability2old", ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).ability2));

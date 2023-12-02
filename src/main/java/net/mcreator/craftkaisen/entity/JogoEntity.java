@@ -25,6 +25,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftkaisen.procedures.JogoOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 public class JogoEntity extends Monster {
@@ -72,6 +73,12 @@ public class JogoEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		JogoOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

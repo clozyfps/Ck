@@ -1,31 +1,36 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionHand;
-
-import net.mcreator.craftkaisen.init.CraftKaisenModItems;
-import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
-
-import java.util.Comparator;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
+import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
+import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
+import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
+import net.minecraft.core.Registry;
+import net.minecraft.core.BlockPos;
 
 public class TestRightclickedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (((Entity) world.getEntitiesOfClass(TojiFushiguroEntity.class, AABB.ofSize(new Vec3(x, y, z), 25, 25, 25), e -> true).stream().sorted(new Object() {
-			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+			ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("craft_kaisen:unlimited_void_domain"));
+			if (_player.level.dimension() == destinationType)
+				return;
+			ServerLevel nextLevel = _player.server.getLevel(destinationType);
+			if (nextLevel != null) {
+				_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+				_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+				_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+				for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+					_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+				_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 			}
-		}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(CraftKaisenModItems.INVERTED_SPEAR.get());
-			_setstack.setCount(1);
-			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-			if (_entity instanceof Player _player)
-				_player.getInventory().setChanged();
 		}
 	}
 }

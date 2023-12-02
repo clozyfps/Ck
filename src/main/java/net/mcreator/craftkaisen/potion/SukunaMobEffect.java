@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 
+import net.mcreator.craftkaisen.procedures.SukunaOnEffectActiveTickProcedure;
 import net.mcreator.craftkaisen.procedures.SukunaEffectStartedappliedProcedure;
 import net.mcreator.craftkaisen.procedures.SukunaEffectExpiresProcedure;
 
@@ -28,6 +29,11 @@ public class SukunaMobEffect extends MobEffect {
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		SukunaEffectStartedappliedProcedure.execute(entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		SukunaOnEffectActiveTickProcedure.execute(entity);
 	}
 
 	@Override

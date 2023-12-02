@@ -117,6 +117,10 @@ public class CraftKaisenModVariables {
 			clone.inventorycurse = original.inventorycurse;
 			clone.RenderSpecial = original.RenderSpecial;
 			clone.SukunaLevel = original.SukunaLevel;
+			clone.CSM1 = original.CSM1;
+			clone.CSM2 = original.CSM2;
+			clone.CSM3 = original.CSM3;
+			clone.CSM4 = original.CSM4;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -132,6 +136,7 @@ public class CraftKaisenModVariables {
 				clone.TenShadowDeaths = original.TenShadowDeaths;
 				clone.Page = original.Page;
 				clone.DomainClashCombo = original.DomainClashCombo;
+				clone.flowerexpand = original.flowerexpand;
 			}
 		}
 
@@ -364,6 +369,11 @@ public class CraftKaisenModVariables {
 		public boolean inventorycurse = false;
 		public String RenderSpecial = "\"\"";
 		public double SukunaLevel = 0;
+		public double flowerexpand = 0;
+		public String CSM1 = "\"\"";
+		public String CSM2 = "\"\"";
+		public String CSM3 = "\"\"";
+		public String CSM4 = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -431,6 +441,11 @@ public class CraftKaisenModVariables {
 			nbt.putBoolean("inventorycurse", inventorycurse);
 			nbt.putString("RenderSpecial", RenderSpecial);
 			nbt.putDouble("SukunaLevel", SukunaLevel);
+			nbt.putDouble("flowerexpand", flowerexpand);
+			nbt.putString("CSM1", CSM1);
+			nbt.putString("CSM2", CSM2);
+			nbt.putString("CSM3", CSM3);
+			nbt.putString("CSM4", CSM4);
 			return nbt;
 		}
 
@@ -495,6 +510,11 @@ public class CraftKaisenModVariables {
 			inventorycurse = nbt.getBoolean("inventorycurse");
 			RenderSpecial = nbt.getString("RenderSpecial");
 			SukunaLevel = nbt.getDouble("SukunaLevel");
+			flowerexpand = nbt.getDouble("flowerexpand");
+			CSM1 = nbt.getString("CSM1");
+			CSM2 = nbt.getString("CSM2");
+			CSM3 = nbt.getString("CSM3");
+			CSM4 = nbt.getString("CSM4");
 		}
 	}
 
@@ -578,6 +598,11 @@ public class CraftKaisenModVariables {
 					variables.inventorycurse = message.data.inventorycurse;
 					variables.RenderSpecial = message.data.RenderSpecial;
 					variables.SukunaLevel = message.data.SukunaLevel;
+					variables.flowerexpand = message.data.flowerexpand;
+					variables.CSM1 = message.data.CSM1;
+					variables.CSM2 = message.data.CSM2;
+					variables.CSM3 = message.data.CSM3;
+					variables.CSM4 = message.data.CSM4;
 				}
 			});
 			context.setPacketHandled(true);
