@@ -1,6 +1,26 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.entity.TwistRangedEntity;
+import net.mcreator.craftkaisen.entity.SleepRangedEntity;
+import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
+import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
+import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 
 import javax.annotation.Nullable;
 
