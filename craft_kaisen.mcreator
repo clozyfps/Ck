@@ -1554,6 +1554,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3802,18 +3806,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -4148,28 +4140,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobTargetProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -5475,8 +5446,20 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6224,7 +6207,6 @@
     {
       "name": "Shibuya",
       "type": "biome",
-      "sortid": 582,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shibuya",
@@ -10218,6 +10200,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -10891,6 +10877,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -12104,8 +12106,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/finger_bearer_biome_modifier.json"
+          "src/main/resources/assets/craft_kaisen/models/item/finger_bearer_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -14400,6 +14401,38 @@
       "path": "~/Potions"
     },
     {
+      "name": "StronghitProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 589,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stronghit_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StronghitProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Melee"
+    },
+    {
       "name": "IdleTransfigurationMoves",
       "type": "procedure",
       "sortid": 583,
@@ -14418,6 +14451,26 @@
         ]
       },
       "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "IdleTransfigurationTick",
+      "type": "procedure",
+      "sortid": 585,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_transfiguration_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/IdleTransfigurationTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/IdleTransfiguration"
     },
     {
       "name": "IdleTransfigurationProcedure",
@@ -14464,26 +14517,6 @@
       "path": "~/Abilities/IdleTransfiguration"
     },
     {
-      "name": "IdleTransfigurationTick",
-      "type": "procedure",
-      "sortid": 585,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "idle_transfiguration_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/IdleTransfigurationTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities/IdleTransfiguration"
-    },
-    {
       "name": "MeleeSwitch",
       "type": "procedure",
       "sortid": 586,
@@ -14502,42 +14535,6 @@
         ]
       },
       "path": "~/Procedures/movelists"
-    },
-    {
-      "name": "MeleeMoves",
-      "type": "procedure",
-      "sortid": 587,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "melee_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MeleeMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/MoveUse"
     },
     {
       "name": "StronghitWhileProjectileFlyingTick",
@@ -14580,54 +14577,6 @@
       "path": "~/Abilities/Melee"
     },
     {
-      "name": "StronghitProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 589,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stronghit_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/StronghitProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/Melee"
-    },
-    {
-      "name": "Stronghit",
-      "type": "rangeditem",
-      "sortid": 590,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stronghit",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/StronghitItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/stronghit.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/StronghitEntity.java"
-        ]
-      },
-      "path": "~/Abilities/Melee"
-    },
-    {
       "name": "SlamProcedure",
       "type": "procedure",
       "sortid": 591,
@@ -14659,6 +14608,58 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Abilities/Melee"
+    },
+    {
+      "name": "MeleeMoves",
+      "type": "procedure",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MeleeMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "Stronghit",
+      "type": "rangeditem",
+      "sortid": 590,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stronghit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/StronghitItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/stronghit.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/StronghitEntity.java"
         ]
       },
       "path": "~/Abilities/Melee"
@@ -15464,7 +15465,6 @@
       "advancements.semi_grade_3.descr": "Reach The Required Fame.",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.nue": "Nue",
-      "item.craft_kaisen.stronghit": "Stronghit",
       "gui.craft_kaisen.main_menu.tooltip_increase_movement_speed": "increase movement speed",
       "effect.craft_kaisen.body_crushing": "Crushing",
       "advancements.round_deer_advancement.title": "Round Deer",
@@ -15509,6 +15509,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Melee",
+            "children": []
           },
           {
             "name": "TenShadows",
@@ -15556,15 +15560,11 @@
             "children": []
           },
           {
-            "name": "Cursed Energy",
-            "children": []
-          },
-          {
             "name": "IdleTransfiguration",
             "children": []
           },
           {
-            "name": "Melee",
+            "name": "Cursed Energy",
             "children": []
           }
         ]
