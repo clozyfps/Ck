@@ -1,6 +1,10 @@
 package net.mcreator.craftkaisen.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -9,6 +13,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -26,17 +32,36 @@ import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
+import javax.annotation.Nullable;
+
 import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Iterator;
 import java.util.Comparator;
 
+@Mod.EventBusSubscriber
 public class BlackFlashProcedure {
+	@SubscribeEvent
+	public static void onEntityAttacked(LivingAttackEvent event) {
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity(), event.getAmount());
+		}
+	}
+
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
+		execute(null, world, x, y, z, entity, sourceentity, amount);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
 		if (entity == null || sourceentity == null)
 			return;
+		double v = 0;
+		double vanim = 0;
+		v = Mth.nextInt(RandomSource.create(), 1, 1000);
+		vanim = Mth.nextInt(RandomSource.create(), 1, 10000);
 		if ((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy > 0) {
-			if (Math.random() < (sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy / 3) {
+			if (v < (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).BlackFlashRarity) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -78,13 +103,102 @@ public class BlackFlashProcedure {
 							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
 				}
-				sourceentity.getPersistentData().putDouble("screen", 1);
-				CraftKaisenMod.queueServerWork(2, () -> {
-					sourceentity.getPersistentData().putDouble("screen", 2);
-					CraftKaisenMod.queueServerWork(2, () -> {
-						sourceentity.getPersistentData().putDouble("screen", 0);
+				if (vanim == 1) {
+					sourceentity.getPersistentData().putDouble("screen", 1);
+					CraftKaisenMod.queueServerWork(1, () -> {
+						sourceentity.getPersistentData().putDouble("screen", 2);
+						CraftKaisenMod.queueServerWork(1, () -> {
+							sourceentity.getPersistentData().putDouble("screen", 3);
+							CraftKaisenMod.queueServerWork(1, () -> {
+								sourceentity.getPersistentData().putDouble("screen", 4);
+								CraftKaisenMod.queueServerWork(1, () -> {
+									sourceentity.getPersistentData().putDouble("screen", 5);
+									CraftKaisenMod.queueServerWork(1, () -> {
+										sourceentity.getPersistentData().putDouble("screen", 6);
+										CraftKaisenMod.queueServerWork(1, () -> {
+											sourceentity.getPersistentData().putDouble("screen", 7);
+											CraftKaisenMod.queueServerWork(1, () -> {
+												sourceentity.getPersistentData().putDouble("screen", 8);
+												CraftKaisenMod.queueServerWork(1, () -> {
+													sourceentity.getPersistentData().putDouble("screen", 9);
+													CraftKaisenMod.queueServerWork(1, () -> {
+														sourceentity.getPersistentData().putDouble("screen", 10);
+														CraftKaisenMod.queueServerWork(1, () -> {
+															sourceentity.getPersistentData().putDouble("screen", 11);
+															CraftKaisenMod.queueServerWork(1, () -> {
+																sourceentity.getPersistentData().putDouble("screen", 12);
+																CraftKaisenMod.queueServerWork(1, () -> {
+																	sourceentity.getPersistentData().putDouble("screen", 13);
+																	CraftKaisenMod.queueServerWork(1, () -> {
+																		sourceentity.getPersistentData().putDouble("screen", 14);
+																		CraftKaisenMod.queueServerWork(1, () -> {
+																			sourceentity.getPersistentData().putDouble("screen", 15);
+																			CraftKaisenMod.queueServerWork(1, () -> {
+																				sourceentity.getPersistentData().putDouble("screen", 16);
+																				CraftKaisenMod.queueServerWork(1, () -> {
+																					sourceentity.getPersistentData().putDouble("screen", 17);
+																					CraftKaisenMod.queueServerWork(1, () -> {
+																						sourceentity.getPersistentData().putDouble("screen", 18);
+																						CraftKaisenMod.queueServerWork(1, () -> {
+																							sourceentity.getPersistentData().putDouble("screen", 19);
+																							CraftKaisenMod.queueServerWork(1, () -> {
+																								sourceentity.getPersistentData().putDouble("screen", 20);
+																								CraftKaisenMod.queueServerWork(1, () -> {
+																									sourceentity.getPersistentData().putDouble("screen", 21);
+																									CraftKaisenMod.queueServerWork(1, () -> {
+																										sourceentity.getPersistentData().putDouble("screen", 22);
+																										CraftKaisenMod.queueServerWork(1, () -> {
+																											sourceentity.getPersistentData().putDouble("screen", 23);
+																											CraftKaisenMod.queueServerWork(1, () -> {
+																												sourceentity.getPersistentData().putDouble("screen", 24);
+																												CraftKaisenMod.queueServerWork(1, () -> {
+																													sourceentity.getPersistentData().putDouble("screen", 25);
+																													CraftKaisenMod.queueServerWork(1, () -> {
+																														sourceentity.getPersistentData().putDouble("screen", 26);
+																														CraftKaisenMod.queueServerWork(1, () -> {
+																															sourceentity.getPersistentData().putDouble("screen", 27);
+																															CraftKaisenMod.queueServerWork(1, () -> {
+																																sourceentity.getPersistentData().putDouble("screen", 28);
+																																CraftKaisenMod.queueServerWork(1, () -> {
+																																	sourceentity.getPersistentData().putDouble("screen", 29);
+																																	CraftKaisenMod.queueServerWork(1, () -> {
+																																		sourceentity.getPersistentData().putDouble("screen", 30);
+																																		CraftKaisenMod.queueServerWork(1, () -> {
+																																			sourceentity.getPersistentData().putDouble("screen", 31);
+																																			CraftKaisenMod.queueServerWork(1, () -> {
+																																				sourceentity.getPersistentData().putDouble("screen", 0);
+																																			});
+																																		});
+																																	});
+																																});
+																															});
+																														});
+																													});
+																												});
+																											});
+																										});
+																									});
+																								});
+																							});
+																						});
+																					});
+																				});
+																			});
+																		});
+																	});
+																});
+															});
+														});
+													});
+												});
+											});
+										});
+									});
+								});
+							});
+						});
 					});
-				});
+				}
 			}
 		}
 	}

@@ -29,6 +29,7 @@ import net.mcreator.craftkaisen.client.particle.BlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BloodSplashParticle;
 import net.mcreator.craftkaisen.client.particle.BloodParticle;
 import net.mcreator.craftkaisen.client.particle.BlackFlashPulseParticle;
+import net.mcreator.craftkaisen.client.particle.BlackFlashLightningParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModParticles {
@@ -54,5 +55,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.PURPLE_PARTICLE.get(), PurpleParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.PURPLE_ELECTRICITY_PARTICLE.get(), PurpleElectricityParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.DOMAIN_CLASH_PARTICLE.get(), DomainClashParticleParticle::provider);
+		event.register(CraftKaisenModParticleTypes.BLACK_FLASH_LIGHTNING.get(), BlackFlashLightningParticle::provider);
 	}
 }

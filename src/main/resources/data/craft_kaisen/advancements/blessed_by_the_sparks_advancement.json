@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:black_glazed_terracotta"
+    },
+    "title": {
+      "translate": "advancements.blessed_by_the_sparks_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.blessed_by_the_sparks_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "blessed_by_the_sparks_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

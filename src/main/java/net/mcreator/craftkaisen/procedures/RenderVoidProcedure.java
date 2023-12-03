@@ -68,7 +68,7 @@ public class RenderVoidProcedure {
 		if (entity == null || pose == null)
 			return;
 		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("craft_kaisen:unlimited_void_domain")))) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_kaisen" + ":textures/" + "galaxy" + ".png")));
+			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_kaisen" + ":textures/" + "unlimited" + ".png")));
 			{
 				int _color = (int) (255 << 24 | 255 << 16 | 255 << 8 | 255);
 				float _red = (_color >> 16 & 255) / 255.0F;

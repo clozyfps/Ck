@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "advancements.six_eyes_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.six_eyes_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "six_eyes_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

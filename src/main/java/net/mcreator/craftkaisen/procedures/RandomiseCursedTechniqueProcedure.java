@@ -138,14 +138,6 @@ public class RandomiseCursedTechniqueProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (restrictionNumber == 4) {
-				{
-					String _setval = "Six Eyes";
-					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.special = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			}
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
@@ -164,10 +156,6 @@ public class RandomiseCursedTechniqueProcedure {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(
 						Component.literal("You were born with absolutely no cursed energy but an incredibly physically gifted body (Capped at 0 cursed energy and energy control stats) (granted 50 strength and health stats + 25 speed stat)"), false);
-		}
-		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).special).equals("Six Eyes")) {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("You were born with the Six Eyes (granted 50 cursed energy and energy control stats)"), false);
 		}
 	}
 }
