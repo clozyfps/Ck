@@ -58,9 +58,6 @@ public class HanamiOnEntityTickUpdateProcedure {
 				}
 			}
 			if (Math.random() < 0.009) {
-				FlowerFieldHanamiProcedure.execute(world, x, y, z, entity);
-			}
-			if (Math.random() < 0.009) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.swing(InteractionHand.MAIN_HAND, true);
 				{

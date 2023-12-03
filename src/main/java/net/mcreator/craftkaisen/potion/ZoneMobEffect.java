@@ -1,8 +1,16 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class ZoneMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class ZoneMobEffect extends MobEffect {
 	public ZoneMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -16724737);
 	}
@@ -29,7 +37,6 @@ public class ZoneMobEffect extends MobEffect {
 			public boolean renderInventoryText(MobEffectInstance instance, EffectRenderingInventoryScreen<?> screen, PoseStack poseStack, int x, int y, int blitOffset) {
 				return false;
 			}
-
 		});
 	}
 }
