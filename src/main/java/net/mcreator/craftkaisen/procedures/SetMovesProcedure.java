@@ -256,8 +256,32 @@ public class SetMovesProcedure {
 					entity.getPersistentData().putDouble("moveCost", 5);
 				}
 			}
+			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Idle Transfiguration")) {
+				entity.getPersistentData().putDouble("maxMoves", 6);
+				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+					entity.getPersistentData().putString("moveDisplay", "Idle Transfiguration");
+					entity.getPersistentData().putDouble("moveCost", 5);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+					entity.getPersistentData().putString("moveDisplay", "Soul Multiplicity");
+					entity.getPersistentData().putDouble("moveCost", 10);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+					entity.getPersistentData().putString("moveDisplay", "Body Repel");
+					entity.getPersistentData().putDouble("moveCost", 15);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+					entity.getPersistentData().putString("moveDisplay", "Polymorphic Soul Isomer");
+					entity.getPersistentData().putDouble("moveCost", 25);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+					entity.getPersistentData().putString("moveDisplay", "Instant Spirit Body of Distorted Killing");
+					entity.getPersistentData().putDouble("moveCost", 30);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+					entity.getPersistentData().putString("moveDisplay", "Self-Embodiment of Perfection");
+					entity.getPersistentData().putDouble("moveCost", 40);
+				}
+			}
 		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Cursed Energy")) {
 			CursedEnergySwitchProcedure.execute(entity);
+		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Melee")) {
+			MeleeSwitchProcedure.execute(entity);
 		}
 	}
 }

@@ -24,6 +24,7 @@ import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
 import net.mcreator.craftkaisen.item.TestItem;
 import net.mcreator.craftkaisen.item.SukunaOutfitItem;
 import net.mcreator.craftkaisen.item.SukunaFingerItem;
+import net.mcreator.craftkaisen.item.StronghitItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
@@ -193,6 +194,7 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> EMBER_INSECT_PROJECTILE = REGISTRY.register("ember_insect_projectile", () -> new EmberInsectProjectileItem());
 	public static final RegistryObject<Item> FLOWER_PROJECTILE = REGISTRY.register("flower_projectile", () -> new FlowerProjectileItem());
 	public static final RegistryObject<Item> CURSED_SPIRIT_ORB = REGISTRY.register("cursed_spirit_orb", () -> new CursedSpiritOrbItem());
+	public static final RegistryObject<Item> STRONGHIT = REGISTRY.register("stronghit", () -> new StronghitItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
 import net.mcreator.craftkaisen.entity.TenShadowRabbitEntity;
+import net.mcreator.craftkaisen.entity.StronghitEntity;
 import net.mcreator.craftkaisen.entity.SmallPoxDomainSpawnerEntity;
 import net.mcreator.craftkaisen.entity.SmallPoxDeityEntity;
 import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
@@ -305,6 +306,8 @@ public class CraftKaisenModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FlowerProjectileEntity>> FLOWER_PROJECTILE = register("projectile_flower_projectile", EntityType.Builder.<FlowerProjectileEntity>of(FlowerProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FlowerProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<StronghitEntity>> STRONGHIT = register("projectile_stronghit",
+			EntityType.Builder.<StronghitEntity>of(StronghitEntity::new, MobCategory.MISC).setCustomClientFactory(StronghitEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
