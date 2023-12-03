@@ -75,6 +75,7 @@ public class DomainClashActiveProcedure {
 									CallDomainProcedure.execute(world, (entity.getX()), (entity.getY()), (entity.getZ()), entity);
 									entity.getPersistentData().putBoolean("domainclash", false);
 									entityiterator.getPersistentData().putBoolean("domainclash", false);
+									entityiterator.getPersistentData().putBoolean("predomain", false);
 									entityiterator.getPersistentData().putDouble("domainclashtimer", 0);
 									{
 										double _setval = 0;
@@ -89,6 +90,7 @@ public class DomainClashActiveProcedure {
 					}
 				}
 				entity.getPersistentData().putBoolean("domainclash", false);
+				entity.getPersistentData().putBoolean("predomain", false);
 				if (entity instanceof Player _player)
 					_player.closeContainer();
 				entity.getPersistentData().putDouble("domainclashtimer", 0);
@@ -117,14 +119,14 @@ public class DomainClashActiveProcedure {
 						}, _bpos);
 					}
 				}
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.DOMAIN_CLASH_PARTICLE.get()), x, (y - 1), z, 20, 0, 0, 0, 1);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:electric")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:electric")), SoundSource.PLAYERS, 1, 1, false);
-					}
+			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.DOMAIN_CLASH_PARTICLE.get()), x, (y - 1), z, 20, 0, 0, 0, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:electric")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:electric")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 		}

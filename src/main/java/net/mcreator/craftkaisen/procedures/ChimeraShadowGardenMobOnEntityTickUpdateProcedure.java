@@ -12,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
@@ -39,11 +40,13 @@ public class ChimeraShadowGardenMobOnEntityTickUpdateProcedure {
 					"particle minecraft:dust 0 0 0 10 ^0 ^0 ^0 10 0.5 10 0 120");
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(13 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator) && !(entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 250, false, false));
+					if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 5, 250, false, false));
 					entityiterator.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 					if (Math.random() < 0.01) {
 						if (world instanceof ServerLevel _level) {
@@ -58,6 +61,12 @@ public class ChimeraShadowGardenMobOnEntityTickUpdateProcedure {
 						}
 					}
 					entityiterator.setDeltaMovement(new Vec3(0, (entityiterator.getDeltaMovement().y()), 0));
+					{
+						Entity _ent = entity;
+						_ent.teleportTo(x, (entityiterator.getY() - 0.01), z);
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport(x, (entityiterator.getY() - 0.01), z, _ent.getYRot(), _ent.getXRot());
+					}
 				}
 			}
 		}

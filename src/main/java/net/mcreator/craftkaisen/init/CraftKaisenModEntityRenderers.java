@@ -127,5 +127,6 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.EMBER_INSECT_PROJECTILE.get(), EmberInsectProjectileRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.FLOWER_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.STRONGHIT.get(), ThrownItemRenderer::new);
 	}
 }
