@@ -15,6 +15,7 @@ import net.mcreator.craftkaisen.world.inventory.StartScreenMenu;
 import net.mcreator.craftkaisen.world.inventory.MoveGuiMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGuiMenu;
+import net.mcreator.craftkaisen.world.inventory.ImbueGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DomainClashMenu;
 import net.mcreator.craftkaisen.world.inventory.CSMGUIMenu;
 import net.mcreator.craftkaisen.CraftKaisenMod;
@@ -27,4 +28,5 @@ public class CraftKaisenModMenus {
 	public static final RegistryObject<MenuType<InventoryCurseGuiMenu>> INVENTORY_CURSE_GUI = REGISTRY.register("inventory_curse_gui", () -> IForgeMenuType.create(InventoryCurseGuiMenu::new));
 	public static final RegistryObject<MenuType<DomainClashMenu>> DOMAIN_CLASH = REGISTRY.register("domain_clash", () -> IForgeMenuType.create(DomainClashMenu::new));
 	public static final RegistryObject<MenuType<CSMGUIMenu>> CSMGUI = REGISTRY.register("csmgui", () -> IForgeMenuType.create(CSMGUIMenu::new));
+	public static final RegistryObject<MenuType<ImbueGUIMenu>> IMBUE_GUI = REGISTRY.register("imbue_gui", () -> IForgeMenuType.create(ImbueGUIMenu::new));
 }

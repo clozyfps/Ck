@@ -45,6 +45,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.procedures.RikaOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.RikaOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.procedures.RikaEntityDiesProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 import javax.annotation.Nullable;
@@ -120,7 +121,7 @@ public class RikaEntity extends TamableAnimal {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		RikaOnInitialEntitySpawnProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		RikaEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -176,7 +177,7 @@ public class RikaEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		RikaOnEntityTickUpdateProcedure.execute(this);
+		RikaOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

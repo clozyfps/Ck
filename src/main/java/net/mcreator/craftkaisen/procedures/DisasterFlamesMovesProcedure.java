@@ -77,7 +77,7 @@ public class DisasterFlamesMovesProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					EmberInsectProcedureProcedure.execute(entity);
+					EmberInsectProcedureProcedure.execute(world, entity);
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("Ember Insects!"), true);
 					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))),

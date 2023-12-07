@@ -12,7 +12,7 @@ public class Slot4CSMProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getDisplayName().getString();
+			String _setval = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("reg");
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.CSM4 = _setval;
 				capability.syncPlayerVariables(entity);

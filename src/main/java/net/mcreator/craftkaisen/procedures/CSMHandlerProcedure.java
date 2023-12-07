@@ -41,12 +41,13 @@ public class CSMHandlerProcedure {
 			if (((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Cursed Spirit Manipulation")
 					&& entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:cursed_spirits")))) {
 				v = new ItemStack(CraftKaisenModItems.CURSED_SPIRIT_ORB.get());
-				(v).setHoverName(Component.literal((ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString())));
+				(v).setHoverName(Component.literal((entity.getDisplayName().getString())));
 				if (sourceentity instanceof Player _player) {
 					ItemStack _setstack = v;
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
+				v.getOrCreateTag().putString("reg", (ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString()));
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal(("Captured" + ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString())), true);
 			}

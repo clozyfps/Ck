@@ -107,7 +107,7 @@ public class SetMovesProcedure {
 					entity.getPersistentData().putDouble("moveCost", 5);
 				} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
 					entity.getPersistentData().putString("moveDisplay", "Release Rika");
-					entity.getPersistentData().putDouble("moveCost", 10);
+					entity.getPersistentData().putDouble("moveCost", 2);
 				} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
 					entity.getPersistentData().putString("moveDisplay", "Copy");
 					entity.getPersistentData().putDouble("moveCost", 12);
@@ -239,12 +239,12 @@ public class SetMovesProcedure {
 				}
 			}
 			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Cursed Spirit Manipulation")) {
-				entity.getPersistentData().putDouble("maxMoves", 5);
+				entity.getPersistentData().putDouble("maxMoves", 6);
 				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
 					entity.getPersistentData().putString("moveDisplay", "Return Curses");
 					entity.getPersistentData().putDouble("moveCost", 0);
 				} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
-					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM1));
+					entity.getPersistentData().putString("moveDisplay", ("Summon" + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM1));
 				} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
 					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM2));
 					entity.getPersistentData().putDouble("moveCost", 5);
@@ -254,6 +254,8 @@ public class SetMovesProcedure {
 				} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
 					entity.getPersistentData().putString("moveDisplay", ("Summon " + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).CSM4));
 					entity.getPersistentData().putDouble("moveCost", 5);
+				} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+					entity.getPersistentData().putString("moveDisplay", "Maximum: Uzumaki");
 				}
 			}
 			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Idle Transfiguration")) {

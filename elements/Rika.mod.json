@@ -97,7 +97,7 @@
       "value": ""
     },
     "whenMobDies": {
-      "name": "RikaOnInitialEntitySpawn"
+      "name": "RikaEntityDies"
     },
     "onMobTickUpdate": {
       "name": "RikaOnEntityTickUpdate"

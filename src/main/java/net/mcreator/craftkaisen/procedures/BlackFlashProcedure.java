@@ -8,10 +8,11 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -30,14 +31,12 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import javax.annotation.Nullable;
 
-import java.util.stream.Collectors;
-import java.util.List;
 import java.util.Iterator;
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class BlackFlashProcedure {
@@ -45,23 +44,27 @@ public class BlackFlashProcedure {
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		Entity entity = event.getEntity();
 		if (event != null && entity != null) {
-			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity(), event.getAmount());
+			execute(event, entity.getLevel(), entity, event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
-		execute(null, world, x, y, z, entity, sourceentity, amount);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double amount) {
+		execute(null, world, entity, sourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double amount) {
 		if (entity == null || sourceentity == null)
 			return;
 		double v = 0;
 		double vanim = 0;
-		v = Mth.nextInt(RandomSource.create(), 1, 1000);
-		vanim = Mth.nextInt(RandomSource.create(), 1, 10000);
+		sourceentity.getPersistentData().putDouble("bf", (Mth.nextInt(RandomSource.create(), 1, 1000)));
+		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.ZONE.get()) : false)) {
+			vanim = Mth.nextInt(RandomSource.create(), 1, 10000);
+		} else if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.ZONE.get()) : false) {
+			vanim = Mth.nextInt(RandomSource.create(), 1, 2000);
+		}
 		if ((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy > 0) {
-			if (v < (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).BlackFlashRarity) {
+			if (sourceentity.getPersistentData().getDouble("bf") < (sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).BlackFlashRarity) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -78,21 +81,9 @@ public class BlackFlashProcedure {
 					}
 				}
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.BLACK_FLASH_PULSE.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.1, 0.1, 0.1, 1);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, (entity.getX()), (entity.getY()), (entity.getZ()), 1, 1, 2, 1, 0);
+					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.BLACK_FLASH_LIGHTNING.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 4, 1, 0.5, 1, 0);
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.POOF, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.5, 2, 0.5, 0.5);
-				{
-					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(7 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
-					for (Entity entityiterator : _entfound) {
-						if (!(entity == entityiterator)) {
-							entityiterator.setDeltaMovement(new Vec3(((entity.getX() + entityiterator.getX()) / 6), (entity.getDeltaMovement().y() + 1), ((entity.getZ() + entityiterator.getZ()) / 6)));
-						}
-					}
-				}
 				entity.hurt((new EntityDamageSource("magic.player", sourceentity)), (float) (amount * 2.5));
 				if (sourceentity instanceof ServerPlayer _player) {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:black_flash_advancement"));
@@ -103,6 +94,8 @@ public class BlackFlashProcedure {
 							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
 				}
+				if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.ZONE.get(), 1000, 0));
 				if (vanim == 1) {
 					sourceentity.getPersistentData().putDouble("screen", 1);
 					CraftKaisenMod.queueServerWork(1, () -> {
