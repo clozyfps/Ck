@@ -55,7 +55,9 @@ import net.mcreator.craftkaisen.item.EmberInsectProjectileItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.DisasterFlameRangedItem;
+import net.mcreator.craftkaisen.item.CursedWombDeathPaintingItem;
 import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
+import net.mcreator.craftkaisen.item.CursedRingItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.ChosoArmorItem;
@@ -195,6 +197,8 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> FLOWER_PROJECTILE = REGISTRY.register("flower_projectile", () -> new FlowerProjectileItem());
 	public static final RegistryObject<Item> CURSED_SPIRIT_ORB = REGISTRY.register("cursed_spirit_orb", () -> new CursedSpiritOrbItem());
 	public static final RegistryObject<Item> STRONGHIT = REGISTRY.register("stronghit", () -> new StronghitItem());
+	public static final RegistryObject<Item> CURSED_RING = REGISTRY.register("cursed_ring", () -> new CursedRingItem());
+	public static final RegistryObject<Item> CURSED_WOMB_DEATH_PAINTING = REGISTRY.register("cursed_womb_death_painting", () -> new CursedWombDeathPaintingItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

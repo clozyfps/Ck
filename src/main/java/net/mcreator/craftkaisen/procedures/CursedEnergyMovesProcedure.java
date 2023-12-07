@@ -20,7 +20,6 @@ import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
-import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 
 import javax.annotation.Nullable;
@@ -141,47 +140,8 @@ public class CursedEnergyMovesProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentMove).equals("Dont Move")) {
-				if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy >= 50
-						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
-					{
-						double _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy
-								- 50 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10);
-						entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.currentCursedEnergy = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new DontMoveRangedEntity(CraftKaisenModEntities.DONT_MOVE_RANGED.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 0, 0, (byte) 500);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal("Dont Move."), true);
-					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
-				} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy < 50
-						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal(("You need "
-								+ new java.text.DecimalFormat("##.##").format(50 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10))
-								+ " cursed energy to use this move.")), true);
-				}
+			} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentMove).equals("Domain Amplification")) {
+				DomainAmplificationProcedureProcedure.execute(world, entity);
 				{
 					String _setval = "";
 					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

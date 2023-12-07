@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.potion.NueElectricityEffectMobEffect;
 import net.mcreator.craftkaisen.potion.LapseBlueControlMobEffect;
 import net.mcreator.craftkaisen.potion.EvadeCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
+import net.mcreator.craftkaisen.potion.DomainAmplificationMobEffect;
 import net.mcreator.craftkaisen.potion.DivergentFistPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ConstantSliceMobEffect;
 import net.mcreator.craftkaisen.potion.BurnCooldownMobEffect;
@@ -58,4 +59,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> SUKUNA = REGISTRY.register("sukuna", () -> new SukunaMobEffect());
 	public static final RegistryObject<MobEffect> SMALL_POX_DEITY_COOLDOWN = REGISTRY.register("small_pox_deity_cooldown", () -> new SmallPoxDeityCooldownMobEffect());
 	public static final RegistryObject<MobEffect> ZONE = REGISTRY.register("zone", () -> new ZoneMobEffect());
+	public static final RegistryObject<MobEffect> DOMAIN_AMPLIFICATION = REGISTRY.register("domain_amplification", () -> new DomainAmplificationMobEffect());
 }

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_kaisen:cursed_ring"
+    },
+    "title": {
+      "translate": "advancements.rika_tamed.title"
+    },
+    "description": {
+      "translate": "advancements.rika_tamed.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rika_tamed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

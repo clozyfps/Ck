@@ -15,7 +15,7 @@ public class MaximumElephantOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).isAlive()) {
-			if (Math.random() < 0.001) {
+			if (Math.random() < 0.01) {
 				{
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level;

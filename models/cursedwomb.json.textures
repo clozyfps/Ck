@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "glastexture",
+        "1": "blackpixels",
+        "2": "fleshtexture"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -125,6 +125,7 @@ public class CraftKaisenModVariables {
 			clone.RCTLevel = original.RCTLevel;
 			clone.RCTExp = original.RCTExp;
 			clone.Traits = original.Traits;
+			clone.YutaEventHappened = original.YutaEventHappened;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -384,6 +385,7 @@ public class CraftKaisenModVariables {
 		public double RCTExp = 0;
 		public double BlackFlashRarity = 10.0;
 		public String Traits = "\"\"";
+		public boolean YutaEventHappened = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -461,6 +463,7 @@ public class CraftKaisenModVariables {
 			nbt.putDouble("RCTExp", RCTExp);
 			nbt.putDouble("BlackFlashRarity", BlackFlashRarity);
 			nbt.putString("Traits", Traits);
+			nbt.putBoolean("YutaEventHappened", YutaEventHappened);
 			return nbt;
 		}
 
@@ -535,6 +538,7 @@ public class CraftKaisenModVariables {
 			RCTExp = nbt.getDouble("RCTExp");
 			BlackFlashRarity = nbt.getDouble("BlackFlashRarity");
 			Traits = nbt.getString("Traits");
+			YutaEventHappened = nbt.getBoolean("YutaEventHappened");
 		}
 	}
 
@@ -628,6 +632,7 @@ public class CraftKaisenModVariables {
 					variables.RCTExp = message.data.RCTExp;
 					variables.BlackFlashRarity = message.data.BlackFlashRarity;
 					variables.Traits = message.data.Traits;
+					variables.YutaEventHappened = message.data.YutaEventHappened;
 				}
 			});
 			context.setPacketHandled(true);

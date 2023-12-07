@@ -42,29 +42,31 @@ public class YutaSummonRikaProcedure {
 			return;
 		if (entity instanceof YutaOkkotsuEntity) {
 			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
-				if (entity.getPersistentData().getBoolean("prerika")) {
-					entity.getPersistentData().putBoolean("prerika", false);
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new RikaEntity(CraftKaisenModEntities.RIKA.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+				if (Math.random() < 0.007) {
+					if (entity.getPersistentData().getBoolean("prerika")) {
+						entity.getPersistentData().putBoolean("prerika", false);
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = new RikaEntity(CraftKaisenModEntities.RIKA.get(), _level);
+							entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof Mob _mobToSpawn)
+								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+							world.addFreshEntity(entityToSpawn);
+						}
+						if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal("Yuta: come, rika."), false);
+						CraftKaisenMod.queueServerWork(10, () -> {
+							if (((Entity) world.getEntitiesOfClass(RikaEntity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).stream().sorted(new Object() {
+								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+								}
+							}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+								_toTame.tame(_owner);
+						});
 					}
-					if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal("Yuta: RIKA!!"), false);
-					CraftKaisenMod.queueServerWork(10, () -> {
-						if (((Entity) world.getEntitiesOfClass(RikaEntity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
-							_toTame.tame(_owner);
-					});
-				}
-				if (!entity.getPersistentData().getBoolean("prerika")) {
-					if (Math.random() < 0.001) {
-						entity.getPersistentData().putBoolean("release", true);
+					if (!entity.getPersistentData().getBoolean("prerika")) {
+						if (Math.random() < 0.001) {
+							entity.getPersistentData().putBoolean("release", true);
+						}
 					}
 				}
 			}

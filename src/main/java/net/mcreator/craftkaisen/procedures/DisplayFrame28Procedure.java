@@ -1,8 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class DisplayFrame28Procedure {
 	public static boolean execute(Entity entity) {

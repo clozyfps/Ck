@@ -1,0 +1,44 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Cursed Energy Amount",
+          "name": "ImbueValue",
+          "width": 120,
+          "height": 20,
+          "x": 150,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_imbue",
+          "text": "Imbue",
+          "width": 51,
+          "height": 20,
+          "x": 186,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
