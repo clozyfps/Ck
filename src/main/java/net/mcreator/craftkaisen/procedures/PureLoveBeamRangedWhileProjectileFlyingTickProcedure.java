@@ -6,6 +6,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -30,13 +31,13 @@ public class PureLoveBeamRangedWhileProjectileFlyingTickProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator)) {
+				if (!(entity == entityiterator) && !((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == entityiterator)) {
 					entityiterator.hurt(DamageSource.GENERIC, 15);
 				}
 			}
 		}
-		int horizontalRadiusHemiTop = (int) 5 - 1;
-		int verticalRadiusHemiTop = (int) 5;
+		int horizontalRadiusHemiTop = (int) 7 - 1;
+		int verticalRadiusHemiTop = (int) 7;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int i = 0; i < yIterationsHemiTop; i++) {
 			if (i == verticalRadiusHemiTop) {
@@ -53,7 +54,7 @@ public class PureLoveBeamRangedWhileProjectileFlyingTickProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 30, 6, 3, 6, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 10, 6, 3, 6, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 10, 6, 3, 6, 0);
 		if (world instanceof ServerLevel _level)

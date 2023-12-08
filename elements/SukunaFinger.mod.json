@@ -8,11 +8,11 @@
     "customProperties": {},
     "states": [],
     "name": "Sukuna Finger",
-    "rarity": "COMMON",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:CkItems"
     },
-    "stackSize": 64,
+    "stackSize": 20,
     "enchantability": 0,
     "useDuration": 25,
     "toolType": 1.0,
@@ -26,7 +26,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§l§5Special Grade Cursed Object: Finger"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

@@ -34,7 +34,7 @@ public class MahoragaAdaptionProcedure {
 			return;
 		if (entity instanceof EightHandledSwordDivergentSilaDivineGeneralMahoragaEntity) {
 			entity.getPersistentData().putString("Adapting", (entity.getPersistentData().getString("Adapting") + " " + sourceentity.getPersistentData().getString("currentmoveactive")));
-			entity.getPersistentData().putDouble("adaptingtimergoal", (Mth.nextInt(RandomSource.create(), 60, 200)));
+			entity.getPersistentData().putDouble("adaptingtimergoal", (Mth.nextInt(RandomSource.create(), 500, 1000)));
 			if ((entity.getPersistentData().getString("Adapted")).contains(sourceentity.getPersistentData().getString("currentmoveactive"))) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);

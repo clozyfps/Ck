@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CursedWombDeathPaintingItem extends Item {
 	public CursedWombDeathPaintingItem() {
-		super(new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS).stacksTo(1).rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_ITEMS).stacksTo(1).rarity(Rarity.EPIC));
 	}
 
 	@Override

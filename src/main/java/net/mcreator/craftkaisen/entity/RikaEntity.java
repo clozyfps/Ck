@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -20,6 +21,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -51,6 +53,7 @@ import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import javax.annotation.Nullable;
 
 import java.util.List;
+import java.util.EnumSet;
 
 public class RikaEntity extends TamableAnimal {
 	public RikaEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -81,16 +84,55 @@ public class RikaEntity extends TamableAnimal {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(2, new OwnerHurtByTargetGoal(this));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.6, true) {
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 2.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
+		this.goalSelector.addGoal(4, new Goal() {
+			{
+				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+			}
+
+			public boolean canUse() {
+				if (RikaEntity.this.getTarget() != null && !RikaEntity.this.getMoveControl().hasWanted()) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				return RikaEntity.this.getMoveControl().hasWanted() && RikaEntity.this.getTarget() != null && RikaEntity.this.getTarget().isAlive();
+			}
+
+			@Override
+			public void start() {
+				LivingEntity livingentity = RikaEntity.this.getTarget();
+				Vec3 vec3d = livingentity.getEyePosition(1);
+				RikaEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2.5);
+			}
+
+			@Override
+			public void tick() {
+				LivingEntity livingentity = RikaEntity.this.getTarget();
+				if (RikaEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					RikaEntity.this.doHurtTarget(livingentity);
+				} else {
+					double d0 = RikaEntity.this.distanceToSqr(livingentity);
+					if (d0 < 50) {
+						Vec3 vec3d = livingentity.getEyePosition(1);
+						RikaEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2.5);
+					}
+				}
+			}
+		});
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(8, new FloatGoal(this));
 	}
 
 	@Override

@@ -68,9 +68,9 @@ public class MahitoOnEntityTickUpdateProcedure {
 						if (!(entity == entityiterator)) {
 							entityiterator.hurt(DamageSource.GENERIC, 10);
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.POOF, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 3, 2, 3, 0);
+								_level.sendParticles(ParticleTypes.POOF, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 2, 3, 2, 3, 0);
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.SOUL, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 6, 1, 2, 1, 0);
+								_level.sendParticles(ParticleTypes.SOUL, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 8, 0.4, 2, 0.4, 0);
 							if (entity instanceof LivingEntity _entity)
 								_entity.swing(InteractionHand.MAIN_HAND, true);
 						}
@@ -79,8 +79,8 @@ public class MahitoOnEntityTickUpdateProcedure {
 			}
 		}
 		if (entity.getPersistentData().getBoolean("mahitohit")) {
-			entity.getPersistentData().putDouble("mahitohit", (entity.getPersistentData().getDouble("mahitohittimer") + 1));
-			if (entity.getPersistentData().getDouble("mahitohittimer") == 2) {
+			entity.getPersistentData().putDouble("mahitohittimer", (entity.getPersistentData().getDouble("mahitohittimer") + 1));
+			if (entity.getPersistentData().getDouble("mahitohittimer") >= 2) {
 				entity.getPersistentData().putBoolean("mahitohit", false);
 			}
 		}

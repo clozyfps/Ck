@@ -18,6 +18,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 
 import java.util.stream.Collectors;
 import java.util.List;
@@ -44,7 +45,8 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator) && !(entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)) {
+				if (!(entity == entityiterator) && !(entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+						&& !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()) : false)) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 2, 0.6, 0.6, 0.6, 0.6);
 					if (world instanceof ServerLevel _level)
@@ -65,6 +67,10 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 						}
 					}
 					entityiterator.hurt((new EntityDamageSource("generic.player", (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))), 18);
+				} else if (entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()) : false) {
+					if (Math.random() < 0.01) {
+						entity.getPersistentData().putDouble("simpledomainlevel", (entity.getPersistentData().getDouble("simpledomainlevel") - 1));
+					}
 				}
 			}
 		}

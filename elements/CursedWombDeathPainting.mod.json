@@ -10,7 +10,7 @@
     "name": "Cursed Womb: Death Painting",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkItems"
     },
     "stackSize": 1,
     "enchantability": 0,
