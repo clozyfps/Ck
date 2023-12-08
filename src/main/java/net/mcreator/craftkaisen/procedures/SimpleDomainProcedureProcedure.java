@@ -13,10 +13,13 @@ public class SimpleDomainProcedureProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()) : false)) {
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get(), 1000, 1, false, false));
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("Given Simple Domain"), true);
+			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN_COOLDOWN.get()) : false)) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get(), 1000, 1, false, false));
+				if (entity instanceof Player _player && !_player.level.isClientSide())
+					_player.displayClientMessage(Component.literal("Given Simple Domain"), true);
+				entity.getPersistentData().putDouble("simpledomainlevel", 4);
+			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()) : false)
 				&& (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()) ? _livEnt.getEffect(CraftKaisenModMobEffects.SIMPLE_DOMAIN.get()).getDuration() : 0) < 1000) {
 			if (entity instanceof LivingEntity _entity)

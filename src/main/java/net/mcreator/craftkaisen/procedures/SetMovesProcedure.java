@@ -280,6 +280,13 @@ public class SetMovesProcedure {
 					entity.getPersistentData().putDouble("moveCost", 40);
 				}
 			}
+			if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Boogie Woogie")) {
+				entity.getPersistentData().putDouble("maxMoves", 1);
+				if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+					entity.getPersistentData().putString("moveDisplay", "Clap");
+					entity.getPersistentData().putDouble("moveCost", 7);
+				}
+			}
 		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Cursed Energy")) {
 			CursedEnergySwitchProcedure.execute(entity);
 		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Melee")) {

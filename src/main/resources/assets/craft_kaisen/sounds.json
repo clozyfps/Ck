@@ -87,5 +87,13 @@
         "stream": false
       }
     ]
+  },
+  "sukunadomain": {
+    "sounds": [
+      {
+        "name": "craft_kaisen:sukuna_saying_domain_expansion_ringtone",
+        "stream": false
+      }
+    ]
   }
 }

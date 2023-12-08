@@ -44,9 +44,9 @@ public class MalevolentShrineProcedureProcedure {
 								entity.getPersistentData().putBoolean("domain", true);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:domain")), SoundSource.NEUTRAL, 1, 1);
+										_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:sukunadomain")), SoundSource.NEUTRAL, 1, 1);
 									} else {
-										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:domain")), SoundSource.NEUTRAL, 1, 1, false);
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:sukunadomain")), SoundSource.NEUTRAL, 1, 1, false);
 									}
 								}
 								if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())

@@ -3,7 +3,7 @@ package net.mcreator.craftkaisen.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class InfinityBeforeHurtProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingHurtEvent event) {
+	public static void onEntityAttacked(LivingAttackEvent event) {
 		Entity entity = event.getEntity();
 		if (event != null && entity != null) {
 			execute(event, entity, event.getSource().getDirectEntity());
