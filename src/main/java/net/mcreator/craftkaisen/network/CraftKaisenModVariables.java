@@ -376,10 +376,10 @@ public class CraftKaisenModVariables {
 		public String RenderSpecial = "\"\"";
 		public double SukunaLevel = 0;
 		public double flowerexpand = 0;
-		public String CSM4 = "";
-		public String CSM3 = "";
-		public String CSM2 = "";
-		public String CSM1 = "";
+		public String CSM4 = "\"\"";
+		public String CSM3 = "\"\"";
+		public String CSM2 = "\"\"";
+		public String CSM1 = "\"\"";
 		public boolean RCT = false;
 		public double RCTLevel = 0;
 		public double RCTExp = 0;

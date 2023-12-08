@@ -15888,20 +15888,6 @@
       "path": "~/Mobs/Procedure"
     },
     {
-      "name": "SimpleDomainCooldown",
-      "type": "potioneffect",
-      "sortid": 640,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "simple_domain_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/SimpleDomainCooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
       "name": "BoogieWoogieMoves",
       "type": "procedure",
       "sortid": 641,
@@ -15924,6 +15910,20 @@
         ]
       },
       "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "SimpleDomainCooldown",
+      "type": "potioneffect",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_domain_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SimpleDomainCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
     }
   ],
   "variable_elements": [
@@ -16315,25 +16315,25 @@
       "name": "CSM4",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "CSM3",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "CSM2",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "CSM1",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "RCT",
@@ -16645,7 +16645,6 @@
       "entity.craft_kaisen.great_serpent": "Great Serpent",
       "effect.craft_kaisen.constant_slice": "ConstantSlice",
       "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
-      "effect.craft_kaisen.simple_domain_cooldown": "Simple Domain Cooldown",
       "advancements.stand_proud_you_are_strong.descr": "Get Sukuna To Atleast Half Health And Lose To Him",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
@@ -16832,6 +16831,10 @@
             "children": []
           },
           {
+            "name": "BoogieWoogie",
+            "children": []
+          },
+          {
             "name": "DisasterPlants",
             "children": []
           },
@@ -16866,10 +16869,6 @@
           },
           {
             "name": "Cursed Energy",
-            "children": []
-          },
-          {
-            "name": "BoogieWoogie",
             "children": []
           }
         ]

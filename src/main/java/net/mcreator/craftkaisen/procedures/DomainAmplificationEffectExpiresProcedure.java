@@ -1,12 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
+import javax.annotation.Nullable;
 
 public class DomainAmplificationEffectExpiresProcedure {
 	public static void execute(Entity entity) {
@@ -20,6 +16,6 @@ public class DomainAmplificationEffectExpiresProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.removeEffect(CraftKaisenModMobEffects.DOMAIN_AMPLIFICATION.get());
+			_entity.removeEffect(CraftKaisenModMobEffects.DELETED_MOD_ELEMENT.get());
 	}
 }

@@ -1,21 +1,8 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
-
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
-
-import net.mcreator.craftkaisen.procedures.DomainAmplificationEffectStartedappliedProcedure;
-import net.mcreator.craftkaisen.procedures.DomainAmplificationEffectExpiresProcedure;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class DomainAmplificationMobEffect extends MobEffect {
+
 	public DomainAmplificationMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -16724737);
 	}
