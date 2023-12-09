@@ -3001,22 +3001,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -6027,10 +6011,6 @@
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -9899,10 +9879,6 @@
           },
           {
             "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -14334,11 +14310,23 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
           },
           {
             "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -15954,6 +15942,26 @@
       "path": "~/Potions"
     },
     {
+      "name": "ResistanceHealth",
+      "type": "procedure",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistance_health",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ResistanceHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
       "name": "MahitoClone",
       "type": "livingentity",
       "sortid": 642,
@@ -16005,15 +16013,52 @@
       "path": "~/Mobs/Procedure"
     },
     {
-      "name": "ResistanceHealth",
+      "name": "PerceptionBlitz",
       "type": "procedure",
-      "sortid": 644,
+      "sortid": 641,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "resistance_health",
+      "registry_name": "perception_blitz",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ResistanceHealthProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/PerceptionBlitzProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayBoogieWoogieTargets",
+      "type": "procedure",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_boogie_woogie_targets",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayBoogieWoogieTargetsProcedure.java"
         ],
         "dependencies": [
           {
@@ -16022,7 +16067,111 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUI/Procedures/Value"
+    },
+    {
+      "name": "ReturnTargetOne",
+      "type": "procedure",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_target_one",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnTargetOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Value"
+    },
+    {
+      "name": "ReturnTargetTwo",
+      "type": "procedure",
+      "sortid": 645,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_target_two",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnTargetTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Value"
+    },
+    {
+      "name": "MahitoPreventDamage",
+      "type": "procedure",
+      "sortid": 648,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_prevent_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoPreventDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "SetBoogieWoogie",
+      "type": "procedure",
+      "sortid": 646,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_boogie_woogie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetBoogieWoogieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "PerceptionOfTheSoul",
+      "type": "achievement",
+      "sortid": 647,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "perception_of_the_soul",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/perception_of_the_soul.json"
+        ]
+      },
+      "path": "~/Advancement"
     }
   ],
   "variable_elements": [
@@ -16455,7 +16604,7 @@
     {
       "name": "BlackFlashRarity",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "10.0"
     },
     {

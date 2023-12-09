@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:soul_lantern"
+    },
+    "title": {
+      "translate": "advancements.perception_of_the_soul.title"
+    },
+    "description": {
+      "translate": "advancements.perception_of_the_soul.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "perception_of_the_soul": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_kaisen:jujutsu_kaisen"
+}

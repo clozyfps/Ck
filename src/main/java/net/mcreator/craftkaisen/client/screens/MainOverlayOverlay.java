@@ -13,8 +13,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftkaisen.procedures.ReturnTargetTwoProcedure;
+import net.mcreator.craftkaisen.procedures.ReturnTargetOneProcedure;
 import net.mcreator.craftkaisen.procedures.ReturnOutputProcedure;
 import net.mcreator.craftkaisen.procedures.ReturnCEOverlayProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayBoogieWoogieTargetsProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class MainOverlayOverlay {
@@ -42,6 +45,14 @@ public class MainOverlayOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					ReturnOutputProcedure.execute(entity), posX + 96, posY + 89, -1);
+			if (DisplayBoogieWoogieTargetsProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+						ReturnTargetOneProcedure.execute(entity), posX + -189, posY + 86, -1);
+			if (DisplayBoogieWoogieTargetsProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+						ReturnTargetTwoProcedure.execute(entity), posX + -189, posY + 95, -1);
 		}
 	}
 }

@@ -35,6 +35,44 @@
           "x": 309,
           "y": 209
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_target_one_na",
+          "text": {
+            "fixedValue": "Target One : N/A",
+            "name": "ReturnTargetOne"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayBoogieWoogieTargets"
+          },
+          "x": 24,
+          "y": 206
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_target_two_na",
+          "text": {
+            "fixedValue": "Target Two : N/A",
+            "name": "ReturnTargetTwo"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayBoogieWoogieTargets"
+          },
+          "x": 24,
+          "y": 215
+        }
       }
     ],
     "baseTexture": "",
@@ -44,7 +82,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

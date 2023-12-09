@@ -39,6 +39,7 @@ import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
 import net.mcreator.craftkaisen.procedures.SetCopyProcedure;
 import net.mcreator.craftkaisen.procedures.SetCSMProcedure;
+import net.mcreator.craftkaisen.procedures.SetBoogieWoogieProcedure;
 import net.mcreator.craftkaisen.procedures.SetBloodManipulationProcedure;
 import net.mcreator.craftkaisen.procedures.ResetButtonProcedure;
 
@@ -49,7 +50,7 @@ public class SetCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(Commands.literal("craftKaisen").requires(s -> s.hasPermission(2)).then(Commands.literal("technique").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Limitless").executes(arguments -> {
+				.register(Commands.literal("craftKaisen").requires(s -> s.hasPermission(2)).then(Commands.literal("Technique").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Limitless").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -193,7 +194,19 @@ public class SetCommandCommand {
 
 					SetCSMProcedure.execute(entity);
 					return 0;
-				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
+				})).then(Commands.literal("BoogieWoogie").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetBoogieWoogieProcedure.execute(entity);
+					return 0;
+				})))).then(Commands.literal("Race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Human").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -205,7 +218,7 @@ public class SetCommandCommand {
 
 					SetHumanProcedure.execute(entity);
 					return 0;
-				})).then(Commands.literal("curse").executes(arguments -> {
+				})).then(Commands.literal("Curse").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -217,7 +230,7 @@ public class SetCommandCommand {
 
 					SetCurseProcedure.execute(entity);
 					return 0;
-				})))).then(Commands.literal("stat").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("cursedenergy").then(Commands.argument("cursedEnergy", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				})))).then(Commands.literal("Stat").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("CursedEnergy").then(Commands.argument("cursedEnergy", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -229,7 +242,7 @@ public class SetCommandCommand {
 
 					SetCursedEnergyStatProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("strength").then(Commands.argument("strength", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("Strength").then(Commands.argument("strength", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -241,7 +254,7 @@ public class SetCommandCommand {
 
 					SetStrengthStatProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("speed").then(Commands.argument("speed", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("Speed").then(Commands.argument("speed", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -253,7 +266,7 @@ public class SetCommandCommand {
 
 					SetSpeedStatProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("health").then(Commands.argument("health", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("Health").then(Commands.argument("health", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -265,7 +278,7 @@ public class SetCommandCommand {
 
 					SetHealthStatProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("energycontrol").then(Commands.argument("energyControl", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("EnergyControl").then(Commands.argument("energyControl", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -277,7 +290,7 @@ public class SetCommandCommand {
 
 					SetEnergyControlProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("skillpoints").then(Commands.argument("skillPoints", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("SkillPoints").then(Commands.argument("skillPoints", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -289,7 +302,7 @@ public class SetCommandCommand {
 
 					SetSkillPointsProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("level").then(Commands.argument("Level", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("Level").then(Commands.argument("Level", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -301,7 +314,7 @@ public class SetCommandCommand {
 
 					SetLevelProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("exp").then(Commands.argument("Exp", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("Experience").then(Commands.argument("Exp", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -313,7 +326,7 @@ public class SetCommandCommand {
 
 					SetExpProcedure.execute(arguments);
 					return 0;
-				}))))).then(Commands.literal("special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
+				}))))).then(Commands.literal("Special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -361,7 +374,7 @@ public class SetCommandCommand {
 
 					SetFragileBodyProcedure.execute(entity);
 					return 0;
-				})))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+				})))).then(Commands.literal("Reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

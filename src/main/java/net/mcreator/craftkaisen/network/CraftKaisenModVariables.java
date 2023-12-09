@@ -124,7 +124,6 @@ public class CraftKaisenModVariables {
 			clone.RCT = original.RCT;
 			clone.RCTLevel = original.RCTLevel;
 			clone.RCTExp = original.RCTExp;
-			clone.BlackFlashRarity = original.BlackFlashRarity;
 			clone.Traits = original.Traits;
 			clone.YutaEventHappened = original.YutaEventHappened;
 			if (!event.isWasDeath()) {
@@ -143,6 +142,7 @@ public class CraftKaisenModVariables {
 				clone.Page = original.Page;
 				clone.DomainClashCombo = original.DomainClashCombo;
 				clone.flowerexpand = original.flowerexpand;
+				clone.BlackFlashRarity = original.BlackFlashRarity;
 			}
 		}
 
