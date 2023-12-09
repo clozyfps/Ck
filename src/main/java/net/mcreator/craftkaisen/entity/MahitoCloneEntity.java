@@ -5,9 +5,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -16,7 +14,6 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,18 +23,18 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.craftkaisen.init.CraftKaisenModItems;
+import net.mcreator.craftkaisen.procedures.MahitoCloneTickProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
-public class FingerBearerEntity extends Monster {
-	public FingerBearerEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftKaisenModEntities.FINGER_BEARER.get(), world);
+public class MahitoCloneEntity extends Monster {
+	public MahitoCloneEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftKaisenModEntities.MAHITO_CLONE.get(), world);
 	}
 
-	public FingerBearerEntity(EntityType<FingerBearerEntity> type, Level world) {
+	public MahitoCloneEntity(EntityType<MahitoCloneEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
-		xpReward = 5;
+		xpReward = 0;
 		setNoAi(false);
 	}
 
@@ -66,9 +63,9 @@ public class FingerBearerEntity extends Monster {
 		return MobType.UNDEFINED;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(CraftKaisenModItems.SUKUNA_FINGER.get()));
+	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
 	}
 
 	@Override
@@ -81,18 +78,22 @@ public class FingerBearerEntity extends Monster {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		MahitoCloneTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+	}
+
 	public static void init() {
-		SpawnPlacements.register(CraftKaisenModEntities.FINGER_BEARER.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 290);
+		builder = builder.add(Attributes.MAX_HEALTH, 360);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 14);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 25);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}

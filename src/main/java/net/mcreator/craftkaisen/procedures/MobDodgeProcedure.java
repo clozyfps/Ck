@@ -36,7 +36,7 @@ public class MobDodgeProcedure {
 		if (entity == null)
 			return;
 		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:dashable")))) {
-			if (Math.random() < 0.01) {
+			if (Math.random() < 0.05) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}

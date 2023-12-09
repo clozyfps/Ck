@@ -40,6 +40,7 @@ import net.mcreator.craftkaisen.client.renderer.MaximumElephantRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaxMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
+import net.mcreator.craftkaisen.client.renderer.MahitoCloneRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.InventoryCurseMobRenderer;
@@ -128,5 +129,6 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.EMBER_INSECT_PROJECTILE.get(), EmberInsectProjectileRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.FLOWER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.STRONGHIT.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MAHITO_CLONE.get(), MahitoCloneRenderer::new);
 	}
 }

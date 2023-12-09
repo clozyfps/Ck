@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Mahito",
+    "mobName": "Mahito Clone",
     "mobLabel": "",
     "mobModelName": "Biped",
     "mobModelTexture": "mahitoh.png",
@@ -14,17 +14,17 @@
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
-      "value": -15197403,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -3342339,
+      "value": -1,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:CkCurses"
+      "value": "No creative tab entry"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -57,8 +57,8 @@
     "armorBaseValue": 0.1,
     "trackingRange": 64,
     "followRange": 50,
-    "health": 460,
-    "xpAmount": 3,
+    "health": 360,
+    "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -97,14 +97,11 @@
       "value": ""
     },
     "onMobTickUpdate": {
-      "name": "MahitoOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "MahitoOnInitialEntitySpawn"
+      "name": "MahitoCloneTick"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.7</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -115,7 +112,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
+    "spawnThisMob": false,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 1,
     "mobSpawningType": "ambient",

@@ -56,7 +56,7 @@ public class MahitoEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.6, true) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.7, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -110,7 +110,7 @@ public class MahitoEntity extends Monster {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 460);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 25);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;

@@ -33,23 +33,21 @@ public class SukunaQuoteProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player || (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof ServerPlayer) {
-			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getPersistentData().getBoolean("proud")) {
-				if (entity instanceof RyomenSukunaEntity || entity.getPersistentData().getBoolean("sukuna")) {
-					if (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 5
-							&& (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 2) {
-						if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getPersistentData().getBoolean("proud"))) {
-							if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player _player && !_player.level.isClientSide())
-								_player.displayClientMessage(Component.literal(("Stand Proud " + entity.getDisplayName().getString() + ", You are strong.")), true);
-							(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getPersistentData().putBoolean("proud", true);
-							if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 250, false, false));
-							if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 250, false, false));
-							if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 50, 250, false, false));
-							if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 250, false, false));
-						}
+			if (entity instanceof RyomenSukunaEntity || entity.getPersistentData().getBoolean("sukuna")) {
+				if (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 5
+						&& (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 2) {
+					if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getPersistentData().getBoolean("proud"))) {
+						if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal(("Stand Proud " + entity.getDisplayName().getString() + ", You are strong.")), true);
+						(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getPersistentData().putBoolean("proud", true);
+						if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 250, false, false));
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 250, false, false));
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 50, 250, false, false));
+						if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 250, false, false));
 					}
 				}
 			}

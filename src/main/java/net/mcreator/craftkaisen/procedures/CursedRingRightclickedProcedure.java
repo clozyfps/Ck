@@ -1,19 +1,33 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.entity.RikaEntity;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.Comparator;
 
 public class CursedRingRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level instanceof ServerLevel
-				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:deleted_mod_element"))).isDone())) {
+		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:rika_tamed"))).isDone())) {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(Component.literal("\u00A7l\u00A75Gain My Trust."), true);
-		} else if (entity instanceof ServerPlayer _plr2 && _plr2.level instanceof ServerLevel
-				&& _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:deleted_mod_element"))).isDone()) {
+		} else if (entity instanceof ServerPlayer _plr2 && _plr2.level instanceof ServerLevel && _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(new ResourceLocation("craft_kaisen:rika_tamed"))).isDone()) {
 			if (!entity.getPersistentData().getBoolean("rika")) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = new RikaEntity(CraftKaisenModEntities.RIKA.get(), _level);

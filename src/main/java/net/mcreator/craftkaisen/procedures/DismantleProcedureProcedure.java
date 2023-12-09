@@ -11,6 +11,8 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
@@ -92,6 +94,8 @@ public class DismantleProcedureProcedure {
 							}
 						}
 						entityiterator.getPersistentData().putBoolean("dismantle", true);
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 2, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, new BlockPos(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL,

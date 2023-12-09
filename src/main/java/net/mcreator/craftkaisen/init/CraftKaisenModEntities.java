@@ -57,6 +57,7 @@ import net.mcreator.craftkaisen.entity.MaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.MaxMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
+import net.mcreator.craftkaisen.entity.MahitoCloneEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.InventoryCurseMobEntity;
@@ -308,6 +309,10 @@ public class CraftKaisenModEntities {
 			.setCustomClientFactory(FlowerProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<StronghitEntity>> STRONGHIT = register("projectile_stronghit",
 			EntityType.Builder.<StronghitEntity>of(StronghitEntity::new, MobCategory.MISC).setCustomClientFactory(StronghitEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MahitoCloneEntity>> MAHITO_CLONE = register("mahito_clone",
+			EntityType.Builder.<MahitoCloneEntity>of(MahitoCloneEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoCloneEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -358,6 +363,7 @@ public class CraftKaisenModEntities {
 			WoodenBoxEntity.init();
 			SmallPoxDomainSpawnerEntity.init();
 			PoxDeityDomainEntity.init();
+			MahitoCloneEntity.init();
 		});
 	}
 
@@ -405,5 +411,6 @@ public class CraftKaisenModEntities {
 		event.put(WOODEN_BOX.get(), WoodenBoxEntity.createAttributes().build());
 		event.put(SMALL_POX_DOMAIN_SPAWNER.get(), SmallPoxDomainSpawnerEntity.createAttributes().build());
 		event.put(POX_DEITY_DOMAIN.get(), PoxDeityDomainEntity.createAttributes().build());
+		event.put(MAHITO_CLONE.get(), MahitoCloneEntity.createAttributes().build());
 	}
 }

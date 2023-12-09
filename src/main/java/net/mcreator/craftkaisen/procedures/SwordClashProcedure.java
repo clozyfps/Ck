@@ -35,19 +35,19 @@ public class SwordClashProcedure {
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		Entity entity = event.getEntity();
 		if (event != null && entity != null) {
-			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getDirectEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		execute(null, world, x, y, z, entity, sourceentity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
+		execute(null, world, x, y, z, entity, immediatesourceentity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
+		if (entity == null || immediatesourceentity == null || sourceentity == null)
 			return;
 		if (Math.random() < 0.5) {
-			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem
+			if ((immediatesourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem
 					&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.swing(InteractionHand.MAIN_HAND, true);
@@ -80,7 +80,7 @@ public class SwordClashProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.CLASH_PARTICLE.get()), x, y, z, 2, 1, 2, 1, 2);
-				if (entity instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
+				if (entity instanceof Mob _entity && immediatesourceentity instanceof LivingEntity _ent)
 					_entity.setTarget(_ent);
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
@@ -100,7 +100,7 @@ public class SwordClashProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.CLASH_PARTICLE.get()), x, y, z, 2, 1, 2, 1, 2);
-				if (entity instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
+				if (entity instanceof Mob _entity && immediatesourceentity instanceof LivingEntity _ent)
 					_entity.setTarget(_ent);
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);

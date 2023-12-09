@@ -86,11 +86,11 @@ public class YujiItadoriEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
-		builder = builder.add(Attributes.MAX_HEALTH, 300);
+		builder = builder.add(Attributes.MAX_HEALTH, 370);
 		builder = builder.add(Attributes.ARMOR, 0.2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 17);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 21);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 3);
 		return builder;
 	}
 }

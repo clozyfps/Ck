@@ -1554,6 +1554,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2985,6 +3001,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -5995,6 +6027,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -9863,6 +9899,10 @@
           },
           {
             "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -14294,23 +14334,11 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
             "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
             "type": "number"
           },
           {
@@ -15924,6 +15952,77 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "MahitoClone",
+      "type": "livingentity",
+      "sortid": 642,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_clone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoCloneEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoCloneRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MahitoCloneTick",
+      "type": "procedure",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_clone_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoCloneTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ResistanceHealth",
+      "type": "procedure",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistance_health",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ResistanceHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -16356,7 +16455,7 @@
     {
       "name": "BlackFlashRarity",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "10.0"
     },
     {
@@ -16477,9 +16576,9 @@
       "gui.craft_kaisen.csmgui.button_1": "1",
       "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "gui.craft_kaisen.move_gui.button_6": "6",
-      "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
       "gui.craft_kaisen.csmgui.button_3": "3",
+      "gui.craft_kaisen.move_gui.button_empty3": "\u003e",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "gui.craft_kaisen.csmgui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_empty2": "\u003c",
       "gui.craft_kaisen.move_gui.button_5": "5",
@@ -16571,6 +16670,7 @@
       "item.craft_kaisen.yuta_outfit_leggings": "Yuta Pants",
       "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
       "effect.craft_kaisen.pre_red": "PreRed",
+      "entity.craft_kaisen.mahito_clone": "Mahito Clone",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
       "entity.craft_kaisen.finger_bearer": "Finger Bearer",
       "block.craft_kaisen.sprinkler_on": "Sprinkler On",
@@ -16645,6 +16745,7 @@
       "entity.craft_kaisen.great_serpent": "Great Serpent",
       "effect.craft_kaisen.constant_slice": "ConstantSlice",
       "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
+      "effect.craft_kaisen.simple_domain_cooldown": "Simple Domain Cooldown",
       "advancements.stand_proud_you_are_strong.descr": "Get Sukuna To Atleast Half Health And Lose To Him",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
