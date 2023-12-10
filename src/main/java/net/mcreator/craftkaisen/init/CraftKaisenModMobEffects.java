@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.potion.SukunaMobEffect;
 import net.mcreator.craftkaisen.potion.SmallPoxDeityCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.SimpleDomainMobEffect;
 import net.mcreator.craftkaisen.potion.SimpleDomainCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.RCTMobEffect;
 import net.mcreator.craftkaisen.potion.PureLovePreMobEffect;
 import net.mcreator.craftkaisen.potion.PureLoveActiveMobEffect;
 import net.mcreator.craftkaisen.potion.PunchBarragePotionMobEffect;
@@ -62,4 +63,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> ZONE = REGISTRY.register("zone", () -> new ZoneMobEffect());
 	public static final RegistryObject<MobEffect> DOMAIN_AMPLIFICATION = REGISTRY.register("domain_amplification", () -> new DomainAmplificationMobEffect());
 	public static final RegistryObject<MobEffect> SIMPLE_DOMAIN_COOLDOWN = REGISTRY.register("simple_domain_cooldown", () -> new SimpleDomainCooldownMobEffect());
+	public static final RegistryObject<MobEffect> RCT = REGISTRY.register("rct", () -> new RCTMobEffect());
 }

@@ -1,8 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 public class DisplayBoogieWoogieTargetsProcedure {
 	public static boolean execute(Entity entity) {

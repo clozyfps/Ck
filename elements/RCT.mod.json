@@ -1,0 +1,20 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Reversed Cursed Energy",
+    "icon": "zone.png",
+    "color": {
+      "value": -16724890,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "RCTOnEffectActiveTick"
+    }
+  }
+}
