@@ -70,7 +70,7 @@ public class QuestBoardOnBlockRightClickedProcedure {
 					}
 				} else if (random == 3) {
 					{
-						String _setval = "Deliver the medicine to a hospital";
+						String _setval = "Deliver the medicine to the old lady";
 						entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.CurrentMission = _setval;
 							capability.syncPlayerVariables(entity);
@@ -90,7 +90,7 @@ public class QuestBoardOnBlockRightClickedProcedure {
 				random = Mth.nextInt(RandomSource.create(), 1, 4);
 				if (random == 1) {
 					{
-						String _setval = "Escort The Star Plasma Vessel";
+						String _setval = "Escort The Star Plasma Vessel To - " + "X: " + entity.getPersistentData().getDouble("vesselx") + " Z: " + entity.getPersistentData().getDouble("vesselz");
 						entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.CurrentMission = _setval;
 							capability.syncPlayerVariables(entity);

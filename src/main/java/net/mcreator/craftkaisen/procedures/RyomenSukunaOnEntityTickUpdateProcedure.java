@@ -3,10 +3,8 @@ package net.mcreator.craftkaisen.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -23,8 +21,6 @@ import net.minecraft.commands.CommandSource;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import java.util.stream.Collectors;
@@ -73,6 +69,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 							_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 3, 0.1, 0.1, 0.1, 1);
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.BLOOD_SPLASH.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 15, 0.2, (entityiterator.getBbHeight()), 0.2, 0.1);
+						world.levelEvent(2001, new BlockPos(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.RED_CONCRETE.defaultBlockState()));
 					}
 				}
 			}
@@ -140,27 +137,8 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 			if (entity.getPersistentData().getDouble("cooldown") == 0) {
 				move = Mth.nextInt(RandomSource.create(), 1, 6);
 				if (move == 1) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new DismantleEntity(CraftKaisenModEntities.DISMANTLE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 5, 1, (byte) 50);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
 					entity.getPersistentData().putString("currentmoveactive", "Dismantle");
+					DismantleProcedureSukunaProcedure.execute(world, entity);
 					entity.getPersistentData().putDouble("cooldown", 40);
 				} else if (move == 2) {
 					entity.getPersistentData().putBoolean("dismantleSphere", true);
@@ -169,69 +147,12 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 					entity.getPersistentData().putDouble("cooldown", 100);
 				} else if (move == 3) {
 					entity.getPersistentData().putString("currentmoveactive", "Dismantle");
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new DismantleEntity(CraftKaisenModEntities.DISMANTLE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 5, 1, (byte) 50);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
+					DismantleProcedureSukunaProcedure.execute(world, entity);
 					CraftKaisenMod.queueServerWork(20, () -> {
-						{
-							Entity _shootFrom = entity;
-							Level projectileLevel = _shootFrom.level;
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new DismantleEntity(CraftKaisenModEntities.DISMANTLE.get(), level);
-										entityToSpawn.setOwner(shooter);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										entityToSpawn.setPierceLevel(piercing);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, entity, 5, 1, (byte) 50);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
+						DismantleProcedureSukunaProcedure.execute(world, entity);
 						entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 						CraftKaisenMod.queueServerWork(20, () -> {
-							{
-								Entity _shootFrom = entity;
-								Level projectileLevel = _shootFrom.level;
-								if (!projectileLevel.isClientSide()) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-											AbstractArrow entityToSpawn = new DismantleEntity(CraftKaisenModEntities.DISMANTLE.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											entityToSpawn.setPierceLevel(piercing);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 5, 1, (byte) 50);
-									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-							}
+							DismantleProcedureSukunaProcedure.execute(world, entity);
 							entity.getPersistentData().putString("currentmoveactive", "Dismantle");
 						});
 					});

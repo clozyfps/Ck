@@ -18,6 +18,6 @@ public class TojiFushiguroRenderer extends HumanoidMobRenderer<TojiFushiguroEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(TojiFushiguroEntity entity) {
-		return new ResourceLocation("craft_kaisen:textures/entities/toji_fushiguro.png");
+		return new ResourceLocation("craft_kaisen:textures/entities/toji-fushiguro-on-planetminecraft-com.png");
 	}
 }

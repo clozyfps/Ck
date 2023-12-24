@@ -16,6 +16,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.ToggleCTSpecialMessage;
+import net.mcreator.craftkaisen.network.ReverseCursedTechniqueMessage;
 import net.mcreator.craftkaisen.network.OutputMessage;
 import net.mcreator.craftkaisen.network.MenuMessage;
 import net.mcreator.craftkaisen.network.EvadeMessage;
@@ -179,7 +180,24 @@ public class CraftKaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping REVERSE_CURSED_TECHNIQUE = new KeyMapping("key.craft_kaisen.reverse_cursed_technique", GLFW.GLFW_KEY_H, "key.categories.craft_kaisen");
+	public static final KeyMapping REVERSE_CURSED_TECHNIQUE = new KeyMapping("key.craft_kaisen.reverse_cursed_technique", GLFW.GLFW_KEY_H, "key.categories.craft_kaisen") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new ReverseCursedTechniqueMessage(0, 0));
+				ReverseCursedTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				REVERSE_CURSED_TECHNIQUE_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - REVERSE_CURSED_TECHNIQUE_LASTPRESS);
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new ReverseCursedTechniqueMessage(1, dt));
+				ReverseCursedTechniqueMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
 	public static final KeyMapping ARMOR_SPECIAL = new KeyMapping("key.craft_kaisen.armor_special", GLFW.GLFW_KEY_O, "key.categories.craft_kaisen") {
 		private boolean isDownOld = false;
 
@@ -194,6 +212,7 @@ public class CraftKaisenModKeyMappings {
 		}
 	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
+	private static long REVERSE_CURSED_TECHNIQUE_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -228,6 +247,7 @@ public class CraftKaisenModKeyMappings {
 				MENU.consumeClick();
 				TOGGLE_CT_SPECIAL.consumeClick();
 				EVADE.consumeClick();
+				REVERSE_CURSED_TECHNIQUE.consumeClick();
 				ARMOR_SPECIAL.consumeClick();
 			}
 		}

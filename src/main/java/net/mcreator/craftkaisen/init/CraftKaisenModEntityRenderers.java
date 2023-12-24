@@ -27,11 +27,13 @@ import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.RugbyFieldCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RoundDeerRenderer;
 import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
+import net.mcreator.craftkaisen.client.renderer.RikoAmanaiRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.ResurrectedTojiRenderer;
 import net.mcreator.craftkaisen.client.renderer.RainbowDragonRenderer;
 import net.mcreator.craftkaisen.client.renderer.PoxDeityDomainRenderer;
+import net.mcreator.craftkaisen.client.renderer.OldLadyRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
 import net.mcreator.craftkaisen.client.renderer.NobaraKugisakiRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
@@ -47,6 +49,7 @@ import net.mcreator.craftkaisen.client.renderer.InventoryCurseMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
+import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectProjectileRenderer;
@@ -130,5 +133,8 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.FLOWER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.STRONGHIT.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.MAHITO_CLONE.get(), MahitoCloneRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.FLY_HEAD.get(), FlyHeadRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.OLD_LADY.get(), OldLadyRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
 	}
 }

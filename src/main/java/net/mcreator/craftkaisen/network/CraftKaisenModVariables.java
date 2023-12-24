@@ -127,6 +127,10 @@ public class CraftKaisenModVariables {
 			clone.Traits = original.Traits;
 			clone.YutaEventHappened = original.YutaEventHappened;
 			clone.Passives = original.Passives;
+			clone.RCTdecoy = original.RCTdecoy;
+			clone.CurrentBounties = original.CurrentBounties;
+			clone.HasBounty = original.HasBounty;
+			clone.Bounty = original.Bounty;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -388,6 +392,10 @@ public class CraftKaisenModVariables {
 		public String Traits = "\"\"";
 		public boolean YutaEventHappened = false;
 		public String Passives = "\"\"";
+		public double RCTdecoy = 0;
+		public String CurrentBounties = "\"\"";
+		public boolean HasBounty = false;
+		public double Bounty = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -467,6 +475,10 @@ public class CraftKaisenModVariables {
 			nbt.putString("Traits", Traits);
 			nbt.putBoolean("YutaEventHappened", YutaEventHappened);
 			nbt.putString("Passives", Passives);
+			nbt.putDouble("RCTdecoy", RCTdecoy);
+			nbt.putString("CurrentBounties", CurrentBounties);
+			nbt.putBoolean("HasBounty", HasBounty);
+			nbt.putDouble("Bounty", Bounty);
 			return nbt;
 		}
 
@@ -543,6 +555,10 @@ public class CraftKaisenModVariables {
 			Traits = nbt.getString("Traits");
 			YutaEventHappened = nbt.getBoolean("YutaEventHappened");
 			Passives = nbt.getString("Passives");
+			RCTdecoy = nbt.getDouble("RCTdecoy");
+			CurrentBounties = nbt.getString("CurrentBounties");
+			HasBounty = nbt.getBoolean("HasBounty");
+			Bounty = nbt.getDouble("Bounty");
 		}
 	}
 
@@ -638,6 +654,10 @@ public class CraftKaisenModVariables {
 					variables.Traits = message.data.Traits;
 					variables.YutaEventHappened = message.data.YutaEventHappened;
 					variables.Passives = message.data.Passives;
+					variables.RCTdecoy = message.data.RCTdecoy;
+					variables.CurrentBounties = message.data.CurrentBounties;
+					variables.HasBounty = message.data.HasBounty;
+					variables.Bounty = message.data.Bounty;
 				}
 			});
 			context.setPacketHandled(true);

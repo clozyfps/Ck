@@ -46,6 +46,7 @@ import net.mcreator.craftkaisen.client.model.Modeldivinedog;
 import net.mcreator.craftkaisen.client.model.Modelcustom_model;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritgrasshopper;
+import net.mcreator.craftkaisen.client.model.Modelcurse_1;
 import net.mcreator.craftkaisen.client.model.Modelchosodrip;
 import net.mcreator.craftkaisen.client.model.Modelchoso;
 import net.mcreator.craftkaisen.client.model.Modelchimerafrog;
@@ -63,6 +64,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modeluniform.LAYER_LOCATION, Modeluniform::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximumelephantnew.LAYER_LOCATION, Modelmaximumelephantnew::createBodyLayer);
 		event.registerLayerDefinition(Modelyutafitnew.LAYER_LOCATION, Modelyutafitnew::createBodyLayer);
+		event.registerLayerDefinition(Modelcurse_1.LAYER_LOCATION, Modelcurse_1::createBodyLayer);
 		event.registerLayerDefinition(Modelsukunafightingchestplate.LAYER_LOCATION, Modelsukunafightingchestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelgetosandalsnew.LAYER_LOCATION, Modelgetosandalsnew::createBodyLayer);
 		event.registerLayerDefinition(Modelsorcerernew.LAYER_LOCATION, Modelsorcerernew::createBodyLayer);

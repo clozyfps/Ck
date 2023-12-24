@@ -5,7 +5,7 @@
     "mobName": "Toji Fushiguro",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "toji_fushiguro.png",
+    "mobModelTexture": "toji-fushiguro-on-planetminecraft-com.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -95,6 +95,9 @@
     },
     "stepSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "TojiFushiguroOnEntityTickUpdate"
     },
     "onInitialSpawn": {
       "name": "TojiFushiguroOnInitialEntitySpawn"

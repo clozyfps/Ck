@@ -18,6 +18,6 @@ public class RyomenSukunaRenderer extends HumanoidMobRenderer<RyomenSukunaEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(RyomenSukunaEntity entity) {
-		return new ResourceLocation("craft_kaisen:textures/entities/sukunanew.png");
+		return new ResourceLocation("craft_kaisen:textures/entities/ryomen-sukuna-on-planetminecraft-com.png");
 	}
 }

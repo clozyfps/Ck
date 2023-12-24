@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.procedures.SetSukunaProcedure;
 import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetStrawDollProcedure;
 import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetSorcererProcedure;
 import net.mcreator.craftkaisen.procedures.SetSkillPointsProcedure;
 import net.mcreator.craftkaisen.procedures.SetSixEyesProcedure;
 import net.mcreator.craftkaisen.procedures.SetPhysicallyGiftedProcedure;
@@ -36,6 +37,7 @@ import net.mcreator.craftkaisen.procedures.SetDisasterPlantsProcedure;
 import net.mcreator.craftkaisen.procedures.SetDisasterFlamesProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedSpeechProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetCurseUserProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
 import net.mcreator.craftkaisen.procedures.SetCopyProcedure;
 import net.mcreator.craftkaisen.procedures.SetCSMProcedure;
@@ -373,6 +375,30 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetFragileBodyProcedure.execute(entity);
+					return 0;
+				})))).then(Commands.literal("Affiliation").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Sorcerer").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetSorcererProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("CurseUser").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetCurseUserProcedure.execute(entity);
 					return 0;
 				})))).then(Commands.literal("Reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

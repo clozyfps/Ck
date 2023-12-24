@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.craftkaisen.client.particle.SoundWaveParticle;
 import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
 import net.mcreator.craftkaisen.client.particle.RedParticleParticle;
+import net.mcreator.craftkaisen.client.particle.RedParticleBigParticle;
 import net.mcreator.craftkaisen.client.particle.PurplePulseParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleParticleParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticleParticle;
@@ -56,5 +57,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.PURPLE_ELECTRICITY_PARTICLE.get(), PurpleElectricityParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.DOMAIN_CLASH_PARTICLE.get(), DomainClashParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.BLACK_FLASH_LIGHTNING.get(), BlackFlashLightningParticle::provider);
+		event.register(CraftKaisenModParticleTypes.RED_PARTICLE_BIG.get(), RedParticleBigParticle::provider);
 	}
 }

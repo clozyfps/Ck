@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.craftkaisen.client.gui.StartScreenScreen;
+import net.mcreator.craftkaisen.client.gui.PhoneGUIScreen;
 import net.mcreator.craftkaisen.client.gui.MoveGuiScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
 import net.mcreator.craftkaisen.client.gui.InventoryCurseGuiScreen;
@@ -31,6 +32,7 @@ public class CraftKaisenModScreens {
 			MenuScreens.register(CraftKaisenModMenus.DOMAIN_CLASH.get(), DomainClashScreen::new);
 			MenuScreens.register(CraftKaisenModMenus.CSMGUI.get(), CSMGUIScreen::new);
 			MenuScreens.register(CraftKaisenModMenus.IMBUE_GUI.get(), ImbueGUIScreen::new);
+			MenuScreens.register(CraftKaisenModMenus.PHONE_GUI.get(), PhoneGUIScreen::new);
 		});
 	}
 }

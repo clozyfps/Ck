@@ -40,6 +40,7 @@ import net.mcreator.craftkaisen.entity.RugbyFieldCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RoundDeerEntity;
 import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RootProjectileEntity;
+import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
@@ -48,6 +49,7 @@ import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
 import net.mcreator.craftkaisen.entity.RainbowDragonEntity;
 import net.mcreator.craftkaisen.entity.PureLoveBeamRangedEntity;
 import net.mcreator.craftkaisen.entity.PoxDeityDomainEntity;
+import net.mcreator.craftkaisen.entity.OldLadyEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
 import net.mcreator.craftkaisen.entity.NobaraKugisakiEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
@@ -65,6 +67,7 @@ import net.mcreator.craftkaisen.entity.HollowPurpleProjectileEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
 import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
+import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 import net.mcreator.craftkaisen.entity.FlowerProjectileEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -313,6 +316,18 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<MahitoCloneEntity>of(MahitoCloneEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoCloneEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FlyHeadEntity>> FLY_HEAD = register("fly_head",
+			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<OldLadyEntity>> OLD_LADY = register("old_lady",
+			EntityType.Builder.<OldLadyEntity>of(OldLadyEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OldLadyEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RikoAmanaiEntity>> RIKO_AMANAI = register("riko_amanai",
+			EntityType.Builder.<RikoAmanaiEntity>of(RikoAmanaiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikoAmanaiEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -364,6 +379,9 @@ public class CraftKaisenModEntities {
 			SmallPoxDomainSpawnerEntity.init();
 			PoxDeityDomainEntity.init();
 			MahitoCloneEntity.init();
+			FlyHeadEntity.init();
+			OldLadyEntity.init();
+			RikoAmanaiEntity.init();
 		});
 	}
 
@@ -412,5 +430,8 @@ public class CraftKaisenModEntities {
 		event.put(SMALL_POX_DOMAIN_SPAWNER.get(), SmallPoxDomainSpawnerEntity.createAttributes().build());
 		event.put(POX_DEITY_DOMAIN.get(), PoxDeityDomainEntity.createAttributes().build());
 		event.put(MAHITO_CLONE.get(), MahitoCloneEntity.createAttributes().build());
+		event.put(FLY_HEAD.get(), FlyHeadEntity.createAttributes().build());
+		event.put(OLD_LADY.get(), OldLadyEntity.createAttributes().build());
+		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
 	}
 }

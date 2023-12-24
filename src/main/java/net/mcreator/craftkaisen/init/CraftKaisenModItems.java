@@ -34,12 +34,14 @@ import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.ReversalRedItem;
 import net.mcreator.craftkaisen.item.PureLoveBeamRangedItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.PhoneItem;
 import net.mcreator.craftkaisen.item.NobaraOutfitItem;
 import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NailProjectileItem;
 import net.mcreator.craftkaisen.item.NailItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
+import net.mcreator.craftkaisen.item.MedicineItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
@@ -128,7 +130,7 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> TALISMAN_BLOCK = block(CraftKaisenModBlocks.TALISMAN_BLOCK, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> SHIBUYA_GATES = block(CraftKaisenModBlocks.SHIBUYA_GATES, null);
 	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -38604, -8816263, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
-	public static final RegistryObject<Item> SPRINKLER = block(CraftKaisenModBlocks.SPRINKLER, CraftKaisenModTabs.TAB_CK_MOBS);
+	public static final RegistryObject<Item> SPRINKLER = block(CraftKaisenModBlocks.SPRINKLER, CraftKaisenModTabs.TAB_CK_BLOCKS);
 	public static final RegistryObject<Item> SPRINKLER_ON = block(CraftKaisenModBlocks.SPRINKLER_ON, null);
 	public static final RegistryObject<Item> CHOSO_ARMOR_CHESTPLATE = REGISTRY.register("choso_armor_chestplate", () -> new ChosoArmorItem.Chestplate());
 	public static final RegistryObject<Item> CHOSO_ARMOR_LEGGINGS = REGISTRY.register("choso_armor_leggings", () -> new ChosoArmorItem.Leggings());
@@ -199,6 +201,13 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> STRONGHIT = REGISTRY.register("stronghit", () -> new StronghitItem());
 	public static final RegistryObject<Item> CURSED_RING = REGISTRY.register("cursed_ring", () -> new CursedRingItem());
 	public static final RegistryObject<Item> CURSED_WOMB_DEATH_PAINTING = REGISTRY.register("cursed_womb_death_painting", () -> new CursedWombDeathPaintingItem());
+	public static final RegistryObject<Item> FLY_HEAD_SPAWN_EGG = REGISTRY.register("fly_head_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.FLY_HEAD, -12965318, -11711155, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> PHONE = REGISTRY.register("phone", () -> new PhoneItem());
+	public static final RegistryObject<Item> OLD_LADY_SPAWN_EGG = REGISTRY.register("old_lady_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.OLD_LADY, -3447118, -2894893, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> MEDICINE = REGISTRY.register("medicine", () -> new MedicineItem());
+	public static final RegistryObject<Item> RIKO_AMANAI_SPAWN_EGG = REGISTRY.register("riko_amanai_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RIKO_AMANAI, -1, -16760428, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

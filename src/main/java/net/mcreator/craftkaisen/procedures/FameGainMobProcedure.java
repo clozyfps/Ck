@@ -57,25 +57,22 @@ public class FameGainMobProcedure {
 			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 10, 25)));
 		}
 		if (entity instanceof RoppongiCursedSpiritEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 400, 800)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 200, 300)));
 		}
 		if (entity instanceof RugbyFieldCursedSpiritEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 2000, 5000)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 500, 600)));
 		}
 		if (entity instanceof FingerBearerEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 10000, 30000)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 5000, 9000)));
 		}
 		if (entity instanceof MouthCursedSpiritEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 800, 2500)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 200, 300)));
 		}
 		if (entity instanceof KoGuyEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 5000, 12000)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 1000, 5000)));
 		}
 		if (entity instanceof SmallPoxDeityEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 15000, 20000)));
-		}
-		if (entity instanceof SmallPoxDeityEntity) {
-			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 25000, 35000)));
+			entity.getPersistentData().putDouble("famegain", (Mth.nextInt(RandomSource.create(), 700, 900)));
 		}
 	}
 }

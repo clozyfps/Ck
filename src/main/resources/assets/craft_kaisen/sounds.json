@@ -95,5 +95,13 @@
         "stream": false
       }
     ]
+  },
+  "teleport": {
+    "sounds": [
+      {
+        "name": "craft_kaisen:timestop-teleport",
+        "stream": false
+      }
+    ]
   }
 }

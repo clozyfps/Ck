@@ -4,6 +4,12 @@
   "definition": {
     "triggerKey": "H",
     "keyBindingName": "Reverse Cursed Technique",
-    "keyBindingCategoryKey": "craft_kaisen"
+    "keyBindingCategoryKey": "craft_kaisen",
+    "onKeyPressed": {
+      "name": "ReverseCursedTechniqueOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ReverseCursedTechniqueOnKeyReleased"
+    }
   }
 }

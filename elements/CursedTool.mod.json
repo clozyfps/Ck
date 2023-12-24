@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:PlayfulCloud"
+      },
+      {
+        "value": "CUSTOM:YutaKatana"
+      },
+      {
+        "value": "CUSTOM:Naginata"
+      },
+      {
+        "value": "CUSTOM:InvertedSpear"
+      },
+      {
+        "value": "CUSTOM:MiwaKatana"
+      },
+      {
+        "value": "CUSTOM:SplitSoulKatana"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "cursed_tool",
+    "namespace": "mod"
+  }
+}

@@ -36,9 +36,7 @@ public class EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpda
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
 			if (Math.random() < 0.01) {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 20, 2, 1, 2, 0);
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 2, 1, 2, 0);
+					_level.sendParticles(ParticleTypes.POOF, x, y, z, 25, 2, 1, 2, 0);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
@@ -128,7 +126,7 @@ public class EightHandledSwordDivergentSilaDivineGeneralMahoragaOnEntityTickUpda
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.BLOOD_SPLASH.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 15, 0.2, (entityiterator.getBbHeight()), 0.2, 0.1);
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 2, 1, 2, 0);
+								_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, (entity.getX()), (entity.getY()), (entity.getZ()), 2, 2, 1, 2, 0);
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.POOF, (entity.getX()), (entity.getY()), (entity.getZ()), 15, 2, 1, 2, 0);
 							entityiterator.setDeltaMovement(new Vec3((3 * entity.getLookAngle().x), (3 * entity.getLookAngle().y), (3 * entity.getLookAngle().z)));

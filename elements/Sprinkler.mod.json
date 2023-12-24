@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkBlocks"
     },
     "destroyTool": "Not specified",
     "customDrop": {

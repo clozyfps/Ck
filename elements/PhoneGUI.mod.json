@@ -1,0 +1,55 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Player Name",
+          "name": "PlayerBounty",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 84
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Bounty Amount",
+          "name": "BountyPlayer",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 112
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_place",
+          "text": "Place",
+          "width": 51,
+          "height": 20,
+          "x": 189,
+          "y": 141
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

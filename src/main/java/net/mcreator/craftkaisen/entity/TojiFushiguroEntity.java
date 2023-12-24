@@ -33,6 +33,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.TojiFushiguroOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.TojiFushiguroOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
@@ -97,6 +98,12 @@ public class TojiFushiguroEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		TojiFushiguroOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		TojiFushiguroOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
