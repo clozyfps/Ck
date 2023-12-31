@@ -57,6 +57,7 @@ import net.mcreator.craftkaisen.client.renderer.EightHandledSwordDivergentSilaDi
 import net.mcreator.craftkaisen.client.renderer.CoffinMountainRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChimeraShadowGardenMobRenderer;
+import net.mcreator.craftkaisen.client.renderer.BlueEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.BlackDivineDogRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -136,5 +137,7 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.FLY_HEAD.get(), FlyHeadRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.OLD_LADY.get(), OldLadyRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLUE_ENTITY.get(), BlueEntityRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.LAPSE_BLUE_RANGED.get(), ThrownItemRenderer::new);
 	}
 }

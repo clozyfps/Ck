@@ -291,6 +291,8 @@ public class SetMovesProcedure {
 			CursedEnergySwitchProcedure.execute(entity);
 		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Melee")) {
 			MeleeSwitchProcedure.execute(entity);
+		} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).Page).equals("Weapon")) {
+			WeaponSwitchProcedure.execute(entity);
 		}
 	}
 }

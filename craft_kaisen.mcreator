@@ -2895,22 +2895,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17035,6 +17019,262 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "WeaponSwitch",
+      "type": "procedure",
+      "sortid": 686,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weapon_switch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WeaponSwitchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/movelists"
+    },
+    {
+      "name": "WeaponMoves",
+      "type": "procedure",
+      "sortid": 687,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weapon_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WeaponMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BecomeSorcerer",
+      "type": "procedure",
+      "sortid": 688,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "become_sorcerer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BecomeSorcererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BlueEntity",
+      "type": "livingentity",
+      "sortid": 689,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/BlueEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BlueEntityRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Abilities"
+    },
+    {
+      "name": "LapseBlueRanged",
+      "type": "rangeditem",
+      "sortid": 690,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/LapseBlueRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/LapseBlueRangedItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/lapse_blue_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "LapseBlueRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 691,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "LapseBlueProcedure",
+      "type": "procedure",
+      "sortid": 692,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "LapseBlueOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 693,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "LapseBlueOverlay",
+      "type": "overlay",
+      "sortid": 694,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/LapseBlueOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "CursedTeddyBear",
+      "type": "item",
+      "sortid": 695,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_teddy_bear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CursedTeddyBearItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/cursed_teddy_bear.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "YutaOkkotsuOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 696,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yuta_okkotsu_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/YutaOkkotsuOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
     }
   ],
   "variable_elements": [
@@ -17617,9 +17857,9 @@
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
       "subtitles.sukuna": "sukuna talking",
       "gui.craft_kaisen.domain_clash.label_domain_clash": "Domain Clash!!",
-      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "advancements.sukuna_vessel.descr": "Become a Vessel Of Ryomen Sukuna",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "advancements.maximum_elephant_advancement.descr": "Tame Maximum Elephant",
       "key.craft_kaisen.output": "Output",
       "gui.craft_kaisen.move_gui.button_4": "4",
@@ -17644,6 +17884,7 @@
       "advancements.semi_grade_1.descr": "Reach The Required Fame.",
       "entity.craft_kaisen.ko_guy": "Ko-Guy",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
+      "gui.craft_kaisen.lapse_blue_overlay.label_ctrl_move_away": "CTRL - Push",
       "effect.craft_kaisen.piercing_blood": "PiercingBlood",
       "item.craft_kaisen.eight_handled_sword_divergent_sila_divine_general_mahoraga_spawn_egg": "Eight Handled Sword Divergent Sila Divine General Mahoraga Spawn Egg",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
@@ -17816,6 +18057,7 @@
       "item.craft_kaisen.disaster_flame_ranged": "Disaster Flame Ranged",
       "key.craft_kaisen.ability_2": "Ability 2",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
+      "item.craft_kaisen.lapse_blue_ranged": "Lapse Blue Ranged",
       "key.craft_kaisen.ability_3": "Ability 3",
       "item.craft_kaisen.reversal_red": "Reversal Red",
       "advancements.young_fishand_reverse_punishment.descr": "Kill Mahito",
@@ -17865,6 +18107,7 @@
       "subtitles.electric": "electricity",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_health": "increase max health",
+      "item.craft_kaisen.cursed_teddy_bear": "Cursed Teddy Bear",
       "advancements.grade_2.descr": "Reach The Required Fame.",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_leggings": "Jujutsu Sorcerer Uniform",
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
@@ -17892,6 +18135,7 @@
       "entity.craft_kaisen.max_meteor": "Max Meteor",
       "item.craft_kaisen.old_lady_spawn_egg": "Old Lady Spawn Egg",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
+      "gui.craft_kaisen.lapse_blue_overlay.label_alt_move_closer": "ALT - Pull",
       "item.craft_kaisen.pure_love_beam_ranged": "Pure Love Beam Ranged",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
@@ -17921,6 +18165,7 @@
       "item.craft_kaisen.nail_projectile": "Nail Projectile",
       "item.craft_kaisen.cursed_spirit_orb": "Cursed Spirit Orb",
       "item.craft_kaisen.hollow_purple_projectile": "Hollow Purple Projectile",
+      "entity.craft_kaisen.blue_entity": "Blue Entity",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
@@ -18037,6 +18282,10 @@
           },
           {
             "name": "Cursed Energy",
+            "children": []
+          },
+          {
+            "name": "Weapon",
             "children": []
           }
         ]

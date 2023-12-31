@@ -60,6 +60,7 @@ import net.mcreator.craftkaisen.entity.MaxMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.MahitoCloneEntity;
+import net.mcreator.craftkaisen.entity.LapseBlueRangedEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.InventoryCurseMobEntity;
@@ -85,6 +86,7 @@ import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.CoffinMountainEntity;
 import net.mcreator.craftkaisen.entity.ChosoEntity;
 import net.mcreator.craftkaisen.entity.ChimeraShadowGardenMobEntity;
+import net.mcreator.craftkaisen.entity.BlueEntityEntity;
 import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
@@ -328,6 +330,12 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<RikoAmanaiEntity>of(RikoAmanaiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikoAmanaiEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlueEntityEntity>> BLUE_ENTITY = register("blue_entity",
+			EntityType.Builder.<BlueEntityEntity>of(BlueEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlueEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LapseBlueRangedEntity>> LAPSE_BLUE_RANGED = register("projectile_lapse_blue_ranged", EntityType.Builder.<LapseBlueRangedEntity>of(LapseBlueRangedEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(LapseBlueRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -382,6 +390,7 @@ public class CraftKaisenModEntities {
 			FlyHeadEntity.init();
 			OldLadyEntity.init();
 			RikoAmanaiEntity.init();
+			BlueEntityEntity.init();
 		});
 	}
 
@@ -433,5 +442,6 @@ public class CraftKaisenModEntities {
 		event.put(FLY_HEAD.get(), FlyHeadEntity.createAttributes().build());
 		event.put(OLD_LADY.get(), OldLadyEntity.createAttributes().build());
 		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
+		event.put(BLUE_ENTITY.get(), BlueEntityEntity.createAttributes().build());
 	}
 }

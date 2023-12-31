@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.client.model.Modeltojishirt;
 import net.mcreator.craftkaisen.client.model.Modeltojipants;
 import net.mcreator.craftkaisen.client.model.Modeltoji_curse;
 import net.mcreator.craftkaisen.client.model.Modeltenshadowsgreatserpent;
+import net.mcreator.craftkaisen.client.model.Modelswordslice;
 import net.mcreator.craftkaisen.client.model.Modelsukunafit;
 import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
 import net.mcreator.craftkaisen.client.model.Modelsorcerernew;
@@ -108,5 +109,6 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modeldivinedog.LAYER_LOCATION, Modeldivinedog::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelnewmuzi.LAYER_LOCATION, Modelnewmuzi::createBodyLayer);
+		event.registerLayerDefinition(Modelswordslice.LAYER_LOCATION, Modelswordslice::createBodyLayer);
 	}
 }

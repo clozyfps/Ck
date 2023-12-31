@@ -43,6 +43,7 @@ import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.MedicineItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
+import net.mcreator.craftkaisen.item.LapseBlueRangedItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
 import net.mcreator.craftkaisen.item.HollowPurpleProjectileItem;
@@ -58,6 +59,7 @@ import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.DisasterFlameRangedItem;
 import net.mcreator.craftkaisen.item.CursedWombDeathPaintingItem;
+import net.mcreator.craftkaisen.item.CursedTeddyBearItem;
 import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
 import net.mcreator.craftkaisen.item.CursedRingItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
@@ -208,6 +210,8 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> MEDICINE = REGISTRY.register("medicine", () -> new MedicineItem());
 	public static final RegistryObject<Item> RIKO_AMANAI_SPAWN_EGG = REGISTRY.register("riko_amanai_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RIKO_AMANAI, -1, -16760428, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> LAPSE_BLUE_RANGED = REGISTRY.register("lapse_blue_ranged", () -> new LapseBlueRangedItem());
+	public static final RegistryObject<Item> CURSED_TEDDY_BEAR = REGISTRY.register("cursed_teddy_bear", () -> new CursedTeddyBearItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

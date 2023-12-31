@@ -27,7 +27,7 @@ public class LapseBlueControlMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		LapseBlueControlOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		LapseBlueControlOnEffectActiveTickProcedure.execute(entity);
 	}
 
 	@Override

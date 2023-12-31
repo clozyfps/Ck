@@ -33,6 +33,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.YutaOkkotsuOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.YutaOkkotsuOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
@@ -98,6 +99,12 @@ public class YutaOkkotsuEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		YutaOkkotsuOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		YutaOkkotsuOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

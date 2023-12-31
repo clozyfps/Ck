@@ -39,6 +39,8 @@ public class RikaEntityDiesProcedure {
 				});
 			});
 		});
-		(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getPersistentData().putBoolean("rika", false);
+		if (!((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == null)) {
+			(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getPersistentData().putBoolean("rika", false);
+		}
 	}
 }
